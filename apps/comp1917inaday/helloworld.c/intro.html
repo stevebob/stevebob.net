@@ -1,0 +1,42 @@
+<h1>Your first c program</h1>
+To keep the computer gods happy, we must begin with writing a helloworld program. This is a program that does nothing more than print the text &quot;Hello World!&quot;. So without further ado:
+
+codefile: helloworld.c handle: helloworld code: 1
+
+Make a directory for your c programs and navigate to it in your 
+Open gedit and copy the above code into the editor.
+Save the file in your c directory with the name helloworld.c.
+Compile it with gcc:
+<pre class="code">
+gcc -Wall -Werror -O -o helloworld helloworld.c
+</pre>
+Now run it:
+<pre class="code">
+./helloworld
+</pre>
+
+Congratulations! You just compiled your first c program.
+
+Here is what everything means.
+Firstly, every line in c in which something happens must end in a semicolon.
+
+Line 1:
+stdio.h is a header file that contains function definitions for such functions used for reading and writing (e.g. printf). #include is a keyword in c that places the entire contents of the included file with the source code when it is compiled. It is essentially the same as copying all the code in the header file into your source file. This line is necessary in any program that reads from or writes to the command line (which will be most of your programs).
+
+Line 2:
+White space - c ignores white space (spaces, tabs and new lines). This means that you can space out your code as much as you like. This helps make it easy to read, so don't feel that you have to cram all your code into as little space as possible.
+
+Line 3:
+Beginning of definition of main function. In c, the main function is the only function that is called when the program is executed. Here is a breakdown of this line.
+int - (integer) the return type of this function
+main - the name of the function
+(int argc, char *argv[]) - a list of arguments. For the main function, arguments are entered at the command line following the program name when the program is executed. argc is an integer that refers to the number of arguments given. argv is a list of strings that are the actual arguments.
+
+Line 4:
+A comment. Single line comments in c are started with "//". Comments can follow code. Multiline comments begin with /* and end with */. A useful debuging trick is using comments to disable certain parts of code so you can see which part is problematic.
+
+Line 5:
+printf - the f stands for formatted - but more on that later. printf is used to print text to standard output. The '/n' is the newline character. '/' is used to escape certain characters to make special characters. '/n' is used very often.
+
+Line 7:
+Specifies the return value of the function. For the main function, it is always 0. This tells the operating system that the program terminated correctly.

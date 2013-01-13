@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!-- Thanbs to Dan Padilha for the server space -->
+<html>
+<head>
+<title>QR Clipboard</title>
+
+<style>
+div#download_container {
+    position:absolute;
+    top:0px;
+    left:380px;
+    bottom:0px;
+    right:0px;
+}
+
+div#image_container {
+}
+
+div#download_section {
+    position:relative;
+}
+
+div.explanation_container {
+    max-width:600px;
+    min-width:350px;
+}
+
+body {
+    margin-left:100px;
+    margin-right:100px;
+}
+
+div#back {
+    font-size:16px;
+    font-family:monospace;
+}
+
+p {
+    max-width:980px;
+}
+
+div#footer {
+    position: relative;
+    bottom: -40px;
+    padding-bottom:20px;
+    text-align:center;
+
+}
+
+</style>
+
+</head>
+<body>
+<div id="back">
+<a href="http://stevebob.net">back</a> | stevebob.net...
+</div>
+<h1>QR Clipboard </h1>
+<h2>Copy from your browser. Paste to your phone.</h2>
+<p>
+Sometimes there is some text that appears on your computer, such as a phone number
+or URL that you want to enter on your phone. So what do you do?
+Manually type it in like a caveman (<img src="caveman.png" width=20 />)?
+Well Mr. Caveman (<img src="caveman.png" width=20 />), those days are over.
+</p>
+<hr/>
+
+<div id="download_section">
+<div id="image_container">
+<img src="icon768.png" width=380 />
+</div>
+
+<div id="download_container">
+
+    <div class="explanation_container">
+    <h2>Downloads</h2>
+    <h3>Chrome Extension</h3>
+    </div>
+
+    <a
+    href="https://chrome.google.com/webstore/detail/jlaiapplcgkkikfldlgpalcnmmokfmhd">
+    Install Via Chrome Web Store
+    </a>
+<!--
+    <div class="explanation_container">
+    <p>The next link will download the Android App.
+    <br/>
+    If you already have a QR code scanner, just scan the code to the left.
+    <br/>
+    Otherwise, "stevebob.net/qrclipboard/QRClipboard.apk" will be the last
+    piece of text you have to manually copy from your computer screen to 
+    your phone. Enter it in your browser, let the file download, then run it.
+    </div>
+
+    <a href="QRClipboard.apk">
+    Android App
+    </a>
+
+</div> -->
+</div>
+
+<hr/>
+
+<h2>What is this?</h2>
+<p>
+This is an Android app and Chrome extension for simplifying transferring
+data from computers to phones. Text that has been copied to the computer's
+clipboard is encoded in a QR code by the Chrome extension. The Android
+app then reads the QR code, decodes it, and stores the text in the phone's
+clipboard. The text can be pasted, as if it was copied on the phone itself.
+</p>
+
+<p>Here is a <a href="screenshot.jpg">screenshot</a>.</p>
+
+<hr/>
+
+<h2>To copy text from you computer to your phone:</h2>
+<ol>
+    <li>
+        Copy some text.
+    </li>
+    <li>
+        Click the QR Clipboard icon in your browser (<img src="icon32.png" width=20 />).
+        A QR code will appear.
+    </li>
+    <li>
+        Launch the QR Clipboard Android app, and point the camera at the
+        QR code on your computer screen.
+    </li>
+    <li>
+        Wait for the phone's screen to flash white.
+    </li>
+    <li>
+        The clipboard on your phone now contains the copied text.
+    </li>
+</ol>
+
+<hr/>
+
+<h2>Disclaimer</h2>
+This software is distributed with absolutely no warranty.
+Nevertheless, if you encounter a bug, or just want to chat, feel free to email me at <em>steve@stevebob.net</em>.
+
+<div id="footer">
+    <img src="caveman.png" width=80 title="I spent an hour drawing this caveman so you WILL enjoy it!"/>
+    <br />
+    Copyright &copy; 2012 stevebob.net
+    
+</div> 
+
+</body>
+</html>

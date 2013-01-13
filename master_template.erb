@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="<%=base%>sb.css">
+<link rel="stylesheet" type="text/css" href="<%=base%>syntax.min.css">
+<script src="<%=base%>tree.min.js" type="text/javascript"></script>
+<script src="<%=base%>mountain.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="<%=base%>console/Console.min.js"></script>
+<script type="text/javascript" src="<%=base%>console/SBConsole.min.js"></script>
+<script type="text/javascript" src="<%=base%>console/consoleClient.min.js"></script>
+<script type="text/javascript" src="<%=base%>console/Sbox.min.js"></script>
+<script type="text/javascript" src="<%=base%>console/Interpreter.min.js"></script>
+
+<title>stevebob.net...<%= "<%=title%\>" %></title>
+
+</head>
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole();">
+
+
+<div id="tree">
+<div id="treeclick" onclick="new TreeDemo().start_tree()">
+</div>
+<canvas id="screen" width=300 height=200 style="position:absolute;left:-30px;z-index:2"></canvas>
+</div>
+
+<div id="mountain_container">
+
+<div id="mountain_click" onclick="mountain_reset()"></div>
+<canvas id="mountain" height=130 width=500>
+</canvas>
+
+</div>
+
+
+<div id="sky">
+</div>
+<div id="skymain">
+<div id="skycontent">
+
+                <input id="consoleinput"
+                />
+            <div id="consoleoutput">
+                <p style="font-size:40px;margin:0px;">
+                <br />
+                </p>
+                <p style="font-size:40px">stevebob.net...</p>
+                &gt; Holy shit! Rounded corners!
+            </div>
+
+            
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="linkbar">
+
+<div id="linkbarmain">
+
+<div id="linkbarcontents">
+
+
+<%= <<-EOF
+<% 
+if defined? selected and selected == "home" then \%\>
+<div class="selectedBannerLinkContainer">
+<% else \%\>
+<div class="bannerlinkcontainer">
+<% end \%\>
+EOF
+%>
+<a href="<%= base %>">
+<div class="bannerlink">
+Home</div>
+</a>
+
+
+</div>
+
+
+<%= <<-EOF
+<% 
+if defined? selected and selected == "about" then \%\>
+<div class="selectedBannerLinkContainer">
+<% else \%\>
+<div class="bannerlinkcontainer">
+<% end \%\>
+EOF
+%>
+<a href="<%= base %>about">
+<div class="bannerlink">
+About</div>
+</a>
+
+
+</div>
+
+
+<%= <<-EOF
+<% 
+if defined? selected and selected == "apps" then \%\>
+<div class="selectedBannerLinkContainer">
+<% else \%\>
+<div class="bannerlinkcontainer">
+<% end \%\>
+EOF
+%>
+<a href="<%= base %>apps">
+<div class="bannerlink">
+Apps</div>
+</a>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: <%= app_columns.length * 175 %>px">
+
+<% app_columns.each do |col| %>
+
+<div class="app-column">
+    <% col.each do |app| %>
+    <a class="menuLink" href="<%= app.url %>"><%= app.name %></a>
+    <% end %>
+</div>
+<% end %>
+
+</div>
+</div>
+</div>
+
+
+
+<%= <<-EOF
+<% 
+if defined? selected and selected == "posts" then \%\>
+<div class="selectedBannerLinkContainer">
+<% else \%\>
+<div class="bannerlinkcontainer">
+<% end \%\>
+EOF
+%>
+<a href="<%= base %>posts">
+<div class="bannerlink">
+Posts
+</div>
+</a>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: <%= post_columns.length * 200 %>px">
+
+<% post_columns.each do |col| %>
+
+<div class="post-column">
+    <% col.each do |post| %>
+    <a class="menuLink" href="<%= base %><%= post.permalink %>"><%= post.heading %></a>
+    <% end %>
+</div>
+<% end %>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+
+<div id="leftmain">
+<div id="leftlinks" class="sidepane">
+
+<% sidebar_apps.each do |app| %>
+<a class="leftlink" href="<%= app.url %>"><%= app.name %></a>
+<% end %>
+
+</div>
+</div>
+
+<div id="rightmain">
+
+<div id="contact-box">
+
+<a href="http://stevebob.net/rss.xml"><img src="<%=base%>rss.png" alt="RSS Feed"></a>
+<a href="mailto:steve@stevebob.net"><img src="<%=base%>email.png" alt="Email"></a>
+<a href="https://www.facebook.com/stephen.sherratt1"><img src="<%=base%>facebook.png" alt="Facebook"></a>
+<a href="https://twitter.com/sherro92"><img src="<%=base%>twitter.png" alt="Twitter"></a>
+
+</div>
+
+<div id="rightlinks" class="sidepane">
+
+<% sidebar_posts.each do |post| %>
+<a class="right_link" href="<%= base %><%= post.permalink %>"><%= post.heading %></a>
+<% end %>
+
+</div>
+</div>
+
+
+
+<div id="centremain">
+<div id="centrecontent">
+
+
+<%= "<%= body \%\>" %>
+
+
+</div>
+</div>
+
+<div id="footer">
+Copyright &copy; 2012 stevebob.net
+</div>
+</div>
+
+
+</body>
+</html>

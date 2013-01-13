@@ -1,0 +1,110 @@
+Content-type: html; charset=iso-8859-1
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head>
+
+<script type="application/x-javascript">
+
+function toggleLineNos(name) {
+
+    if (document.getElementById(name + "lines").style.display == "none") {
+
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+
+    }
+
+}
+</script> 
+
+<link href="../sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a day</title> 
+</head>
+<body>
+
+<h1>COMP1917 in a day: helloworld.c</h1>
+<div class='section'>
+<p>
+<h1>Your first c program</h1>
+</br>To keep the computer gods happy, we must begin with writing a helloworld program. This is a program that does nothing more than print the text &quot;Hello World!&quot;. So without further ado:
+</br>
+</br><div class='codeblock'><a href="javascript:toggleLineNos('helloworld');">Toggle Line Numbers</a><pre id='helloworldlines' class='code'>1: #include &ltstdio.h&gt
+2: 
+3: int main(int argc, char *argv[]) {
+4:     //print a message
+5:     printf("Hello World!");
+6:     
+7:     return 0;
+8: }
+</pre><pre id='helloworldnolines' class='code' style='display:none;'>#include &ltstdio.h&gt
+
+int main(int argc, char *argv[]) {
+    //print a message
+    printf("Hello World!");
+    
+    return 0;
+}
+</pre></div>
+</br>Make a directory for your c programs and navigate to it in your 
+</br>Open gedit and copy the above code into the editor.
+</br>Save the file in your c directory with the name helloworld.c.
+</br>Compile it with gcc:
+</br><pre class="code">
+gcc -Wall -Werror -O -o helloworld helloworld.c
+</pre>
+Now run it:
+</br><pre class="code">
+./helloworld
+</pre>
+
+</br>Congratulations! You just compiled your first c program.
+</br>
+</br>Here is what everything means.
+</br>
+</br>Line 1:
+</br>stdio.h is a header file that contains function definitions for such functions used for reading and writing (e.g. printf). #include is a keyword in c that places the entire contents of the included file with the source code when it is compiled. It is essentially the same as copying all the code in the header file into your source file. This line is necessary in any program that reads from or writes to the command line (which will be most of your programs).
+</br>
+</br>Line 2:
+</br>White space - c ignores white space (spaces, tabs and new lines). This means that you can space out your code as much as you like. This helps make it easy to read, so don't feel that you have to cram all your code into as little space as possible.
+</br>
+</br>Line 3:
+</br>Beginning of definition of main function. In c, the main function is the only function that is called when the program is executed. Here is a breakdown of this line.
+</br>int - (integer) the return type of this function
+</br>main - the name of the function
+</br>(int argc, char *argv[]) - a list of arguments. For the main function, arguments are entered at the command line following the program name when the program is executed. argc is an integer that refers to the number of arguments given. argv is a list of strings that are the actual arguments.
+</br>
+</br>Line 4:
+</br>A comment. Single line comments in c are started with "//". Comments can follow code. Multiline comments begin with /* and end with */. A useful debuging trick is using comments to disable certain parts of code so you can see which part is problematic.
+</br>
+</br>Line 5:
+</br>printf - the f stands for formatted - but more on that later. printf is used to print text to standard output.
+</br>
+</br>Line 7:
+</br>Specifies the return value of the function. For the main function, it is always 0. This tells the operating system that the program terminated correcty.
+</br></p>
+</div>
+<div class='section'>
+<p>
+<h1>A Note on Style</h1>
+</br>CSE has a style guide, and it is worth noting a few aspects of it now:
+</br>You lines of code should not be any longer than 70 characters. This includes comments. gedit has the current column in the status bar on the bottom right corner.
+</br>Always indent your code when entering a new structure. A rule of thumb is, add an indent the line after a line ending with a "{", and remove an indent on a line with "}".
+</br></p>
+</div>
+<div id="header" style="position:absolute;left:10px;width:auto;top:0px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.7);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;"> 
+<a href="../">back</a> |
+<a href="../housekeeping">Housekeeping</a> |
+<a href="../helloworld.c">helloworld.c</a> |
+stevebob.net...
+</div>
+
+<div style="position:relative;height:40px;width:100%;font-family:monospace;text-align:center;">
+Copyright &copy; 2010 Stephen Sherratt
+</div>
+</body>
+</html>

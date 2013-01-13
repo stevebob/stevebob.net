@@ -1,0 +1,11 @@
+from pygments import highlight
+from pygments.lexers import CoffeeScriptLexer
+from pygments.formatters import HtmlFormatter
+
+
+while True:
+    try:
+        line = raw_input()
+        print highlight(line, CoffeeScriptLexer(), HtmlFormatter())
+    except EOFError:
+        break

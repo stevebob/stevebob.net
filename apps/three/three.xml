@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Three" url="three" url-end="" favourite="true">
+    <description>
+        A wireframe 3D engine demo
+    </description> 
+</app>

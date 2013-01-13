@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+gem 'erubis'
+gem 'nokogiri'
+gem 'maruku'
+gem 'coderay'

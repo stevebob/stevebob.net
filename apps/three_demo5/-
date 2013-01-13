@@ -1,0 +1,44 @@
+
+const IN_FRONT = 0;
+const BEHIND = 1;
+const BOTH = 2;
+
+function BSPTree() {
+
+    this.polygon = null;
+    this.left = null;
+    this.right = null;
+    
+    this.addPolygon = function(p) {
+        if (this.polygon == null) {
+            this.polygon = p;
+            this.left = new BSPTree();
+            this.right = new BSPTree();
+        } else {
+            var behind = this.isBehind(p);
+            if (behind == IN_FRONT) {
+                this.left.addPolygon(p);
+            } else if (behind == BEHIND) {
+                this.right.addPolygon(p);
+            } else {
+                console.debug("cutting");
+                this.polygon.toBasis();
+            }
+        }
+    }
+
+    this.toString = function() {
+        if (this.polygon == null) {
+            return "null";
+        }
+        var left = "";
+        var right = "";
+        if (this.left != null) {
+            left = this.left.toString();
+        }
+        if (this.right != null) {
+            right = this.right.toString();
+        }
+        return "p(" + left + ", " + right + ")";
+    }
+}

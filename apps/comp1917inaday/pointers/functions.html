@@ -1,0 +1,25 @@
+<h1>Passing pointers to functions</h1>
+
+As with any other type of variable, pointers (or arrays) can be passed as arguments to functions. This is commonly used to <strong>pass by reference</strong> which allows you to change values of variables in other functions (like scanf). Another use is passing arrays. If you have an array in one function and want to access it from another, it can simply be passed as an argument. When you change elements of the array in one function, it's values will be different everywhere. This is because you're actually only passing a pointer which stores the address of the first element of the array.
+
+Remember the swap function that didn't work:
+codefile: failswap.c handle: failswap code: 1
+
+It doesn't work because the swap function gets passed the values in the variables (rather than the variables themselves) and so while they are swapped locally, after the function is evaluated the original values remain.
+
+However we can make a successful swap function using <strong>pass by reference</strong>.
+codefile: swap.c handle: swap code: 1
+
+output:
+codefile: swapout handle: swapout code: 0
+
+The difference is now we pass the address of the variables to swap, which swaps the values at those addresses.
+
+Here is an example of passing an array to a function:
+codefile: printlist.c handle: printlist code: 1
+
+Note that the syntax list[] and *list are treated identically.
+Also note that the syntax list[5] and *(list + 5) are treated identically, however CSE's style prefers list[5].
+It is important to note that using addition and subtraction on pointers is valid.
+
+If 'p' is a pointer, p++ doesn't add 1 to p. It adds the size equivalent to one variable of the type pointed to by p, so it points to the next element of the array.

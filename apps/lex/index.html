@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- Thanbs to Dan Padilha for the server space -->
+<html>
+<head>
+<title>lex</title>
+       <script type="application/x-javascript" src="lex.js"></script>
+       <script type="application/x-javascript" src="behaviour.js"></script>
+       <script type="application/x-javascript" src="maths.js"></script>
+</head>
+<body onclick="setFocus();" onload="setFocus();" style="margin:0px;padding:0px;background-color:black;">
+
+<div id="border"  style="position:absolute;top:40px;bottom:50px;left:20px;right:0px;background-color:black;margin:0px;padding:0px;overflow:auto;color:white;font-family:monospace;font-size:24px;">
+<div id="term" style="position:relative;top:0px;left:0px;right:0px;margin:0px;padding:0px;">
+</div>
+<div style="margin:0px;padding:0px;top:0px;left:100px;width:100%;">
+
+<div style="position:absolute;margin:0px;padding:0px;left:0px;width:35px;font-family:monospace;border:0px;color:white;background-color:black;">
+#>
+</div>
+<input id="in" style="position:absolute;margin:0px;padding:0px;right:0px;left:35px;font-family:monospace;border:0px;color:white;background-color:black;font-size:24px;">
+</div>
+</div>
+
+<div id="helpcontainer" style="position:absolute;top:50px;bottom:0px;left:0px;right:0px;">
+<div id="help" style="font-family:monospace;font-size:24px;position:absolute;left:10%;top:5%;width:75%;height:80%;background-color:rgba(255, 255, 255, 0.7);padding:20px;text-align:justify;display:none;overflow:auto;">
+<strong>Lex Help</strong>
+ (<a href="javascript: setHelpVis(0);">hide</a>)
+
+<div style="top:40px;left:0px;right:0px;bottom:0px;">
+
+This is a simple lexical analyser that can evaluate expressions containing any combination of the following operators.
+To have an expression evaluated, enter it at the command line and press ENTER/RETURN.
+As with most terminal emulators, the up/down arrows can be used to navigate through previously entered expressions.
+All operators use function notation.
+That is, rather than writing &quot;2 + 4&quot;, one must write &quot;add(2, 4)&quot;.
+Note that the nesting of operators is perfectly legal (ie. add(multiply(4, 2), factorial(3)) is a valid expression).
+<br />
+<br />
+<strong>Here is a list of operators:</strong><br />
+add(a, b): returns a + b<br />
+minus(a, b): returns a - b<br />
+multiply(a, b): returns a * b <br />
+divide(a, b): returns a / b <br />
+power(a, b): returns a ^ b <br />
+factorial(a): returns a! <br />
+<br />
+<strong>Variables</strong>
+<br />
+Variables can be defined and then used in your expressions.
+The syntax for variables is: <br />
+variable = expression
+<br />
+Names for variables must begin with either an upper case or lower case letter followed by
+any combination of letters, numbers, underscores and single quotes.
+<br /><br />
+
+<strong>Language Structure</strong><br />
+expression -&gt; number | variable | operator(expression,...)
+<br />
+operator -&gt; add | minus | multiply | divide | power | factorial
+<br />
+number -&gt; any numeric value
+<br />
+variable -&gt; any variable name that has been assigned a value
+
+</div>
+</div>
+</div>
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header">
+<a href="http://stevebob.net">back</a> |            
+            <a href="javascript: setHelpVis(1)">help</a> | stevebob.net...</div>
+
+</body>
+</html>

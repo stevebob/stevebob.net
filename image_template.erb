@@ -1,0 +1,27 @@
+</div>
+
+<% if type == "centre" then %>
+<div class="post-image-centre-container">
+<% end %>
+
+<table class="image-<%=type%>">
+<caption class="image-caption"><%= caption %></caption>
+<tr><td>
+<img class="post-image-<%=type%>" src="<%= src %>"<%
+
+img.keys.each do |key|
+    if key != 'src' and key != 'gallery' then 
+        %> <%=key%>="<%=img[key]%>" <%
+    end
+
+end
+
+%>/>
+</td></tr>
+</table>
+
+<% if type == "centre" then %>
+</div>
+<% end %>
+
+<div class="post-body">

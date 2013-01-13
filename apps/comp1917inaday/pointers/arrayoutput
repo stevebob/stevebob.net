@@ -1,0 +1,31 @@
+The memory address of list[0] is: 0x7ffffcf646d0
+Actual value of list: 0x7ffffcf646d0
+Notice that they are the same.
+
+The value stored in list[0] is: 9
+If we dereference list with * we get: 9
+These are also the same.
+The value stored in list[1] is: 2
+If we dereference list + 1 we get: 2
+These are also the same.
+p[0] = 9
+p[1] = 2
+p[2] = 4
+p[3] = 5
+p[4] = 0
+p[5] = 8
+p[6] = 6
+p[7] = 7
+p[8] = 1
+p[9] = 3
+And again...
+p[0] = 9
+p[1] = 2
+p[2] = 4
+p[3] = 5
+p[4] = 0
+p[5] = 8
+p[6] = 6
+p[7] = 7
+p[8] = 1
+p[9] = 3

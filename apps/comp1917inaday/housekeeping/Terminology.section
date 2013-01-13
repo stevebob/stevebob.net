@@ -1,0 +1,27 @@
+<h1>Terminology</h1>
+<table border=1>
+<tr><td>Binary File: </td>
+<td>Excecutable file - not readable by humans.</td></tr>
+
+<tr><td>Compile: </td>
+<td>Convert source code into a binary file that can be excecuted.</td></tr>
+
+<tr><td>Command: </td>
+<td>Programs that provide users with a means to interact with a computer via the command line.</td></tr>
+
+<tr><td>Prompt: </td>
+<td>Initial text that appears on a command line. For example: <pre class="code">steve$ </pre></td></tr>
+
+<tr><td>Script: </td>
+<td>An excecutable file that is compiled automatically, immediately prior to excecution.</td></tr>
+
+<tr><td>Source Code: </td>
+<td>Code that is readable by humans.</td></tr>
+
+<tr><td>Source File: </td>
+<td>File containing source code.</td></tr>
+
+<tr><td>Unix: </td>
+<td>Old multiuser operating system upon which many modern OSes are based (such as Mac OSX and GNU/Linux).</td></tr>
+
+</table>

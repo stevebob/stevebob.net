@@ -1,0 +1,21 @@
+<h1>Functions</h1>
+Suppose in your program you had a need to calculate the value of a number to the power of another number. This is easy enough to code, however what if there were two or more parts in your code when this is required? Of course, you could copy all the code for finding powers to this new section, but it is messy, and a far more elegand approach is to write a <strong>function</strong>.
+
+You have already used several functions. scanf, printf, sizeof and main are all functions that you will have seen before. Functions can be thought of in a similar way to functions in mathematics. That is, they take several values as input (these are called <strong>arguments</strong>), do something with them, and possibly return a value. The number of arguments can be zero, and there can be as many as you like. Functions can return at most one value, however sometimes it is unnecessary to return anything (e.g. functions for printing).
+
+Here is an example of code with a power function:
+
+codefile: power.c handle: power code: 1
+
+Some things to note:
+On line 3, there is a <strong>prototype</strong> for the power function. This is essentially the first line of the function definition but without the open parenthesis and ending in a semicolon.
+When defining a function, begin with the return type (the type of the value that will be returned). In this case it is int. If a function does not return anything, begin the line with "void".
+Then comes the name of the function. This is the name that you use when calling the function. The name of this function is "power".
+Finally, there is a list of arguments. The names of arguments given here must be used to refer to them inside the function, however they have no influence on the names of variables or values passed to the function when it is called.
+If the function has a return type, it must end with a return line, returning a value of that type.
+
+Some definitions:
+<strong>Call</strong> in this context refers to when the function is <i>activated</i>. This is done by using the name of the function. It can be used in the same way as a variable, value or expression (a function call is an expression) to access the return value.
+<strong>Pass</strong> refers to giving values as input to a function. This is done by placing a comma seperated list of values in brackets after the function name. If the function takes no values, use an empty set of brackets.
+
+One could accurately say that in the above code, baseInput and indexInput are passed to power. Power is called on line 16 and its return value is stored in answer.

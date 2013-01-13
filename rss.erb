@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+
+<title>stevebob.net</title>
+<link>http://stevebob.net</link>
+<description>A tech blog/javascript demo site</description>
+<atom:link href="http://stevebob.net/rss.xml" rel="self" type="application/rss+xml" />
+
+<% posts.each do |post| %>
+
+<item>
+<title><%= post.heading %></title>
+<description><%= post.description %></description>
+<link>http://stevebob.net/<%= post.permalink %></link>
+<guid>http://stevebob.net/<%= post.permalink %></guid>
+</item>
+
+<% end %>
+
+
+
+</channel>
+</rss>

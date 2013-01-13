@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+
+<title>stevebob.net</title>
+<link>http://stevebob.net</link>
+<description>This is a blog where I put cool things.</description>
+<atom:link href="http://stevebob.net/test3.xml" rel="self" type="application/rss+xml" />
+
+
+<item>
+<title>OMG First Post</title>
+<description>Yay! This isaoeuaeouaou my first post.</description>
+<link>http://stevebob.net</link>
+<guid>http://stevebob.net/aoeuaoeuaoeuaoeu</guid>
+</item>
+<item>
+<title>OMG third Post</title>
+<description>Yay! This iy third post.</description>
+<link>http://stevebob.net/zzzzzzz</link>
+<guid>http://stevebob.net/zzzzz</guid>
+</item>
+<item>
+<title>OMG second Post</title>
+<description>Yay! This iy first post.</description>
+<link>http://stevebob.net/aoeuaau</link>
+<guid>http://stevebob.net/aoeuaou</guid>
+</item>
+
+<item>
+<title>OMG fourth Post</title>
+<description>Yay! This iy fourth post.</description>
+<link>http://stevebob.net/4444</link>
+<guid>http://stevebob.net/4444</guid>
+</item>
+
+
+
+</channel>
+</rss>

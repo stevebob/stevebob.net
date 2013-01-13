@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Virtual Canvas Demo" url="virtualcanvasdemo" url-end="" favourite="true">
+    <description>
+        Virtualized canvas elements inside an actual canvas element
+    </description> 
+</app>

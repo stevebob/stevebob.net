@@ -1,0 +1,21 @@
+</div>
+
+<% if type == "centre" then %>
+<div class="post-image-centre-container">
+<% end %>
+
+<table class="image-<%=type%>">
+<caption class="image-caption"><%= caption %></caption>
+<tr><td>
+<img class="post-image-<%=type%>" src="<%= src %>"<%
+
+
+%>/>
+</td></tr>
+</table>
+
+<% if type == "centre" then %>
+</div>
+<% end %>
+
+<div class="post-body">

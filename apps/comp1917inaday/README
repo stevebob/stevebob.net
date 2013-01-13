@@ -1,0 +1,17 @@
+GIT Readme:
+
+How to use:
+If you've committed a bunch of stuff and want to push, do the following:
+
+git pull
+
+OR
+
+git fetch
+git rebase origin/master
+
+The first option is easier, but the second option gives a cleaner history.
+
+If anything goes wrong during an automatic merge, just run
+git mergetool
+(or git merge-tool? I don't remember)

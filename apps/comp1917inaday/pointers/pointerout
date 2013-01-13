@@ -1,0 +1,6 @@
+The value of p is: 0x7ffff7cca9ec
+The value pointed to by p is: 5
+Now the value pointed to by p is: 2
+Now the value of a is: 4
+Now the value of p is: 0x7ffff7cca9e8
+And the value pointed to by p is: 3

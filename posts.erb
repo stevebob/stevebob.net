@@ -1,0 +1,14 @@
+<div class="post-container">
+<div class="heading-container">
+<h1>Posts</h1>
+<div class="under-heading">
+</div>
+</div>
+<div class="post-body" style="margin-top:-20px">
+
+<% posts.each do |post| %>
+<h2><a href="<%= base %><%= post.permalink %>"><%= post.heading %></a></h2>
+<% end %>
+
+</div>
+</div>

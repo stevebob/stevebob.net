@@ -1,0 +1,16 @@
+<table class="image-left">
+<caption class="image-caption"><%= caption %></caption>
+<tr><td>
+
+<img class="post-image-left" src="<%= img['src'] %>" <%
+    if img['title'] then
+        %>title="<%= img['title'] %>"<%
+    end %> alt="<%= img['alt'] %>" <% 
+    if img['width'] then
+        %>width="<%=img['width']%>"<%
+    end
+%>/>
+
+
+</td></tr>
+</table>

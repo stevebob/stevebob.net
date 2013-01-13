@@ -1,0 +1,21 @@
+C
+Helloworld - what does everything mean
+Variables - types
+Expressions - maths, logic
+Reading input - scanf
+Constants - no magic numbers
+If Else - syntax, lazy evaluation, = and ==
+Loops - for, while
+Functions - syntax, write int power(base, index) as an example, Pass by value, Try a swap function (it wont work)
+Multiple Files - how to compile
+Arrays - initialising, multidimensional, traversing, passing as paramaters
+Pointers - malloc, free
+Strings - string functions
+Structures - typedef, data types, the semicolon, == doesn't work - make a function, pointers to structures
+Dynamic Structures - compare to array, link lists, stacks, queues, limitations, postfix calculator
+Recursion - factorial, what happens in memory, hanoi, how to think about these problems
+Binary Trees - traversal
+
+Systems
+MIPS
+
