@@ -10,7 +10,7 @@ require 'htmlentities'
 $URL_BASE = ""
 puts ARGV[0]
 if ARGV[0] == "--staging" then
-    $URL_BASE = "http://localhost/"
+    $URL_BASE = "http://127.0.0.5/"
 else
     $URL_BASE = "http://stevebob.net/"
 end
@@ -93,7 +93,6 @@ class Post
                     
                 end
             else
-                puts code
                 output = "<div class='highlight'><pre>" + code + "</pre></div>"
             end
 
@@ -346,8 +345,6 @@ apps = apps.sort{|i, j| i.name <=> j.name}
 favourite_apps = apps.select{|i| i.favourite}
 app_columns = column_split(apps, $NUM_APPS_PER_COL);
 
-puts apps.map{|i| i.url}.join("\n")
-
 
 divider = File.read("divider_template.erb")
 eruby = Erubis::Eruby.new($master_template)
@@ -359,8 +356,7 @@ template = eruby.result({
     :post_columns => post_columns,
     :app_columns => app_columns
 })
-
-puts "---"
+puts template
 
 if File.directory? "output" then
     FileUtils.rm_r "output"
