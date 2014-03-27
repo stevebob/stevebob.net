@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<!-- Thanbs to Dan Padilha for the server space --> 
+<html>
+
+<head>
+<title>jewels</title>
+<script type="text/javascript" src="jewels.js"></script>
+
+</head>
+
+
+<body onload="setUpCanvas(); drawJewels();" onResize="handleResize();" style="margin:0px;padding:0px;background-color:black;">
+
+<div id="panel" style="position:absolute;background-color:white;opacity:0.8;top:0px;left:0px;width:240px;bottom:00px;display:none;font-family:sans-serif;">
+
+<div style="font-size:30px;text-align:center;top:10px;left:10px;right:10px;height:40px;position:absolute;">
+<b>Jewels</b>
+
+</div>
+
+
+<div style="font-size:24px;text-align:left;top:80px;left:10px;right:10px;height:80px;position:absolute;">
+Width:
+<input id="width" style="font-size:24px;width:80px;right:0px;position:absolute;">
+</div>
+
+<div style="font-size:24px;text-align:left;top:120px;left:10px;right:10px;height:80px;position:absolute;">
+Height:
+<input id="height" style="font-size:24px;width:80px;right:0px;position:absolute;">
+</div>
+
+
+<div style="font-size:24px;text-align:left;top:160px;left:10px;right:10px;height:80px;position:absolute;">
+Fall Time:
+<input id="fall" style="font-size:24px;width:80px;right:0px;position:absolute;">
+</div>
+
+
+<div style="font-size:24px;text-align:left;top:200px;left:10px;right:10px;height:80px;position:absolute;">
+Max Clump:
+<input id="clump" style="font-size:24px;width:80px;right:0px;position:absolute;">
+</div>
+
+<input type=button value="APPLY" onClick="getValues();" style="position:absolute;top:260px;left:40px;right:40px;height:60px;font-size:25px;">
+
+</div>
+<canvas id="jewelcase" height=800 width=1000 style="background-color:black;margin:0px;padding:0px;" >
+Fail
+</canvas>
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header">
+<a href="http://stevebob.net">back</a> | stevebob.net...</div>
+</body>
+
+
+</html>

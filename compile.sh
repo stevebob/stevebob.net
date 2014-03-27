@@ -1,1 +1,4 @@
-rm -r stevebob.net;ruby generate.rb;mv output stevebob.net
+rm -r stevebob.net
+ruby generate.rb $1;
+cp -r resume output
+mv output stevebob.net

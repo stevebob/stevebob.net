@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Isometric Demo" url="isometric_demo" url-end="" favourite="true">
+    <description>
+        A demo of an isometric graphics engine
+    </description> 
+</app>

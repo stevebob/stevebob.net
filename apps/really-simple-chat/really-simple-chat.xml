@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Really Simple Chat" url="http://rsc.stevebob.net" url-end="" favourite="false">
+    <description>
+        A simple chat client written with websockets
+    </description> 
+</app>

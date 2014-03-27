@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="IOU" url="iou" url-end="" favourite="true">
+    <description>
+        IOU Calculator
+    </description> 
+</app>

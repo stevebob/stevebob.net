@@ -10,7 +10,7 @@ require 'htmlentities'
 $URL_BASE = ""
 puts ARGV[0]
 if ARGV[0] == "--staging" then
-    $URL_BASE = "http://127.0.0.5/"
+    $URL_BASE = "http://localhost/stevebob.net/"
 else
     $URL_BASE = "http://stevebob.net/"
 end
@@ -54,7 +54,14 @@ class Post
 # takes a text node from the xml file and returns some html to appear
 # in the page in that position in the post
         def compile_text(text)
-            Maruku.new(text.to_s.lstrip).to_html
+#            puts "====== RAW ============"
+#            puts text
+#            puts "-----------------------"
+            rendered = Maruku.new(text.to_s.lstrip).to_html
+#            puts "========= RENDERED ========="
+#            puts rendered
+#            puts "----------------------------"
+            return rendered
         end
 
         def compile_img(img)
@@ -153,12 +160,13 @@ class Post
                 end
             end
         
-        @description = (HTMLEntities.new.encode(parts.to_s)).delete "\n"
+        @description = (HTMLEntities.new.encode(parts.join(''))).delete "\n"
 
-        
+#        puts "=================== Parts ========================="
+#        puts parts.to_s 
         eruby = Erubis::Eruby.new($post_template)
         output = eruby.result({
-            :body => parts.to_s, 
+            :body => parts.join(''), 
             :heading => @heading,
             :date => post['date'],
             :permalink => @permalink})
@@ -168,7 +176,9 @@ class Post
         @date_string =~ /(\d+)-(\d+)-(\d+)\s+(\d+):(\d+)/
         @date = DateTime.new($1.to_i, $2.to_i, $3.to_i, $4.to_i, $5.to_i, $6.to_i)
         @date_int = @date.strftime("%s").to_i
-
+        
+#        puts "=============== HTML Output ==============="
+#        puts output
         @html = output
 
     end
@@ -384,7 +394,7 @@ end
 Dir.glob("resources/*.less").each do |f|
     f =~ /(.*).less/
     name = "#{$1}.css"
-    `lessc #{f} > #{name}`
+    `/home/steve/node_modules/less/bin/lessc #{f} > #{name}`
 end
 
 Dir.glob("resources/*").each do |f|

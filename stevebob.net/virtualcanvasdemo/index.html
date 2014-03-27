@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- Thanbs to Dan Padilha for the server space -->
+<html>
+<head>
+<title>Virtual Canvas</title>
+    <script type="text/javascript" src="virtualcanvas/Vector.js"></script>
+    <script type="text/javascript" src="virtualcanvas/SimpleVirtualCanvas.js"></script>
+    <script type="text/javascript" src="virtualcanvas/FullScreenCanvas.js"></script>
+
+    <script type="application/x-javascript" src="fractbox/fractal.js"></script> 
+
+
+<script type="text/javascript" src="3dtesla/algebra.js"></script>
+<script type="text/javascript" src="3dtesla/three.js"></script>
+<script type="text/javascript" src="3dtesla/tesla.js"></script>
+<script type="text/javascript" src="3dtesla/global.js"></script>
+<script type="text/javascript" src="3dtesla/main.js"></script>
+
+
+    <link href="fractbox.css" rel="stylesheet" type="text/css">
+
+    <meta name="description" content="Virtual HTML Canvas">
+
+</head>
+<body style="background-color:rgb(200, 200, 200);margin:0px;padding:0px;"onload="main();client1(0);">
+
+
+<canvas id="screen" height=400 width=1200 style="top:0px;left:0px;position:absolute;padding:0px;margin:0px;"> 
+</canvas>
+
+<div id="content_holder">
+<div id="content">
+<h1>Virtual HTML Canvas</h1>
+<h2>What exactly is going on here?</h2>
+<p>
+This page contains a single <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML5 Canvas Element</a>.
+For those new to this technology, a canvas element is a rectangle of pixels upon which can be drawn
+various lines, shapes and images using <a href="http://en.wikipedia.org/wiki/JavaScript">javascript</a>.
+Most of the demos on <a href="http://stevebob.net">stevebob.net</a> such as <a href="http://stevebob.net/apps/3dtesla">3dtesla</a>
+and <a href="http://stevebob.net/apps/fractbox">fractbox</a> use canvas elements to display graphics.
+On the left of the page are two apps which have been ported from canvas to virtual canvas.
+This allows the two apps to be displayed on the same canvas element.
+</p>
+<h2>How does it work?</h2>
+<p>
+The images on a regular canvas element are manipulated using javascript methods, called on an object associated with the element.
+A virtual canvas is a wrapper for a canvas element. Currently, only a small subset of canvas methods are implemented for
+virtual canvas. Only lines and rectangles can be drawn. Each virtual canvas has a location, size and rotation. The virtual canvas
+object can be treated as a regular canvas object. Note that there are still some problems to work out, such as the graphics overflowing the
+bounds of their allocated space (notice how the lighting doesn't stay in its rectangle).
+</p>
+
+<h2>...and this is useful because...</h2>
+<p>
+In order for a canvas app to have some purpose and not be just a demo or display area for a larger, non-canvas app, the user interface
+needs to be separated into multiple parts. For instance, there might be some buttons or other controls or maybe an area for text or graphics.
+These are logically separate components of the visual aspect of a web application, and as such should be separated by some mechanism.
+One such mechanism is using multiple canvas elements, positioned using <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>.
+Virtual Canvas objects provide another such mechanism.
+</p>
+
+<h2>Porting Demos</h2>
+<p>
+The first section mentions porting demos from canvas to virtual canvas. Only a small amount of code needed to be changed to make these
+demos work side by side in virtual canvas. Namely, conflicting variable and function names had to be changed (since when these demos were
+written they were not intended to be run simultaneously), and the assignment statement
+for the canvas object was replaced with an assignment statement for a virtual canvas object.
+Because these demos only draw lines and rectangles, the methods that were being called on a canvas object are now being called on a virtual
+canvas object and it is taking care of translation, rotation and scaling.
+</p>
+
+</div>
+</div>
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header">
+<a href="http://stevebob.net">back</a> | stevebob.net...</div>
+</body>
+</html>

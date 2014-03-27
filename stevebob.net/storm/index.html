@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html> 
+    <head> 
+        <title>storm</title> 
+        
+        <script type="application/x-javascript" src="storm.js"></script>
+        
+    </head>
+    
+    <body
+    onload="updateDimensions();fade();"
+    onresize="updateDimensions();"
+    style="margin:0px;border:0px;">
+    
+        
+    
+        <canvas id="screen" style="background-color:black;"
+        onclick="makeRandomFractal(1);"> 
+        
+        </canvas>
+<audio id="sound" src="thunder.ogg" controls="controls" style="display:none;">
+</audio>
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header">
+<a href="http://stevebob.net">back</a> | stevebob.net...</div>
+
+<div id="mute" style="position:absolute;left:10px;width:auto;bottom:0px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.7);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:5px;" onclick="setMute();">
+
+unmute
+</div>
+    </body>
+</html>
+    

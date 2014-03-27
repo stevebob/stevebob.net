@@ -5,7 +5,9 @@
 <link rel="stylesheet" type="text/css" href="<%=base%>sb.css">
 <link rel="stylesheet" type="text/css" href="<%=base%>syntax.min.css">
 <script src="<%=base%>tree.min.js" type="text/javascript"></script>
+<script src="<%=base%>nl.js" type="text/javascript"></script>
 <script src="<%=base%>mountain.min.js" type="text/javascript"></script>
+<script src="<%=base%>jquery.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="<%=base%>console/Console.min.js"></script>
 <script type="text/javascript" src="<%=base%>console/SBConsole.min.js"></script>
@@ -16,7 +18,7 @@
 <title>stevebob.net...<%= "<%=title%\>" %></title>
 <link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
 </head>
-<body onload="new TreeDemo().start_tree();mountain_main();initConsole();">
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole();new NL().start()">
 
 
 <div id="tree">
@@ -42,11 +44,10 @@
                 <input id="consoleinput"
                 />
             <div id="consoleoutput">
-                <p style="font-size:40px;margin:0px;">
+                <p style="font-size:30px;margin:0px;">
                 <br />
                 </p>
                 <p style="font-size:40px">stevebob.net...</p>
-                &gt; I can be your hero...
             </div>
 
             
@@ -221,6 +222,13 @@ Posts
 <% end %>
 
 </div>
+
+
+<div id="career" class="sidepane">
+<a class="right_link" href="resume/resume.html">Resume (html)</a>
+<a class="right_link" href="resume/resume.pdf">Resume (pdf)</a>
+</div>
+
 </div>
 
 

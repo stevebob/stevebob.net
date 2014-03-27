@@ -3,6 +3,7 @@ GEM
   specs:
     coderay (1.0.8)
     erubis (2.7.0)
+    htmlentities (4.3.1)
     maruku (0.6.1)
       syntax (>= 1.0.0)
     nokogiri (1.5.5)
@@ -14,5 +15,6 @@ PLATFORMS
 DEPENDENCIES
   coderay
   erubis
+  htmlentities
   maruku
   nokogiri

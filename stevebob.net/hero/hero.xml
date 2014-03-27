@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Hero" url="hero" url-end="" favourite="true">
+    <description>
+        A 2D particle demo
+    </description> 
+</app>
