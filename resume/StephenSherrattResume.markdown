@@ -35,11 +35,11 @@ learning new techniques.
 --------
 ## Work Experience
 - (2013 - present) Freelance web development (mainly Wordpress)
-- (2011 - 2013) Research Assistant at NICTA working on an electronics
+- (2011 - 13) Research Assistant at NICTA working on an electronics
   project to automate software testing
-- (2011,13 - present) Tutor for the School of Computer Science and Engineering
+- (2011, 13 - present) Tutor for the School of Computer Science and Engineering
   at UNSW
-- (2008 - 2009) IT Technician at local computer store
+- (2008 - 09) IT Technician at local computer store
 
 --------
 ## Achievements
