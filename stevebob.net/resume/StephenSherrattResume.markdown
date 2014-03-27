@@ -1,52 +1,70 @@
 ## Profile
-I'm a fourth year Computer Science student at the University of New South Wales.
-I work part time as a research assistant at NICTA, where I have gained a lot of
-experience in systems programming. My major hobby is coding and solving
-computing problems. Some of my ongoing projects are an HTML5 game engine and a
-point-to-point encrypted social network.
+I'm a fifth year Computer Science student at the University of New South Wales.
+I'm currently completing my honours thesis at NICTA, where I'm learning
+about operating systems, virtualization, and writing low-level systems code.
+My major hobby is programming; I spend lots of my spare time writing programs or
+learning new techniques.
 
 ------------
-## Skills
+## Skills and Interests
 ### Systems Programming
-- Competent at reading hardware manuals to learn how to use devices
-- Experience working with a number of different microcontrollers and device
-  controllers
+- Experience working with a number of different microprocessors and device controllers
+- Capable of reading and understanding programming manuals for new hardware
+- Experience writing drivers, including a driver for an RFID controller, and a
+  userspace timer driver
+- Completed UNSW's "Advanced Operating Systems" course, which involved
+  implementing many operating system features from scratch
 - Wrote a multi threading library for an arduino
-- Some experience writing drivers, including a driver for an RFID controller
 
 ### Web Development
 - I spend a lot of my spare time working on web apps or HTML5 graphical demos
-- Competent in the use of a number of backend languages and programming
-  frontends in javascript and coffeescript
-- Some of my personal projects include an all-software 3D engine, an IOU
-  calculator and a code generator for a static html blog
-
-### Functional Programming
-- Experience programming in haskell, both through university courses and
-  personal experimentation
-
-### Mobile App Development
-- Written apps for both Android and Windows Phone 7 including an app that copies
-  data from a QR code to the device's clipboard
-- I can quickly learn new APIs
+- Competent in the use of many backend web languages and frameworks as well as a great deal of
+  javascript experience
+- Personal projects include a 3D engine, IOU
+  calculator, 4D graphical demo, isometric game engine, and blogging engine
 
 ### Software Engineering Practices
-- I've worked with the git, mercurial and SVN version control systems
-- The largest codebase I've worked on to date was UNSW's robotic soccer team
-  (rUNSWift)
+- Familiar with the git, mercurial and SVN version control systems
+- Worked in a team on large codebases including a hypervisor and UNSW's robotic
+  soccer team
+
+### Mobile App Development
+- Written apps for Android and Windows Phone
+- Can quickly learn new APIs
 
 --------
 ## Work Experience
-- (2011 to present) Research Assistant at NICTA working on an electronics
-  project to automate testing of software
-- (2011, 2013) Tutor for the School of Computer Science and
-  Engineering at the University of New South Wales
-- (2008 - 2009) IT Technician at local computer store
+- (2013 - present) Freelance web development (mainly Wordpress)
+- (2011 - 13) Research Assistant at NICTA working on an electronics
+  project to automate software testing
+- (2011, 13 - present) Tutor for the School of Computer Science and Engineering
+  at UNSW
+- (2008 - 09) IT Technician at local computer store
+
+--------
+## Achievements
+### Robocup
+- Developed a behaviour framework for UNSW's robotic soccer team
+- Travelled to The Netherlands to compete in the 2013 Robocup, where
+  we placed 4th in the world
+
+### Student Exchange
+- Took part in a student exchange to the University of Toronto in 2012
 
 ----------
-
-## Interests
+## Extra Curricular and Volunteer Work
 ### UNSW Revues
-I'm actively involved in some theatrical societies at UNSW. I'm currently the
-president of "CSE Revue" and am producing this year's show. In the past I've
-been involved in the cast, tech crew and videos team.
+- Involved in several theatrical societies at UNSW
+- Currently head of the website team of "CSE Revue" - a comedy show run by
+UNSW computing students
+- President of CSE Revue in 2013, and was one of the producers of the show
+- Previously involved in the cast, tech crew, videos, website and executive teams for several
+different shows on campus
+
+-----
+### Volunteering for the School of Computer Science and Engineering
+- Help run the CSE stall at UNSW open days to attract new students
+- Volunteer as a Mentor for CSE's Mentor Program which allocates first year
+  students with older students to introduce them to UNSW
+- Camp Leader for the CSE First Year Camp which is an event held early in
+  the year to allow first year computing students to meet their classmates
