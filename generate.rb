@@ -11,6 +11,8 @@ $URL_BASE = ""
 puts ARGV[0]
 if ARGV[0] == "--staging" then
     $URL_BASE = "http://localhost/stevebob.net/"
+elsif ARGV[0] == "--short" then
+    $URL_BASE = "http://sbox.im/"
 else
     $URL_BASE = "http://stevebob.net/"
 end
@@ -381,10 +383,11 @@ apps.each do |app|
     if app.local
 
         Dir.mkdir "output/#{app.permalink}"
-        files = Dir.glob("#{app.dir}/*")
+        files = Dir.glob("#{app.dir}/*").concat(Dir.glob("#{app.dir}/.git"))
         files.each do |f|
             FileUtils.cp_r f, "output/#{app.permalink}"
         end
+
     else
         puts "non local app"
         puts app.url

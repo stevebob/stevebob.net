@@ -5,7 +5,19 @@ cp resume.html index.html
 ruby compilepdf.rb
 cd ..
 
-rm -r stevebob.net
-ruby generate.rb $1;
+if [ "$1" == "--short" ]
+then
+    rm -rf sbox.im
+else
+    rm -rf stevebob.net
+fi
+
+ruby generate.rb $1
 cp -r resume output
-mv output stevebob.net
+
+if [ "$1" == "--short" ]
+then 
+    mv output sbox.im
+else
+    mv output stevebob.net
+fi

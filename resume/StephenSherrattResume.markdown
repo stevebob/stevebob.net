@@ -14,19 +14,21 @@ learning new techniques.
   userspace timer driver
 - Completed UNSW's "Advanced Operating Systems" course, which involved
   implementing many operating system features from scratch
-- Wrote a multi threading library for an arduino
+- Wrote a multi threading library for an arduino as a personal project
 
 ### Web Development
-- I spend a lot of my spare time working on web apps or HTML5 graphical demos
+- Develops web apps and web-based graphical demos as a hobby
 - Competent in the use of many backend web languages and frameworks as well as a great deal of
   javascript experience
-- Personal projects include a 3D engine, IOU
-  calculator, 4D graphical demo, isometric game engine, and blogging engine
+- Worked with a variety of database technologies
+- Personal projects include a 4D graphical demo, isometric game engine, and blogging engine
 
 ### Software Engineering Practices
 - Familiar with the git, mercurial and SVN version control systems
 - Worked in a team on large codebases including a hypervisor and UNSW's robotic
   soccer team
+- Currently leading a team responsible for maintaining the website of a UNSW
+  society
 
 ### Mobile App Development
 - Written apps for Android and Windows Phone
