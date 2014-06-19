@@ -8,9 +8,8 @@ require 'coderay'
 require 'htmlentities'
 
 $URL_BASE = ""
-puts ARGV[0]
 if ARGV[0] == "--staging" then
-    $URL_BASE = "http://localhost/stevebob.net/"
+    $URL_BASE = "http://rpg/"
 elsif ARGV[0] == "--short" then
     $URL_BASE = "http://sbox.im/"
 else
@@ -244,7 +243,7 @@ class App
             @url = app['url']
             @local = false
 
-            puts "non local app"
+            #puts "non local app"
         else
             @url = "#{$URL_BASE}#{app['url']}"
             @local = true
@@ -368,7 +367,7 @@ template = eruby.result({
     :post_columns => post_columns,
     :app_columns => app_columns
 })
-puts template
+#puts template
 
 if File.directory? "output" then
     FileUtils.rm_r "output"
@@ -389,14 +388,15 @@ apps.each do |app|
         end
 
     else
-        puts "non local app"
-        puts app.url
+        #puts "non local app"
+        #puts app.url
     end
 end
 
 Dir.glob("resources/*.less").each do |f|
     f =~ /(.*).less/
     name = "#{$1}.css"
+    #puts "converting #{name}"
     `/home/steve/node_modules/less/bin/lessc #{f} > #{name}`
 end
 

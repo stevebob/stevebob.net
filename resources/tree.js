@@ -72,7 +72,6 @@ function TreeDemo() {
             var x = xMin + variance * Math.random();
 
             var dy = variance * Math.random() - variance / 2 + centre.y;
-            console.debug(dy);
             
             ret.addPoint(new Point2D(x, dy));
         }

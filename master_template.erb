@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="<%=base%>sb.css">
 <link rel="stylesheet" type="text/css" href="<%=base%>syntax.min.css">
 <script src="<%=base%>tree.min.js" type="text/javascript"></script>
-<script src="<%=base%>nl.js" type="text/javascript"></script>
 <script src="<%=base%>mountain.min.js" type="text/javascript"></script>
 <script src="<%=base%>jquery.min.js" type="text/javascript"></script>
 
@@ -18,7 +17,7 @@
 <title>stevebob.net...<%= "<%=title%\>" %></title>
 <link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
 </head>
-<body onload="new TreeDemo().start_tree();mountain_main();initConsole();new NL().start()">
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole()">
 
 
 <div id="tree">
@@ -64,7 +63,7 @@
 <div id="linkbarmain">
 
 <div id="linkbarcontents">
-
+<ul>
 
 <%= <<-EOF
 <% 
@@ -75,14 +74,13 @@ if defined? selected and selected == "home" then \%\>
 <% end \%\>
 EOF
 %>
+<li>
 <a href="<%= base %>">
 <div class="bannerlink">
 Home</div>
 </a>
-
-
+</li>
 </div>
-
 
 <%= <<-EOF
 <% 
@@ -93,14 +91,13 @@ if defined? selected and selected == "about" then \%\>
 <% end \%\>
 EOF
 %>
+<li>
 <a href="<%= base %>about">
 <div class="bannerlink">
 About</div>
 </a>
-
-
+</li>
 </div>
-
 
 <%= <<-EOF
 <% 
@@ -111,27 +108,32 @@ if defined? selected and selected == "apps" then \%\>
 <% end \%\>
 EOF
 %>
+<li>
 <a href="<%= base %>apps">
 <div class="bannerlink">
 Apps</div>
 </a>
+</li>
 
 <div class="dropMenu">
 <div class="dropMenuContainee" style="width: <%= app_columns.length * 175 %>px">
+
+<ul>
 
 <% app_columns.each do |col| %>
 
 <div class="app-column">
     <% col.each do |app| %>
-    <a class="menuLink" href="<%= app.url %>"><%= app.name %></a>
+    <li><a class="menuLink" href="<%= app.url %>"><%= app.name %></a></li>
     <% end %>
 </div>
 <% end %>
 
-</div>
-</div>
-</div>
+</ul>
 
+</div>
+</div>
+</div>
 
 
 <%= <<-EOF
@@ -143,32 +145,37 @@ if defined? selected and selected == "posts" then \%\>
 <% end \%\>
 EOF
 %>
+<li>
 <a href="<%= base %>posts">
 <div class="bannerlink">
 Posts
 </div>
 </a>
+</li>
 
 <div class="dropMenu">
 <div class="dropMenuContainee" style="width: <%= post_columns.length * 200 %>px">
 
+<ul>
 <% post_columns.each do |col| %>
 
 <div class="post-column">
     <% col.each do |post| %>
-    <a class="menuLink" href="<%= base %><%= post.permalink %>"><%= post.heading %></a>
+    <li><a class="menuLink" href="<%= base %><%= post.permalink %>"><%= post.heading %></a></li>
     <% end %>
 </div>
 <% end %>
-
+</ul>
 
 
 
 </div>
 </div>
+
+
 </div>
 
-
+</ul>
 
 
 </div>
@@ -196,11 +203,11 @@ Posts
 
 <div id="leftmain">
 <div id="leftlinks" class="sidepane">
-
+<ul>
 <% sidebar_apps.each do |app| %>
-<a class="leftlink" href="<%= app.url %>"><%= app.name %></a>
+<li><a class="leftlink" href="<%= app.url %>"><%= app.name %></a></li>
 <% end %>
-
+</ul>
 </div>
 </div>
 
@@ -216,17 +223,19 @@ Posts
 </div>
 
 <div id="rightlinks" class="sidepane">
-
+<ul>
 <% sidebar_posts.each do |post| %>
-<a class="right_link" href="<%= base %><%= post.permalink %>"><%= post.heading %></a>
+<li><a class="right_link" href="<%= base %><%= post.permalink %>"><%= post.heading %></a></li>
 <% end %>
-
+</ul>
 </div>
 
 
 <div id="career" class="sidepane">
-<a class="right_link" href="resume/resume.html">Resume (html)</a>
-<a class="right_link" href="resume/resume.pdf">Resume (pdf)</a>
+<ul>
+<li><a class="right_link" href="resume/resume.html">Resume (html)</a></li>
+<li><a class="right_link" href="resume/resume.pdf">Resume (pdf)</a></li>
+</ul>
 </div>
 
 </div>
