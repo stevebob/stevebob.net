@@ -47,10 +47,10 @@ I will finish my undergraduate degree and be ready to start full time work in Ju
 
 --------
 ## Work Experience
+- (2011, 13 - present) Tutor for the School of Computer Science and Engineering
 - (2013 - 14) Freelance web development (mainly Wordpress)
 - (2011 - 13) Research Assistant at NICTA working on an electronics
   project to automate software testing
-- (2011, 13 - present) Tutor for the School of Computer Science and Engineering
   at UNSW
 - (2008 - 09) IT Technician at computer store
 
