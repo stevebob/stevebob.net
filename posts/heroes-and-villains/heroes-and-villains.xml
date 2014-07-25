@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<post heading="Heroes and Villains" permalink="heroes-and-villains" date="2014-07-25 20:40">
+
+<html>
+<script type="text/javascript" src="http://localhost/heroes-and-villains/h.js">1</script>
+<table class="image-left" style="margin-right:10px">
+<caption class="image-caption" style="text-align:center;padding-right:10px;">
+Demo runs for 5 seconds then pauses (so as to not drain your laptop's battery).
+Click the demo to resume. Subsequent clicks restart the demo.
+</caption>
+<tr><td>
+<canvas id="hs" style="position:relative" width="400" height="400">Your browser does not support canvas.</canvas>
+</td></tr>
+</table>
+
+</html>
+
+This is an explanation of a graphical demo I call "Heroes and Villains".
+I wrote the [first version](/hero) in my first year of university and it was one of the
+first demos on this site. I revisited the code several years later when I entered
+a modified version for the [JS1K](http://js1k.com/2014-dragons/demo/1905)
+and realized that I made a fundamental mathematical error in the first version,
+but fixing the error caused it to be less interesting to watch so I re-implemented the bug
+as a "feature". But more on that later.
+
+## Entomology
+The demo is named after a "getting to know you" game.
+Take a room full of people and tell each of them to choose one person to be their "hero",
+and choose a second person to be their "villain", keeping the identity of both a secret.
+Then tell each person to move such that their hero is between themselves, and their villain.
+As each person moves into position, they force other people to keep moving, as the position of
+each person affects the position of people who have chosen them as heroes or villains.
+Played indoors in groups of around 15, people tend to stand in lines moving sideways or radially about the
+centre of the room, and tend to also move outwards getting as close to walls as possible.
+
+Naturally, the question arises: "Will the system ever reach a stable state, where everyone's hero is between
+themselves and their villain?" This demo started out as an attempt to simulate the game with
+a large number of players in a large space over a large period.
+
+</post>

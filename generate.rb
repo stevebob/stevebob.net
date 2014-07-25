@@ -10,7 +10,7 @@ require 'htmlentities'
 $LESSC='/home/steve/node_modules/less/bin/lessc'
 $URL_BASE = ""
 if ARGV[0] == "--staging" then
-    $URL_BASE = "http://rpg/"
+    $URL_BASE = "http://localhost/"
 elsif ARGV[0] == "--short" then
     $URL_BASE = "http://sbox.im/"
 elsif ARGV[0] == "--name" then
