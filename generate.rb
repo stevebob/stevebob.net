@@ -6,12 +6,14 @@ require 'date'
 require 'fileutils'
 require 'coderay'
 require 'htmlentities'
-
+$LESSC='/home/steve/src/stevebob.net/node_modules/less/bin/lessc'
 $URL_BASE = ""
 if ARGV[0] == "--staging" then
     $URL_BASE = "http://rpg/"
 elsif ARGV[0] == "--short" then
     $URL_BASE = "http://sbox.im/"
+elsif ARGV[0] == "--name" then
+    $URL_BASE = "http://blog.sherra.tt/"
 else
     $URL_BASE = "http://stevebob.net/"
 end
@@ -397,7 +399,7 @@ Dir.glob("resources/*.less").each do |f|
     f =~ /(.*).less/
     name = "#{$1}.css"
     #puts "converting #{name}"
-    `/home/steve/node_modules/less/bin/lessc #{f} > #{name}`
+    `#{$LESSC} #{f} > #{name}`
 end
 
 Dir.glob("resources/*").each do |f|
