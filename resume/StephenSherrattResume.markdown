@@ -10,7 +10,7 @@ I will finish my undergraduate degree and be ready to start full time work in Ju
 ------------
 ## Skills and Interests
 ### Systems Programming
-- Experience writing drivers, including a driver for an RFID controller, and a
+- Experience writing drivers, including for an RFID controller, and a
   userspace timer driver
 - Wrote a multi threading library for the arduino as a personal project
 - Strong knowledge of the C programming language and runtime environment
@@ -22,17 +22,18 @@ I will finish my undergraduate degree and be ready to start full time work in Ju
   componentization of a virtual machine monitor
 
 ### Application Programming
-- Experience programming in a large variety of high level programming languages
+- Experience with a large variety of high level programming 
   and scripting languages
+- Understanding of computer networks and experience with socket programming
+- Worked with a variety of database technologies
 - Familiar with the Linux and seL4 system call interfaces
 
+
 ### Web Development
-- Develops web apps and web-based graphical demos as a hobby
+- Develop web apps and web-based graphical demos as a hobby
 - Competent in the use of many back-end web languages and frameworks as well as a great deal of
   javascript experience
-- Worked with a variety of database technologies
 - Personal projects include fractal demos, 3D graphical demos, a 4D graphical demo, isometric game engine, and blogging engine
-
 
 ### Software Engineering Practices
 - Familiar with the git, mercurial and SVN version control systems
@@ -48,18 +49,17 @@ I will finish my undergraduate degree and be ready to start full time work in Ju
 --------
 ## Work Experience
 - (2011, 13 - present) Tutor for the School of Computer Science and Engineering
-- (2013 - 14) Freelance web development (mainly Wordpress)
-- (2011 - 13) Research Assistant at NICTA working on an electronics
-  project to automate software testing
-  at UNSW
+- (2013 - 14) Freelance web development
+- (2011 - 13) Research Assistant at NICTA where I designed, built and programmed
+  a device to automate testing
 - (2008 - 09) IT Technician at computer store
 
 ----------
 ## Extra Curricular and Volunteer Work
 ### Robocup
 - Developed a behaviour framework for UNSW's robotic soccer team
-- Travelled to The Netherlands to compete in the 2013 Robocup, where
-  we placed 4th in the world
+- Travelled to The Netherlands to compete in the 2013 Robocup competition, where
+  my team placed 4th in the world
 
 ### UNSW Revues
 - Involved in several theatrical societies at UNSW
@@ -70,7 +70,7 @@ UNSW computing students
 different shows on campus
 
 ### Volunteering for the School of Computer Science and Engineering
-- Volunteer as a Mentor for CSE's Mentor Program which allocates first year
+- Volunteered as a Mentor for CSE's Mentor Program which allocates first year
   students with older students to introduce them to UNSW
 - Camp Leader for the CSE First Year Camp which is an event held early in
   the year to allow first year computing students to meet their classmates

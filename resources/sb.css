@@ -294,7 +294,7 @@ div#consoleoutput {
   height: 120px;
   right: 0px;
   overflow: auto;
-  font: normal normal normal 115% normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+  font: normal normal normal 115% / normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
 }
 input#consoleinput {
   position: absolute;
@@ -307,7 +307,7 @@ input#consoleinput {
   font-size: 18px;
   font-family: monospace;
   z-index: 4;
-  font: normal normal normal 115% normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+  font: normal normal normal 115% / normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
 }
 div.bannerlinkcontainer {
   position: relative;

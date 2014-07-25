@@ -6,7 +6,8 @@ require 'date'
 require 'fileutils'
 require 'coderay'
 require 'htmlentities'
-$LESSC='/home/steve/src/stevebob.net/node_modules/less/bin/lessc'
+#$LESSC='/home/steve/src/stevebob.net/node_modules/less/bin/lessc'
+$LESSC='/home/steve/node_modules/less/bin/lessc'
 $URL_BASE = ""
 if ARGV[0] == "--staging" then
     $URL_BASE = "http://rpg/"

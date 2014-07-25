@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<app name="Shadows" url="shadows" url-end="" favourite="true">
-    <description>
-        A demo of 2D ray casting with a movable light source
-    </description> 
-</app>
