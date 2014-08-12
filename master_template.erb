@@ -63,7 +63,7 @@
 <div id="linkbarmain">
 
 <div id="linkbarcontents">
-<ul>
+<ul class="links">
 
 <%= <<-EOF
 <% 
@@ -118,7 +118,7 @@ Apps</div>
 <div class="dropMenu">
 <div class="dropMenuContainee" style="width: <%= app_columns.length * 175 %>px">
 
-<ul>
+<ul class="links">
 
 <% app_columns.each do |col| %>
 
@@ -156,7 +156,7 @@ Posts
 <div class="dropMenu">
 <div class="dropMenuContainee" style="width: <%= post_columns.length * 200 %>px">
 
-<ul>
+<ul class="links">
 <% post_columns.each do |col| %>
 
 <div class="post-column">
@@ -203,7 +203,7 @@ Posts
 
 <div id="leftmain">
 <div id="leftlinks" class="sidepane">
-<ul>
+<ul class="links">
 <% sidebar_apps.each do |app| %>
 <li><a class="leftlink" href="<%= app.url %>"><%= app.name %></a></li>
 <% end %>
@@ -223,7 +223,7 @@ Posts
 </div>
 
 <div id="rightlinks" class="sidepane">
-<ul>
+<ul class="links">
 <% sidebar_posts.each do |post| %>
 <li><a class="right_link" href="<%= base %><%= post.permalink %>"><%= post.heading %></a></li>
 <% end %>
@@ -232,7 +232,7 @@ Posts
 
 
 <div id="career" class="sidepane">
-<ul>
+<ul class="links">
 <li><a class="right_link" href="http://stephen.sherra.tt">Resume (html)</a></li>
 <li><a class="right_link" href="/resume/StephenSherrattResume.pdf">Resume (pdf)</a></li>
 </ul>

@@ -9,14 +9,10 @@ require 'htmlentities'
 #$LESSC='/home/steve/src/stevebob.net/node_modules/less/bin/lessc'
 $LESSC='/home/steve/node_modules/less/bin/lessc'
 $URL_BASE = ""
-if ARGV[0] == "--staging" then
-    $URL_BASE = "http://localhost/"
-elsif ARGV[0] == "--short" then
-    $URL_BASE = "http://sbox.im/"
-elsif ARGV[0] == "--name" then
-    $URL_BASE = "http://blog.sherra.tt/"
+if ARGV[0] == "" then
+  $URL_BASE = "http://stevebob.net/"
 else
-    $URL_BASE = "http://stevebob.net/"
+  $URL_BASE = ARGV[0]
 end
 
 $NUM_SIDEBAR_POSTS = 10;

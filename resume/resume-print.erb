@@ -4,83 +4,76 @@
 <meta charset="UTF-8">
 <title>Stephen Sherratt</title>
 <style>
+*{font-family: helvetica;text-align:justify;}
+div {margin:0px;padding:0px}
+#header {
+  height:125px;
+}
+
+
+#name {
+  height:100px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+h1#title {
+  margin-top:20px;
+  font-size: 36pt;
+}
 
 h1 {
-  font-size:20pt;
-  float:left;
-  width:300px;
-}
-
-#all {
-  font-family: helvetica;
-  margin:0px;
-  padding-top:40px;
-  padding-bottom:60px;
-  margin-right:60px;
-  margin-left:60px;
-  padding-left:20px;
-}
-#header {
-position:relative;
-height:90px;
+  margin-top:-3px;
 }
 
 #sub {
-  position:absolute;
-  bottom:-10px;
-  left:0px;
-  height:40px;
-  width:400px;
-  font-size:12pt;
-  font-style:italic;
-}
-
-hr {
-  margin-top:2px;
-  margin-bottom:5px;
-}
-
-h2 {
   font-size:16pt;
-  margin:0px;
-}
-h3 {
-  font-size:12pt;
-  margin:0px;
-}
-#contact {
-margin-top:17px;
-float:right;
+  font-style:italic;
+  position:absolute;
+  top:91px;
+  height:25px;
 }
 
-#contents {
-  padding-top:40px;
-  text-align:justify
-}
+h2 {margin-top:0px;margin-bottom:0px}
+h3 {margin-top:10px;margin-bottom:0px}
+ul {margin-top:5px;margin-bottom:5px}
+#contact {position:absolute;top:0px;right:0px}
+.table {position:relative;display: table;border-bottom:none}
+.table .row {position:relative;display: table-row}
+.table .row .cell {position:relative;display: table-cell;height:25px;border:none;}
+.table .row .cell.label {font-weight:bold}
 </style>
 </head>
 <body>
-<div id="all">
-<div id="header">
 
-<h1>Stephen Sherratt</h1>
-<div id="sub">
-I'm a fifth year Computer Science student at UNSW, completing my undergraduate honours thesis at NICTA.
+<div id="header">
+  
+    <div id="name"><h1 id="title">Stephen Sherratt</h1></div>
+    <div id="sub">
+    I'm a UNSW graduate working as a developer at Shodogg.
+    </div>
+
+    <div class="table" id="contact">
+      <div class="row">
+        <div class="cell label" style="width:80px">Email:</div><div class="cell">stephen@sherra.tt</div>
+      </div>
+      <div class="row">
+        <div class="cell label">Mobile:</div><div class="cell">0403 157 219</div>
+      </div>
+      <div class="row">
+        <div class="cell label">Website:</div><div class="cell">sherra.tt</div>
+      </div>
+      <div class="row">
+        <div class="cell label">Github:</div><div class="cell">github.com/stevebob</div>
+      </div>
+      <div class="row">
+        <div class="cell label">Location:</div><div class="cell">Sydney, Australia</div>
+      </div>
+
+    </div>
+
 </div>
-<div id="contact">
-<table>
-<tr><td><strong>Email:</strong></td><td>stephen@sherra.tt</td></tr>
-<tr><td><strong>Mobile:</strong></td><td>0403 157 219</td></tr>
-<tr><td><strong>Website:&nbsp;</strong></td><td>stevebob.net</td></tr>
-<tr><td><strong>Github:</strong></td><td>github.com/stevebob</td></tr>
-</table>
-</div>
-</div>
-<div id="contents">
-<hr />
 <%= `markdown StephenSherrattResume.markdown` %>
-</div>
-</div>
 </body>
 </html>
 

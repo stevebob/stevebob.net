@@ -73,6 +73,7 @@ table.image-centre {
   position: relative;
   text-align: center;
   margin: 0 auto;
+  width: 100%;
 }
 table.image-left {
   position: relative;
@@ -386,7 +387,7 @@ div.post-column {
   position: relative;
   width: 200px;
 }
-ul {
+ul.links {
   list-style-type: none;
   padding: 0px;
   margin: 0px;

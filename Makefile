@@ -3,27 +3,20 @@ SERVER=sherra.tt:
 
 all: 
 	./resume.sh
-	./compile.sh
-	./compile.sh --short
-	./compile.sh --name
+	./compile.sh 'http://sherra.tt/'
+	./compile.sh 'http://blog.sherra.tt/'
+	./compile.sh 'http://sbox.im/'
+	./compile.sh 'http://stevebob.net/'
 
 resume:
 	./resume.sh
 
-stevebob.net: resume
-	./compile.sh
-
-sbox.im: resume
-	./compile.sh --short
-
-blog.sherra.tt: resume
-	./compile.sh --name
-
 staging:
-	./compile.sh --staging
+	./resume.sh
+	./compile.sh 'http://localhost/'
 
 sync:
-	rsync -Pavz stevebob.net sbox.im blog.sherra.tt $(SERVER) 
+	rsync -Pavz stevebob.net sbox.im blog.sherra.tt sherra.tt $(SERVER) 
 
 clean:
-	rm -rf output sbox.im blog.sherra.tt stevebob.net
+	rm -rf output sbox.im blog.sherra.tt stevebob.net sherra.tt

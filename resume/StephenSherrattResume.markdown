@@ -1,79 +1,62 @@
-## Profile
-I'm a fifth year Computer Science student at the University of New South Wales.
-I'm currently completing my honours thesis at NICTA, where I'm learning
-about operating systems, virtualization, and writing low-level systems code.
-My major hobby is programming; I spend lots of my spare time writing programs or
-learning new techniques.
+# Profile
 
-I will finish my undergraduate degree and be ready to start full time work in July 2014.
+I recently graduated from the University of New South Wales with 1st Class
+Honours. I currently work on mobile application and server infrastructure
+at Shodogg ANZ. I write HTML5 demos as a hobby, and am also interested
+in low-level systems programming.
 
 ------------
 ## Skills and Interests
 ### Systems Programming
-- Experience writing drivers, including for an RFID controller, and a
-  userspace timer driver
-- Wrote a multi threading library for the arduino as a personal project
 - Strong knowledge of the C programming language and runtime environment
-- Experience working with a number of different microprocessors and device controllers
-- Capable of reading and understanding programming manuals for new hardware
-- Completed UNSW's "Advanced Operating Systems" course, which involved
-  implementing many operating system features from scratch
-- Completing my undergraduate thesis at NICTA, which focused on the
-  componentization of a virtual machine monitor
+- Implemented many OS features from scratch in UNSW's Advanced OS course
+- Experience working with several microprocessors and controllers
+- Undergrad thesis at NICTA focused on the componentization of a virtual machine
+  monitor
+- Wrote a multi threading library for the arduino as a personal project
+
+### Web Development
+- Component using many back-end and front-end web languages and frameworks
+- Worked with a variety of database technologies and familiar with SQL
+- Develop web applications as a hobby including graphical demos, game engines and blogging software
 
 ### Application Programming
 - Experience with a large variety of high level programming 
   and scripting languages
 - Understanding of computer networks and experience with socket programming
-- Worked with a variety of database technologies
-- Familiar with the Linux and seL4 system call interfaces
 
 
-### Web Development
-- Develop web apps and web-based graphical demos as a hobby
-- Competent in the use of many back-end web languages and frameworks as well as a great deal of
-  javascript experience
-- Personal projects include fractal demos, 3D graphical demos, a 4D graphical demo, isometric game engine, and blogging engine
-
-### Software Engineering Practices
-- Familiar with the git, mercurial and SVN version control systems
-- Worked in a team on large codebases including a virtual machine monitor and UNSW's robotic
-  soccer team
-- Currently leading a team responsible for maintaining the website of a UNSW
-  society
-
-### Mobile App Development
-- Written apps for Android and Windows Phone
-- Can quickly learn new APIs
-
---------
-## Work Experience
-- (2011, 13 - present) Tutor for the School of Computer Science and Engineering
-- (2013 - 14) Freelance web development
-- (2011 - 13) Research Assistant at NICTA where I designed, built and programmed
-  a device to automate testing
-- (2008 - 09) IT Technician at computer store
 
 ----------
+
+## Work Experience
+- (2014-present) Software Developer at Shodogg
+  - Multimedia transcoding and streaming
+  - Android and iPhone application development
+  - Web development
+- (2011,13-14) Tutor for the School of Computer Science and Engineering at UNSW
+  - Taught computing to students from computing and non-computing backgrounds
+- (2013-14) Freelance web development
+- (2011-13) Research Assistant at NICTA
+  - Low-level systems programming
+  - Circuit design and assembly
+- (2008-09) IT Technician at Leading Edge Computers
+
+
+
+--------
 ## Extra Curricular and Volunteer Work
-### Robocup
-- Developed a behaviour framework for UNSW's robotic soccer team
-- Travelled to The Netherlands to compete in the 2013 Robocup competition, where
-  my team placed 4th in the world
+- (2010-present) UNSW Theatrical Societies
+  - Head of website team for "CSE Revue" - a comedy show run by
+    computing students
+  - President of the CSE Revue student society, and producer of the show in 2013
+  - Part of cast, tech crew, website team, videos team and exec team for several
+    theatrical societies
+- (2011-2014) Volunteer for School of Computer Science and Engineering
+  - Volunteered in CSE's Mentor Program, helping first year computing students
+    adjust to university life
+  - Camp Leader for CSE's First-Year Camp
+- (2012) Student Exchange to University of Toronto
+- (2013) rUNSWift - UNSW's robotic soccer team
+  - Developed a behaviour framework for UNSW's robotic soccer team
 
-### UNSW Revues
-- Involved in several theatrical societies at UNSW
-- Currently head of the website team of "CSE Revue" - a comedy show run by
-UNSW computing students
-- President of CSE Revue in 2013, and was one of the producers of the show
-- Previously involved in the cast, tech crew, videos, website and executive teams for several
-different shows on campus
-
-### Volunteering for the School of Computer Science and Engineering
-- Volunteered as a Mentor for CSE's Mentor Program which allocates first year
-  students with older students to introduce them to UNSW
-- Camp Leader for the CSE First Year Camp which is an event held early in
-  the year to allow first year computing students to meet their classmates
-
-### Student Exchange
-- Took part in a student exchange to the University of Toronto in 2012
