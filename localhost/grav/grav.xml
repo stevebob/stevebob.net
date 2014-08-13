@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Grav" url="grav" url-end="" favourite="false">
+    <description>
+        A 2D gravity simulation
+    </description> 
+</app>

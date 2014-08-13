@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<map>
+
+<polygon id="0">
+    <points>
+        <point x="100" y="100"/>
+        <point x="300" y="100"/>
+        <point x="300" y="150" connectedTo="1"/>
+        <point x="300" y="250" connectedTo="1"/>
+        <point x="300" y="300"/>
+        <point x="100" y="300"/>
+    </points>
+    <height>
+        <single z="0"/>
+    </height>
+</polygon>
+<polygon id="1">
+    <points>
+        <point x="300" y="150" connectedTo="0"/>
+        <point x="400" y="150" connectedTo="2"/>
+        <point x="400" y="250" connectedTo="2"/>
+        <point x="300" y="250" connectedTo="0"/>
+    </points>
+    <height>
+        <component x="300" y="150" z="0"/>
+        <component x="400" y="150" z="40"/>
+    </height>
+</polygon>
+<polygon id="2">
+    <points>
+        <point x="400" y="100"/>
+        <point x="600" y="100"/>
+        <point x="600" y="300"/>
+        <point x="400" y="300"/>
+        <point x="400" y="250" connectedTo="1"/>
+        <point x="400" y="150" connectedTo="1"/>
+    </points>
+    <height>
+        <single z="40"/>
+    </height>
+</polygon>
+
+<wall id="1" drawBottom="false" bottom="0" top="120">
+    <point x="100" y="100"/>
+    <point x="300" y="100"/>
+</wall>
+
+<wall id="2" drawBottom="false" bottom="0" top="120">
+    <point x="300" y="100"/>
+    <point x="300" y="150"/>
+</wall>
+
+
+
+
+<wall id="12" drawBottom="false"> 
+    <point x="300" y="250" bottom="0" top="120"/>
+    <point x="400" y="250" bottom="40" top="120"/>
+</wall>
+
+
+<wall id="6" drawBottom="false" bottom="40" top="120">
+    <point x="400" y="100"/>
+    <point x="600" y="100"/>
+</wall>
+
+<wall id="10" drawBottom="false" bottom="40" top="120">
+    <point x="400" y="150"/>
+    <point x="400" y="100"/>
+</wall>
+
+<wall id="11" drawBottom="false"> 
+    <point x="300" y="150" bottom="0" top="120"/>
+    <point x="400" y="150" bottom="40" top="120"/>
+</wall>
+
+<wall id="3" drawBottom="false" bottom="0" top="120">
+    <point x="300" y="250"/>
+    <point x="300" y="300"/>
+</wall>
+
+<wall id="7" drawBottom="false" bottom="40" top="120">
+    <point x="600" y="100"/>
+    <point x="600" y="300"/>
+</wall>
+
+<wall id="8" drawBottom="false" bottom="40" top="120">
+    <point x="600" y="300"/>
+    <point x="400" y="300"/>
+</wall>
+
+<wall id="9" drawBottom="false" bottom="40" top="120">
+    <point x="400" y="300"/>
+    <point x="400" y="250"/>
+</wall>
+
+<wall id="5" drawBottom="false" bottom="0" top="120">
+    <point x="100" y="300"/>
+    <point x="100" y="100"/>
+</wall>
+
+<wall id="4" drawBottom="false" bottom="0" top="120">
+    <point x="100" y="300"/>
+    <point x="300" y="300"/>
+</wall>
+
+<wallBSPTree wall="1">
+    <left wall="2">
+        <left wall="4">
+            <right wall="5"/>
+        </left>
+        <right wall="3">
+            <right wall="7">
+                <left wall="8">
+                    <right wall="9">
+                        <left wall="11">
+                            <left wall="12"/>
+                        </left>
+                        <right wall="10"/>
+                    </right>
+                </left>
+            </right>
+        </right>
+    </left>
+    <right wall="6"/>
+</wallBSPTree>
+</map>

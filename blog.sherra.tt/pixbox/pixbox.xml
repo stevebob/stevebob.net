@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Pixbox" url="pixbox" url-end="" favourite="false">
+    <description>
+        A pixelated version of Fractbox
+    </description> 
+</app>

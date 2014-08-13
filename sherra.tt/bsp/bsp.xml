@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="BSP Demo" url="bsp" url-end="" favourite="true">
+    <description>
+        BSP 3D demo
+    </description> 
+</app>

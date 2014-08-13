@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Ray Cast Demo" url="raycastdemo" url-end="" favourite="false">
+    <description>
+        A verbose demo of how ray casting works
+    </description> 
+</app>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Heart" url="heart" url-end="" favourite="true">
+    <description>
+        A graph of a function in two variables that looks like a heart
+    </description> 
+</app>

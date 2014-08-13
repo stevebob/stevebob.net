@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Mandelbrot" url="mandelbrot" url-end="" favourite="true">
+    <description>
+        An all-javascript mandelbrot set plotter
+    </description> 
+</app>

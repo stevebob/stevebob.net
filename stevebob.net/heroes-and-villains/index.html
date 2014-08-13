@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="http://stevebob.net/sb.css">
+<link rel="stylesheet" type="text/css" href="http://stevebob.net/syntax.min.css">
+<script src="http://stevebob.net/tree.min.js" type="text/javascript"></script>
+<script src="http://stevebob.net/mountain.min.js" type="text/javascript"></script>
+<script src="http://stevebob.net/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://stevebob.net/console/Console.min.js"></script>
+<script type="text/javascript" src="http://stevebob.net/console/SBConsole.min.js"></script>
+<script type="text/javascript" src="http://stevebob.net/console/consoleClient.min.js"></script>
+<script type="text/javascript" src="http://stevebob.net/console/Sbox.min.js"></script>
+<script type="text/javascript" src="http://stevebob.net/console/Interpreter.min.js"></script>
+
+<title>stevebob.net...Heroes and Villains</title>
+<link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
+</head>
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole()">
+
+
+<div id="tree">
+<div id="treeclick" onclick="new TreeDemo().start_tree()">
+</div>
+<canvas id="screen" width=300 height=200 style="position:absolute;left:-30px;z-index:2"></canvas>
+</div>
+
+<div id="mountain_container">
+
+<div id="mountain_click" onclick="mountain_reset()"></div>
+<canvas id="mountain" height=130 width=500>
+</canvas>
+
+</div>
+
+
+<div id="sky">
+</div>
+<div id="skymain">
+<div id="skycontent">
+
+                <input id="consoleinput"
+                />
+            <div id="consoleoutput">
+                <p style="font-size:30px;margin:0px;">
+                <br />
+                </p>
+                <p style="font-size:40px">stevebob.net...</p>
+            </div>
+
+            
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="linkbar">
+
+<div id="linkbarmain">
+
+<div id="linkbarcontents">
+<ul class="links">
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://stevebob.net/">
+<div class="bannerlink">
+Home</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://stevebob.net/about">
+<div class="bannerlink">
+About</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://stevebob.net/apps">
+<div class="bannerlink">
+Apps</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 700px">
+
+<ul class="links">
+
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://stevebob.net/3dhero">3D Hero</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/3dtesla">3D Tesla</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/4dhero">4D Hero</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/bsp">BSP Demo</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/bsp-wireframe">BSP Wireframe</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/backface-culling">Backface Culling</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/backface-culling-2-cubes">Backface Culling 2 Cubes</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/boxillusion">Box Illusion</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/button">Button</a></li>
+    <li><a class="menuLink" href="http://comp1917.ripenetwork.com">COMP1917 in a Day</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/cell">Cell</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/clipping-plane">Clipping Plane</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/convexhull-demo">Convex Hull Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://stevebob.net/dots">Dots</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/fractal">Fractal</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/fractalcubes">Fractal Cubes</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/fractbox">Fractbox</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/grav">Grav</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/heart">Heart</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/hero">Hero</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/herojs1k">Hero JS1K2014</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/hyperspace">Hyperspace</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/iou">IOU</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/isometric_demo">Isometric Demo</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/jewels">Jewels</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/lex">Lex</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://stevebob.net/lowres">Lowres</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/mandelbrot">Mandelbrot</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/matrix">Matrix</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/merry">Merry</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/message">Message</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/metashape">Metashape</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/pixbox">Pixbox</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/pixtree">Pixtree</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rpg">RPG</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rave">Rave</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rave_legacy">Rave Legacy</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/ray">Ray</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/raycastdemo">Ray Cast Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://rsc.stevebob.net">Really Simple Chat</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rooms">Rooms</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/shadows">Shadows</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/snow">Snow</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/storm">Storm</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/tesla">Tesla</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/tesseract">Tesseract</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/three">Three</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/tree">Tree</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/vines">Vines</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/wireframe">Wireframe</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/worms">Worms</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/xor">XOR</a></li>
+</div>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://stevebob.net/posts">
+<div class="bannerlink">
+Posts
+</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 400px">
+
+<ul class="links">
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://stevebob.net/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/heroes-and-villains">Heroes and Villains</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/confusing-train-adventure">Confusing Train Adventure</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/agda-environment">Agda Programming Environment</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/all-grown-up">All Grown Up</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/rpg_engine_intro">RPG Engine: Introduction</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/existentialcrisis">Existential Crisis</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/nyak">New York, Alaska</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/tmo">Toronto, Montreal, Ottawa</a></li>
+</div>
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://stevebob.net/photos1">Exchange: Photos 1</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/exchange_canada">Exchange: Canada</a></li>
+    <li><a class="menuLink" href="http://stevebob.net/blog-written-in-perl">This Blog is Written in Perl</a></li>
+</div>
+</ul>
+
+
+
+</div>
+</div>
+
+
+</div>
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+
+<div id="leftmain">
+<div id="leftlinks" class="sidepane">
+<ul class="links">
+<li><a class="leftlink" href="http://stevebob.net/3dhero">3D Hero</a></li>
+<li><a class="leftlink" href="http://stevebob.net/3dtesla">3D Tesla</a></li>
+<li><a class="leftlink" href="http://stevebob.net/4dhero">4D Hero</a></li>
+<li><a class="leftlink" href="http://stevebob.net/bsp">BSP Demo</a></li>
+<li><a class="leftlink" href="http://stevebob.net/bsp-wireframe">BSP Wireframe</a></li>
+<li><a class="leftlink" href="http://stevebob.net/button">Button</a></li>
+<li><a class="leftlink" href="http://stevebob.net/fractalcubes">Fractal Cubes</a></li>
+<li><a class="leftlink" href="http://stevebob.net/fractbox">Fractbox</a></li>
+<li><a class="leftlink" href="http://stevebob.net/heart">Heart</a></li>
+<li><a class="leftlink" href="http://stevebob.net/hero">Hero</a></li>
+<li><a class="leftlink" href="http://stevebob.net/herojs1k">Hero JS1K2014</a></li>
+<li><a class="leftlink" href="http://stevebob.net/hyperspace">Hyperspace</a></li>
+<li><a class="leftlink" href="http://stevebob.net/iou">IOU</a></li>
+<li><a class="leftlink" href="http://stevebob.net/isometric_demo">Isometric Demo</a></li>
+<li><a class="leftlink" href="http://stevebob.net/lex">Lex</a></li>
+<li><a class="leftlink" href="http://stevebob.net/lowres">Lowres</a></li>
+<li><a class="leftlink" href="http://stevebob.net/mandelbrot">Mandelbrot</a></li>
+<li><a class="leftlink" href="http://stevebob.net/metashape">Metashape</a></li>
+<li><a class="leftlink" href="http://stevebob.net/pixtree">Pixtree</a></li>
+<li><a class="leftlink" href="http://stevebob.net/rpg">RPG</a></li>
+<li><a class="leftlink" href="http://stevebob.net/rave_legacy">Rave Legacy</a></li>
+<li><a class="leftlink" href="http://stevebob.net/rooms">Rooms</a></li>
+<li><a class="leftlink" href="http://stevebob.net/shadows">Shadows</a></li>
+<li><a class="leftlink" href="http://stevebob.net/snow">Snow</a></li>
+<li><a class="leftlink" href="http://stevebob.net/tesla">Tesla</a></li>
+<li><a class="leftlink" href="http://stevebob.net/tesseract">Tesseract</a></li>
+<li><a class="leftlink" href="http://stevebob.net/three">Three</a></li>
+<li><a class="leftlink" href="http://stevebob.net/tree">Tree</a></li>
+</ul>
+</div>
+</div>
+
+<div id="rightmain">
+
+<div id="contact-box">
+
+<a href="https://github.com/stevebob"><img src="http://stevebob.net/github.png" alt="Github"></a>
+<a href="http://stevebob.net/rss.xml"><img src="http://stevebob.net/rss.png" alt="RSS Feed"></a>
+<a href="mailto:stephen@sherra.tt"><img src="http://stevebob.net/email.png" alt="Email"></a>
+<a href="https://www.facebook.com/stephen.sherratt1"><img src="http://stevebob.net/facebook.png" alt="Facebook"></a>
+
+</div>
+
+<div id="rightlinks" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://stevebob.net/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+<li><a class="right_link" href="http://stevebob.net/heroes-and-villains">Heroes and Villains</a></li>
+<li><a class="right_link" href="http://stevebob.net/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+<li><a class="right_link" href="http://stevebob.net/confusing-train-adventure">Confusing Train Adventure</a></li>
+<li><a class="right_link" href="http://stevebob.net/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+<li><a class="right_link" href="http://stevebob.net/agda-environment">Agda Programming Environment</a></li>
+<li><a class="right_link" href="http://stevebob.net/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+<li><a class="right_link" href="http://stevebob.net/all-grown-up">All Grown Up</a></li>
+<li><a class="right_link" href="http://stevebob.net/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+<li><a class="right_link" href="http://stevebob.net/rpg_engine_intro">RPG Engine: Introduction</a></li>
+</ul>
+</div>
+
+
+<div id="career" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://stephen.sherra.tt">Resume (html)</a></li>
+<li><a class="right_link" href="/resume/StephenSherrattResume.pdf">Resume (pdf)</a></li>
+</ul>
+</div>
+
+</div>
+
+
+
+<div id="centremain">
+<div id="centrecontent">
+
+
+<div class="post-container">
+<div class="heading-container">
+<h1>Heroes and Villains</h1>
+<div class="under-heading">
+2014-07-25 20:40
+</div>
+</div>
+<div class="post-body">
+
+<p>This is an explanation of a graphical demo I call “Heroes and Villains”. I wrote the <a href="/hero">first version</a> in my first year of university and it was one of the first demos on this site. I revisited the code several years later when I entered the demo in <a href="http://js1k.com/2014-dragons/demo/1905">JS1K</a> competition, and re-implemented it in less than 1 kilobyte.</p>
+<script type="text/javascript" src="http://sbox.im/heroes-and-villains/h.js">1</script><table class="image-centre">
+  <caption class="image-caption" style="text-align:center;width:600px">
+Demo runs for 5 seconds then pauses (so as to not drain your laptop's battery).<br/>
+Click the demo to resume. Subsequent clicks restart the demo.
+</caption>
+  <tr>
+    <td>
+      <canvas id="hs" style="position:relative" width="600" height="200">Your browser does not support canvas.</canvas>
+    </td>
+  </tr>
+</table>
+<h2 id="etymology">Etymology</h2>
+
+<p>The demo is named after a “getting to know you” game. Take a room full of people and tell each of them to choose one person to be their “hero”, and choose a second person to be their “villain”, keeping the identity of both a secret. Then tell each person to move such that their hero is between themselves, and their villain. As each person moves into position, they force other people to keep moving, as the position of each person affects the position of people who have chosen them as heroes or villains. Played indoors in groups of around 15, people tend to stand in lines moving sideways or radially about the centre of the room, and tend to also move outwards getting as close to walls as possible.</p>
+
+<p>Naturally, the question arises: “Will the system ever reach a stable state, where everyone’s hero is between themselves and their villain?” This demo started out as an attempt to simulate the game with a large number of players in a large space over a long period.</p>
+
+<h2 id="how_it_works">How it works</h2>
+
+<h3 id="initialization">Initialization</h3>
+
+
+<table class="image-right">
+<caption class="image-caption">Each player's hero's villain is that player. Likewise for each player's villain.
+</caption>
+<tr><td>
+<img class="post-image-right" src="http://stevebob.net/heroes-and-villains/assignments.png" title="assignments"  alt="assignments"  align="right" />
+</td></tr>
+</table>
+
+
+
+<p>Initially, each player is randomly assigned a position, and a pair of other players - one its hero, and the other its villain. When a player A is assigned as the hero of some other player B, B gets assigned as the villain of A. The likewise is true when a player is assigned as a villain. See the diagram to the right for a graphical explanation.</p>
+
+<p>This reflexive property is not part of the original game, and several hero/villain assignment policies were experimented with, and this one seemed the most interesting to watch.</p>
+
+<h3 id="simulation">Simulation</h3>
+
+<p>The simulation is broken into discrete ticks. That is, there is an operation that is repeated infinitely at some frequency. This operation consists of calculating the next position of each player based on their current positions, updating the position of each player, and drawing each player to the display.</p>
+
+<p>The rules of the simulation used in the calculation of each player’s position are as follows.</p>
+
+<ul>
+<li>If a player’s hero is between themselves and their villain, the player stays where it is.</li>
+
+<li>Otherwise, a player moves towards the nearest point that would put its hero between itself and its villain.</li>
+</ul>
+
+<p>In order to calculate the point a player will move to, there are two scenarios depending on the relative positions of the player, their hero and their villain. Scenario 1 is assumed, and the point that would be used is checked to see if it places the hero between the player and its villain. If this property is not met, scenario 2 is used instead. Once the target is found, the player moves some small distance towards it.</p>
+
+<h4 id="scenario_1">Scenario 1</h4>
+
+</div>
+<div class="post-image-centre-container">
+
+<table class="image-centre">
+<caption class="image-caption">Move perpendicular to the line between the hero and villain.
+</caption>
+<tr><td>
+<img class="post-image-centre" src="http://stevebob.net/heroes-and-villains/scenario1.png" title="scenario1"  alt="scenario1"  align="centre"  width="300" />
+</td></tr>
+</table>
+
+</div>
+
+<div class="post-body">
+
+<h4 id="scenario_2">Scenario 2</h4>
+
+</div>
+<div class="post-image-centre-container">
+
+<table class="image-centre">
+<caption class="image-caption">Get "just behind" the hero. The distance between the hero and the target is some small constant.
+</caption>
+<tr><td>
+<img class="post-image-centre" src="http://stevebob.net/heroes-and-villains/scenario2.png" title="scenario2"  alt="scenario2"  align="centre"  width="500" />
+</td></tr>
+</table>
+
+</div>
+
+<div class="post-body">
+
+<h2 id="variants">Variants</h2>
+
+<p>Since implementing the original version, I have created some variants:</p>
+
+<ul>
+<li><a href="/hero">Original</a></li>
+
+<li><a href="/3dhero">3D</a></li>
+
+<li><a href="/4dhero">4D</a>(with colour representing the position on the new axis)</li>
+
+<li><a href="/herojs1k">JS1K</a></li>
+</ul>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+<div id="footer">
+Copyright &copy; 2014 stevebob.net
+</div>
+</div>
+
+
+</body>
+</html>

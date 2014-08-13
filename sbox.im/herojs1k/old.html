@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS1k, [COMPO] demo submission [ID]</title>
+		<meta charset="utf-8" />
+    <style>
+      html, body { margin: 0; padding: 0; border: 0; }
+      #c { display: block; } /* kill scrollbars from hell */
+    </style>
+	</head>
+	<body>
+		<canvas id="c"></canvas>
+		<script>
+			var a = document.getElementsByTagName('canvas')[0];
+			var b = document.body;
+      var d = function(e){ return function(){ e.parentNode.removeChild(e); }; }(a);
+      // unprefix some popular vendor prefixed things (but stick to their original name)
+      var AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+      var requestAnimationFrame =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(f){ setTimeout(f, 1000/30); };
+
+      // fix bug in safari: http://qfox.nl/weblog/218
+      document.body.clientWidth;
+      // auto resize (original) canvas. call `onresize(w,h) to limit the size of the canvas
+      (window.onorientationchange = window.onresize = function(a){
+        var mw = Infinity;
+        var mh = Infinity;
+        var min = Math.min;
+
+        return function(w,h){
+          if (arguments.length === 2) {
+            mw = w;
+            mh = h;
+          }
+          a.style.width = (a.width = min(mw, innerWidth)) + 'px';
+          a.style.height = (a.height = min(mh, innerHeight)) + 'px';
+        };
+      }(a))();
+
+      var c = a.getContext('2d');
+		</script>
+		<script>
+// start of submission //
+M=Math;
+r=M.random;
+f=M.floor;
+function dr(q){
+    c.beginPath();
+    c.arc(q.x,q.y,4,0,2*M.PI);
+    c.fill();
+}
+function dp(v,w){return v.x*w.x+v.y*w.y}
+function md(v){return M.sqrt(dp(v,v))}
+function sq(x){return x*x}
+function ad(v,w){return{x:v.x+w.x,y:v.y+w.y}}
+function sm(v,s){return{x:v.x*s,y:v.y*s}}
+function mi(v,w){return ad(v,sm(w,-1))}
+function pr(v,w){return sm(v,dp(v,w)/sq(md(w)||1))}
+function sc(v,l){return sm(sm(v,1/md(v)),l)}
+
+// takes a player q and steps it to its next position
+function st(q){
+    h=mi(q.h,q.v); // hero relative to villain
+    
+    s=dp(h,mi(q,q.v))/dp(h,h); // s is the scale factor
+    r=md(h); // r is the minimum allowed scale factor
+    t=mi(ad(q.v,sm(h,s<r?r:s)),q); // t is the self relative target
+    n=md(t)>32?ad(q,sc(t,32)):q; // compute the scaled distance
+    if(n.x>0&&n.x<a.width)q.x=n.x;
+    if(n.y>0&&n.y<a.height)q.y=n.y;
+}
+
+function tk(){
+    p.map(st);
+    c.beginPath();
+    c.fillStyle="black";
+    c.fillRect(0,0,a.width,a.height);
+    c.fillStyle="white";
+    p.map(function(q){
+//        c.arc(q.x,q.y,4,0,2*M.PI);
+        c.fillRect(parseInt(q.x),parseInt(q.y),1,1);
+    });
+    c.fill();
+    setTimeout(tk,1);
+}
+
+// create the dots
+C=2000; 
+p=[];
+for(i=0;i<C;++i)
+    p[i]={x:r()*a.width,y:r()*a.height};
+
+// assign the dots heros and vilains
+/*
+B=C-1;
+for(i in p){
+    if(!p[i].h){
+        h=f(r()*B);
+        h=h==i?B:h;
+        p[i].h=p[h];
+        if(p[h].h!=p[i])p[h].v=p[i];
+    }
+    if(!p[i].v){
+        v=f(r()*B);
+        v=v==i?B:v;
+        p[i].v=p[v];
+        if(p[v].v!=p[i])p[v].h=p[i];
+    }
+}
+*/
+
+for(i in p) {
+    while(!p[i].h||p[i].h==p[i])
+        p[i].h=p[f(r()*C)];
+    p[i].h.v=p[i];
+    while(!p[i].v||p[i].v==p[i])
+        p[i].v=p[f(r()*C)];
+    p[i].v.h=p[i];
+}
+
+tk();
+// end of submission //
+		</script>
+	</body>
+</html>

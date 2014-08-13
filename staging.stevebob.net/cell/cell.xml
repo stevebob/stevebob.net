@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Cell" url="cell" url-end="" favourite="false">
+    <description>
+        A cell automata demo
+    </description> 
+</app>

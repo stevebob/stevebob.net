@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Button" url="button" url-end="" favourite="true">
+    <description>
+        A live updating button
+    </description> 
+</app>

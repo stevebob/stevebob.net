@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Tesla" url="tesla" url-end="" favourite="true">
+    <description>
+        A Tesla-esque lightning demo
+    </description> 
+</app>

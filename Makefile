@@ -11,6 +11,13 @@ all:
 resume:
 	./resume.sh
 
+stagingserver:
+	./resume.sh
+	./compile.sh 'http://staging.stevebob.net/'
+
+syncstaging:
+	rsync -Pavz staging.stevebob.net $(SERVER) 
+
 staging:
 	./resume.sh
 	./compile.sh 'http://localhost/'

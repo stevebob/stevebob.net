@@ -1,0 +1,156 @@
+body {
+    background-color:rgba(220, 220, 220, 1);
+}
+
+h1#main_heading {
+    font-size:48px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+
+h2#sub_heading {
+    padding-top:0px;
+    margin-top:0px;
+    font-size:24px;
+}
+
+div#heading {
+    margin-top:40px;
+    font-family:monospace;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    color:rgba(80, 80, 80, 1);
+}
+
+div#header {
+    position:absolute;
+    left:10px;
+    width:auto;
+    top:0px;
+    height:auto;
+    text-align:left;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0.7);
+    padding:0px;
+    margin:0px;
+    margin-left:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:10px;
+}
+
+div#bugs {
+
+    margin-left:auto;
+    margin-right:auto;
+    width:600px;
+
+    font-family: monospace;
+    margin-bottom:20px;
+}
+
+div#list {
+    margin-left:auto;
+    margin-right:auto;
+    width:600px;
+
+    font-family: monospace;
+
+}
+
+div.name {
+    position:absolute;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    width:60%;
+}
+
+input.namebox {
+    position:absolute;
+    right:40px;
+    top:2px;
+    bottom:2px;
+    left:70px;
+    font-size:20px;
+    font-family: monospace;
+}
+
+div.spent {
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    width:40%;
+}
+
+input.spentbox {
+
+    position:absolute;
+    right:10px;
+    top:2px;
+    bottom:2px;
+    left:100px;
+    font-size:20px;
+    font-family: monospace;
+}
+
+div.container {
+    
+    position:relative;
+    height:40px;
+
+}
+
+div.label {
+    
+
+    position: absolute;
+    top:7px;
+    left:0px;
+    bottom:0px;
+    font-size:20px;
+}
+
+input.remove {
+
+    position:absolute;
+
+    right:-20px;
+    top:3px;
+    font-size:20px;
+
+}
+
+div#ctrl {
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:280px;
+
+    font-family: monospace;
+    
+}
+
+input#addbtn {
+    font-size:24px;
+    font-family: monospace;
+}
+
+input#calcbtn {
+    font-size:24px;
+    font-family: monospace;
+}
+
+div#output {
+
+    text-align:center;
+    margin-top:20px;
+
+    font-size:20px;
+
+}
+
+

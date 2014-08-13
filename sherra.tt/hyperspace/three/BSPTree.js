@@ -1,0 +1,170 @@
+
+const IN_FRONT = 0;
+const BEHIND = 1;
+const BOTH = 2;
+
+function BSPTree() {
+
+    this.polygon = null;
+    this.left = null;
+    this.right = null;
+    
+    this.addPolygon = function(p) {
+        if (this.polygon == null) {
+            this.polygon = p;
+            this.left = new BSPTree();
+            this.right = new BSPTree();
+        } else {
+            var behind = this.polygon.hasPolygonBehind(p);
+            
+
+            if (behind == IN_FRONT) {
+                this.left.addPolygon(p);
+            } else if (behind == BEHIND) {
+                this.right.addPolygon(p);
+            } else {
+                var basis = this.polygon.toBasis();
+
+                var frontPolygon = [];
+                var backPolygon = [];
+                var trInvMatrix = Matrix3D.basisTransform(basis.u, basis.v, basis.n, basis.o);
+                var trMatrix = Matrix3D.viewingTransform(basis.u, basis.v, basis.n, basis.o);
+
+
+                var firstVector = p.object.points[p.point_indices[0]].toVector();
+                var last = trMatrix.multiplyVector(firstVector).toPoint();
+
+                for (var i = 1;i<p.point_indices.length + 1;i++) {
+                    var index = i % p.point_indices.length;
+                    var pindex = p.point_indices[index];
+                    var point = p.object.points[pindex];
+                    var trPoint = trMatrix.multiplyVector(point.toVector()).toPoint();
+                    
+
+                    if (last.z > 0 && trPoint.z > 0) {
+                        backPolygon.push(pindex);
+                    } else if (last.z <= 0 && trPoint.z <= 0) {
+                        frontPolygon.push(pindex);
+                    } else {
+                        var param = (last.z) / (last.z - trPoint.z);
+                        var ict_x = last.x + (trPoint.x - last.x) * param;
+                        var ict_y = last.y + (trPoint.y - last.y) * param;
+
+                        var ict = new Point3D(ict_x, ict_y, 0);
+                        
+                        /* add the new point to the object's points */
+                        var j = p.object.points.length;
+
+                        var trIct = trInvMatrix.multiplyVector(ict.toVector()).toPoint();
+                        
+                        /* see if the polygon already contains the point */
+                        var alreadyContains = -1;
+                        for (var k = 0;k<p.point_indices.length;k++) {
+                            
+                            var pt = p.object.points[p.point_indices[k]];
+                            
+                            var between = pt.differenceVector(trIct);
+                            if (between.length() == 0) {
+                                alreadyContains = p.point_indices[k];
+                                break;
+                            }
+                            
+                        }
+                            
+                        if (alreadyContains == -1) {
+                            p.object.points.push(trIct);
+                            /* add the point index to both polygons */
+                            frontPolygon.push(j);
+                            backPolygon.push(j);
+                        } else {
+                            frontPolygon.push(alreadyContains);
+                            backPolygon.push(alreadyContains);
+                        }
+
+
+                        if (last.z > 0) {
+                            /* first ict */
+                            frontPolygon.push(pindex);
+                        }
+                        if (last.z <= 0) {
+                            /* second ict */
+                            backPolygon.push(pindex);
+                        }
+
+                    }
+
+                    last = trPoint;
+
+                }
+                
+                var lastIndex = -1;
+                for (var k = 0;k<frontPolygon.length;k++) {
+                    if (lastIndex == frontPolygon[k]) {
+                        frontPolygon.splice(k, 1);
+                    }
+                    lastIndex = frontPolygon[k];
+                }
+                
+                lastIndex = -1;
+                for (var k = 0;k<backPolygon.length;k++) {
+                    if (lastIndex == backPolygon[k]) {
+                        backPolygon.splice(k, 1);
+                    }
+                    lastIndex = backPolygon[k];
+                }
+
+                if (frontPolygon.length > 0) {
+                    p.point_indices = frontPolygon;
+                    this.right.addPolygon(p);
+                }
+
+                if (backPolygon.length > 0) {
+                    var back = new Polygon3D(backPolygon);
+                    back.object = p.object;
+                    back.colour = p.colour;
+                    back.object.polygons.push(back);
+                
+                    this.left.addPolygon(back);
+                    
+                }
+
+            }
+        }
+    }
+
+    /* for a given eye position, this returns an array of polygons
+     * in the order in which they should be drawn.
+     */
+    this.traverse = function(eye, n, depth) {
+        
+        if (this.polygon == null) {
+            return [];
+        }
+        
+        if (this.polygon.hasPointBehind(eye, n, depth)) {
+            var ret = this.left.traverse(eye, n, depth);
+            ret.push(this.polygon);
+            return ret.concat(this.right.traverse(eye, n, depth));
+        } else {
+            var ret = this.right.traverse(eye, n, depth);
+            ret.push(this.polygon);
+            return ret.concat(this.left.traverse(eye, n, depth));
+        }
+
+    }
+
+    this.toString = function() {
+        if (this.polygon == null) {
+            return "null";
+        }
+        var left = "";
+        var right = "";
+        if (this.left != null) {
+            left = this.left.toString();
+        }
+        if (this.right != null) {
+            right = this.right.toString();
+        }
+        return "p(" + left + ", " + right + ")";
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Hyperspace" url="hyperspace" url-end="" favourite="true">
+    <description>
+        Interactive demo of a 4D environment.
+    </description> 
+</app>

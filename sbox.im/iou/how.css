@@ -1,0 +1,24 @@
+div#description {
+    margin-left:200px;
+    margin-right:200px;
+    text-align:justify;
+}
+
+h3 {
+    font-family:monospace;
+    font-size: 1.6em;
+}
+
+p.description {
+    font-family:monospace;
+    font-size: 1.2em;
+}
+
+li {
+    list-style-type: none;
+    font-family:monospace;
+}
+
+div#algo {
+    padding-right:40px;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Fractal Cubes" url="fractalcubes" url-end="" favourite="true">
+    <description>
+        A 3D fractal demo
+    </description> 
+</app>

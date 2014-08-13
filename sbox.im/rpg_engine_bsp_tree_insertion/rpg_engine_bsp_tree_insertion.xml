@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<post heading="RPG Engine: BSP Tree Insertion" permalink="rpg_engine_bsp_tree_insertion" date="2012-10-27 07:23">
+
+Here's a quick post about how visible surface detection works, in particular when there are things that move around. Firstly, say you have a bunch of polygons you want to draw, and some obscure the view of others. It's easy to demonstrate that you can't simply sort all the polygons into some magical order, then draw them, one after the other, in that order, drawing over anything on the canvas that was previously there. Think about the bottom of a cardboard box. There are 4 rectangles, each partially on top of the other (this drove me crazy when I was a kid). Since the last polygon you draw must be completely visible since there is nothing to obscure it, there can be no last polygon drawn, so simply sorting all the polygons will not suffice.
+
+Enter Binary Space Partition Trees. A BSP Tree is a binary tree like data structure used for visible surface detection. To generate a BSP Tree, start with an empty binary tree, and insert polygons in the following way:
+
+insert(p, node)
+    &nbsp;if the node is empty then
+        &nbsp;&nbsp;store p in node
+    &nbsp;else
+       &nbsp;&nbsp;if p is entirely behind the node's polygon
+           &nbsp;&nbsp; &nbsp;insert(p, right subtree of node)
+       &nbsp;&nbsp;else if p is entirely in front of the node's polygon
+        &nbsp;&nbsp;&nbsp; insert(p, left subtree of node)
+      &nbsp;&nbsp;else
+        &nbsp;&nbsp;&nbsp;split p into pfront and pbehind such that pfront is entirely in front of the node's polygon and pbehind is entirely behind it
+       &nbsp;&nbsp;&nbsp;insert(pfront, left subtree of node)
+       &nbsp;&nbsp;&nbsp;insert(pbehind, right subtree of node)
+        
+
+
+Now, for our purposes, the polygons we are going to draw all face the view point, so the view point is always in front of every polygon. Suffice it to say (and wikipedia BSP Trees if you want to know more), that in this special case, if you draw all the polygons in the right subtree by this method, then draw the root node's polygon, then draw all the polygons in the left subtree by the same method, the correct parts of all polygons are visible.
+
+<h2>Sounds cool - what's the catch?</h2>
+The whole "splitting polygons in two" deal turns out to be a bit of a problem. Since it can occur at every stage of every polygon insertion, the total number of polygons gets really big, which slows down the drawing process, and since that is something that happens  at every frame, his is bad news. The order in which polygons are inserted affects the resulting tree. In practice, to generate a "good" tree, where little splitting occurs, many trees are generated with randomized orders if polygon insertion, and the best tree is taken, stored, and just loaded when the program is run.
+
+So far, for this program, I generated the tree on paper and hard coded it into the XML file storing the world. If the following labels are applied to walls...
+
+<img src="bridge0.11/labelled.png" alt="labelled" gallery="false" style="width:100%">
+<caption>
+</caption>
+</img>
+
+...then the BSP Tree might look like...
+
+
+<img src="bridge0.11/bsp.png" alt="bsp" gallery="false">
+<caption>
+</caption>
+</img>
+
+Since BSP Trees work on the notion of some polygons being in front of other polygons, they are complicated when polygons move. This demonstration includes a movable avatar (WASD) that is included in the draw order output by the BSP Tree. It turns out there is a simple way to do this. In each  frame, a copy of the BSP Tree is made, and the avatar's polygon is inserted as per the algorithm described above. This can be done for each movable polygon.
+
+
+<iframe src="bridge0.11/" style="width:1000px;height:740px;border:0px;margin-left:-170px"> </iframe>
+
+</post>

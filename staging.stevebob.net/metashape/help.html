@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>metashape help</title>
+
+<link href="help.css" rel="stylesheet"  type="text/css"/> 
+<link href="examples.css" rel="stylesheet"  type="text/css"/> 
+</head>
+
+<body>
+
+<h1>metashape help</h1>
+
+<h3>Contents</h3>
+<a href="#terminology">Terminalogy</a><br />
+<a href="#commands">Commands</a><br />
+<a href="#language">Formal Language Structure</a><br />
+<a href="#example">Usage Example</a>
+
+<a name="terminology"></a>
+<h2>Terminology</h2>
+<p>
+A fractal is a shape which can be split into parts, each of which is a reduced size copy of the whole.
+In this app, a fractal is modelled as a base shape and a set of repetitions.
+<br />
+Here is some terminology used in this app:
+<table border=1>
+<tr><td><strong>base shape</strong></td>
+    <td>The shape that is to be repeated. This shape will be redrawn for each
+    repetition.</td></tr>
+<tr><td><strong>repetition</strong></td>
+    <td>A list of information describing how the base shape will change each
+    time it is redrawn. Information includes: scale factor, rotation factor,
+    offset distance, offset angle.</td></tr>
+<tr><td><strong>scale factor</strong></td>
+    <td>Change in size. The unit of the new shape will be
+    the current shape's unit multiplied by the scale factor.</td></tr>
+<tr><td><strong>rotation factor</strong></td>
+    <td>The rotation of the new shape. It is added onto the the zero angle of
+    the current shape to get the zero angle of the new shape.</td></tr>
+<tr><td><strong>distance offset</strong></td>
+    <td>The number of units the new shape is from the old shape.</td></tr>
+<tr><td><strong>angle offset</strong></td>
+    <td>The angle between a line from the new shape's centre to the current
+    shape's centre and the current shape's zero angle.</td></tr>
+<tr><td><strong>depth</strong></td>
+    <td>The number of times the repetitions will be applied.</td></tr>
+<tr><td>to <strong>apply</strong> a <strong>repetition</strong></td>
+    <td>For each instance of the shape, for each repetition, a new shape is
+    created using the information in the repetition to modify the instance of
+    the shape. As these new shapes are shapes, the next repetition will also be
+    applied to them.</td></tr>
+<tr><td><strong>unit</strong></td>
+    <td>The global distance of a local '1'. It can be used to resize the entire
+    fractal.</td></tr>
+<tr><td><strong>view window</strong></td>
+    <td>The xMin, xMax, yMin and yMax coordinates that are visible on the
+    srceen.</td></tr>
+<tr><td><strong>initial centre</strong></td>
+    <td>The Cartesian coordinates of the (0, 0) of the base shape. It can be
+    used to move the entire fractal.</td></tr>
+<tr><td><strong>initial zero angle</strong></td>
+    <td>The global angle that the base shape uses for its local zero angle. It
+    can be used to rotate the entire fractal.</td></tr>
+</table>
+
+
+
+<a name="commands"></a>
+<h2>Commands</h2>
+
+At the moment the app can only be controlled from the command line at the bottom of the screen.
+Enter commands and press enter to have them evaluated.
+Use the up/down arrow keys to navigate command history.
+The output from the most recent command is displayed just above the command line.
+The list of commands can be separated into two groups: <strong>expressive</strong> and <strong>non-expressive</strong>.<br />
+Expressive commands are expressions; they return something, and can be nested and used with other commands to compute values.<br />
+Non-expressive commands do something in the program (like draw a line). They don't return anything (so are not expressions). 
+Expressive commands can be used in arguments for non-expressive commands, but not vice versa. Only one non-expressive command
+may be used at a time.<br />
+<br /><br />
+Expressive Commands:
+<table border=1>
+<tr><td><strong>add(a, b)</strong></td>
+    <td>returns a + b</td></tr>
+<tr><td><strong>minus(a, b)</strong></td>
+    <td>returns a - b</td></tr>
+<tr><td><strong>multiply(a, b)</strong></td>
+    <td>returns a * b</td></tr>
+<tr><td><strong>divide(a, b)</strong></td>
+    <td>returns a / b</td></tr>
+<tr><td><strong>power(a, b)</strong></td>
+    <td>returns a<sup>b</sup></td></tr>
+<tr><td><strong>factorial(a)</strong></td>
+    <td>returns a!</td></tr>
+<tr><td><strong>pi()</strong></td>
+    <td>returns pi</td></tr>
+</table>
+
+<br />
+Non-Expressive Commands:
+<table border=1>
+<tr><td><strong>line(x1, y1, x2, y2)</strong></td>
+    <td>creates a new line in the base shape (and all repetitions) from (x1, y1)
+    to (x2, y2)</td></tr>
+<tr><td><strong>repeat(s, r, d, a)</strong></td>
+    <td>creates a new repetition with a scale factor of -, a rotation factor of
+    r, a distance offset of d and an angle offset of a.</td></tr>
+<tr><td><strong>rmline(n)</strong></td>
+    <td>removes line with index n from the base shape</td></tr>
+<tr><td><strong>rmrepeat(n)</strong></td>
+    <td>removes repetition with index n</td></tr>
+<tr><td><strong>clearall()</strong></td>
+    <td>removes all lines and repetitions</td></tr>
+<tr><td><strong>export()</strong></td>
+    <td>This opens a text field which contains a textual representation of your current
+    metashape session. You can copy the text to a text file and use the 
+    <strong>import()</strong> command to load your session on a different
+    computer or save a session for future reference. The app constantly updates
+    its cookie with your current session, so you can close and open the page
+    without losing your work.</td></tr>
+<tr><td><strong>import()</strong></td>
+    <td>This opens a text field into which you can paste a textual representation of
+    a metashape session obtained from running the <strong>export()</strong>
+    command and press the 'Import' button. Note that this will replace your
+    current session so export it first if you want to keep it.</td></tr>
+<tr><td><strong>setdepth(n)</strong></td>
+    <td>sets the depth of the current fractal to n</td></tr>
+<tr><td><strong>setunitsize(n)</strong></td>
+    <td>changes the unit size of the base shape to n</td></tr>
+<tr><td><strong>setzeroangle(n)</strong></td>
+    <td>changes the zero angle of the base shape to n</td></tr>
+<tr><td><strong>setcentre(x, y)</strong></td>
+    <td>changes the local (0, 0) of the base shape to global (x, y)</td></tr>
+<tr><td><strong>screen(xMin, xMax, yMin, yMax)</strong></td>
+    <td>sets the view window's maximum and minimum coordinates</td></tr>
+</table>
+
+<a name="language"></a>
+<h2>Formal Language Structure</h2>
+action -&gt; [any non-expressive command](expression,...)
+<br />
+expression -&gt; number | variable | operator(expression,...)
+<br />
+operator -&gt; [any expressive command]
+<br />
+number -&gt; [any numeric value]
+<br />
+variable -&gt; [any variable name that has been assigned a value]
+
+<a name="example"></a>
+<h2>Usage Example</h2>
+
+Enter the following commands on the command line:
+
+<pre>
+clearall()                              #clear the display
+screen(-15, 15, -10, 10)                #set a nice view window
+setcentre(0, 0)                         #centre the shape at the centre of the screen
+setunitsize(1)                          #set the unit size to 1
+setdepth(5)                             #set a highish depth
+line(-2, -2, 2, -2)
+line(-2, -2, -2, 2)
+line(-2, 2, 2, 2)
+line(2, -2, 2, 2)                       #draw a square
+repeat(0.5, 0, 4, 0)
+repeat(0.5, 0, 4, pi())
+repeat(0.5, 0, 4, divide(pi(), 2))
+repeat(0.5, 0, 4, divide(pi(), -2))     #define some repetitions
+</pre>
+<br />
+That should draw a diamond-shaped fractal.<br />
+Here is the importable code for the fractal:
+
+<div class="ex">
+<pre>
+l 2.8284271247461903 -2.356194490192345 2.8284271247461903 -0.7853981633974483
+l 2.8284271247461903 -2.356194490192345 2.8284271247461903 2.356194490192345
+l 2.8284271247461903 2.356194490192345 2.8284271247461903 0.7853981633974483
+l 2.8284271247461903 -0.7853981633974483 2.8284271247461903 0.7853981633974483
+r 0.5 0 4 0
+r 0.5 0 4 3.141592653589793
+r 0.5 0 4 1.5707963267948966
+r 0.5 0 4 -1.5707963267948966
+d 5
+s -15 15 -10 10
+f 0 0 1 0
+</pre>
+</div>
+
+</body>
+</html>
+

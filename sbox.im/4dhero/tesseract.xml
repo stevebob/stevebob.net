@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Tesseract" url="tesseract" url-end="" favourite="true">
+    <description>
+        Interactive demo of a tesseract.
+    </description> 
+</app>

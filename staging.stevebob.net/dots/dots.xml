@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Dots" url="dots" url-end="" favourite="false">
+    <description>
+        A 2d particle demo where shapes are constructed out of dots
+    </description> 
+</app>

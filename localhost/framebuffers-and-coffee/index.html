@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="http://localhost/sb.css">
+<link rel="stylesheet" type="text/css" href="http://localhost/syntax.min.css">
+<script src="http://localhost/tree.min.js" type="text/javascript"></script>
+<script src="http://localhost/mountain.min.js" type="text/javascript"></script>
+<script src="http://localhost/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://localhost/console/Console.min.js"></script>
+<script type="text/javascript" src="http://localhost/console/SBConsole.min.js"></script>
+<script type="text/javascript" src="http://localhost/console/consoleClient.min.js"></script>
+<script type="text/javascript" src="http://localhost/console/Sbox.min.js"></script>
+<script type="text/javascript" src="http://localhost/console/Interpreter.min.js"></script>
+
+<title>stevebob.net...Framebuffers and Coffee</title>
+<link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
+</head>
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole()">
+
+
+<div id="tree">
+<div id="treeclick" onclick="new TreeDemo().start_tree()">
+</div>
+<canvas id="screen" width=300 height=200 style="position:absolute;left:-30px;z-index:2"></canvas>
+</div>
+
+<div id="mountain_container">
+
+<div id="mountain_click" onclick="mountain_reset()"></div>
+<canvas id="mountain" height=130 width=500>
+</canvas>
+
+</div>
+
+
+<div id="sky">
+</div>
+<div id="skymain">
+<div id="skycontent">
+
+                <input id="consoleinput"
+                />
+            <div id="consoleoutput">
+                <p style="font-size:30px;margin:0px;">
+                <br />
+                </p>
+                <p style="font-size:40px">stevebob.net...</p>
+            </div>
+
+            
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="linkbar">
+
+<div id="linkbarmain">
+
+<div id="linkbarcontents">
+<ul class="links">
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://localhost/">
+<div class="bannerlink">
+Home</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://localhost/about">
+<div class="bannerlink">
+About</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://localhost/apps">
+<div class="bannerlink">
+Apps</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 700px">
+
+<ul class="links">
+
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://localhost/3dhero">3D Hero</a></li>
+    <li><a class="menuLink" href="http://localhost/3dtesla">3D Tesla</a></li>
+    <li><a class="menuLink" href="http://localhost/4dhero">4D Hero</a></li>
+    <li><a class="menuLink" href="http://localhost/bsp">BSP Demo</a></li>
+    <li><a class="menuLink" href="http://localhost/bsp-wireframe">BSP Wireframe</a></li>
+    <li><a class="menuLink" href="http://localhost/backface-culling">Backface Culling</a></li>
+    <li><a class="menuLink" href="http://localhost/backface-culling-2-cubes">Backface Culling 2 Cubes</a></li>
+    <li><a class="menuLink" href="http://localhost/boxillusion">Box Illusion</a></li>
+    <li><a class="menuLink" href="http://localhost/button">Button</a></li>
+    <li><a class="menuLink" href="http://comp1917.ripenetwork.com">COMP1917 in a Day</a></li>
+    <li><a class="menuLink" href="http://localhost/cell">Cell</a></li>
+    <li><a class="menuLink" href="http://localhost/clipping-plane">Clipping Plane</a></li>
+    <li><a class="menuLink" href="http://localhost/convexhull-demo">Convex Hull Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://localhost/dots">Dots</a></li>
+    <li><a class="menuLink" href="http://localhost/fractal">Fractal</a></li>
+    <li><a class="menuLink" href="http://localhost/fractalcubes">Fractal Cubes</a></li>
+    <li><a class="menuLink" href="http://localhost/fractbox">Fractbox</a></li>
+    <li><a class="menuLink" href="http://localhost/grav">Grav</a></li>
+    <li><a class="menuLink" href="http://localhost/heart">Heart</a></li>
+    <li><a class="menuLink" href="http://localhost/hero">Hero</a></li>
+    <li><a class="menuLink" href="http://localhost/herojs1k">Hero JS1K2014</a></li>
+    <li><a class="menuLink" href="http://localhost/hyperspace">Hyperspace</a></li>
+    <li><a class="menuLink" href="http://localhost/iou">IOU</a></li>
+    <li><a class="menuLink" href="http://localhost/isometric_demo">Isometric Demo</a></li>
+    <li><a class="menuLink" href="http://localhost/jewels">Jewels</a></li>
+    <li><a class="menuLink" href="http://localhost/lex">Lex</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://localhost/lowres">Lowres</a></li>
+    <li><a class="menuLink" href="http://localhost/mandelbrot">Mandelbrot</a></li>
+    <li><a class="menuLink" href="http://localhost/matrix">Matrix</a></li>
+    <li><a class="menuLink" href="http://localhost/merry">Merry</a></li>
+    <li><a class="menuLink" href="http://localhost/message">Message</a></li>
+    <li><a class="menuLink" href="http://localhost/metashape">Metashape</a></li>
+    <li><a class="menuLink" href="http://localhost/pixbox">Pixbox</a></li>
+    <li><a class="menuLink" href="http://localhost/pixtree">Pixtree</a></li>
+    <li><a class="menuLink" href="http://localhost/rpg">RPG</a></li>
+    <li><a class="menuLink" href="http://localhost/rave">Rave</a></li>
+    <li><a class="menuLink" href="http://localhost/rave_legacy">Rave Legacy</a></li>
+    <li><a class="menuLink" href="http://localhost/ray">Ray</a></li>
+    <li><a class="menuLink" href="http://localhost/raycastdemo">Ray Cast Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://rsc.stevebob.net">Really Simple Chat</a></li>
+    <li><a class="menuLink" href="http://localhost/rooms">Rooms</a></li>
+    <li><a class="menuLink" href="http://localhost/shadows">Shadows</a></li>
+    <li><a class="menuLink" href="http://localhost/snow">Snow</a></li>
+    <li><a class="menuLink" href="http://localhost/storm">Storm</a></li>
+    <li><a class="menuLink" href="http://localhost/tesla">Tesla</a></li>
+    <li><a class="menuLink" href="http://localhost/tesseract">Tesseract</a></li>
+    <li><a class="menuLink" href="http://localhost/three">Three</a></li>
+    <li><a class="menuLink" href="http://localhost/tree">Tree</a></li>
+    <li><a class="menuLink" href="http://localhost/vines">Vines</a></li>
+    <li><a class="menuLink" href="http://localhost/wireframe">Wireframe</a></li>
+    <li><a class="menuLink" href="http://localhost/worms">Worms</a></li>
+    <li><a class="menuLink" href="http://localhost/xor">XOR</a></li>
+</div>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://localhost/posts">
+<div class="bannerlink">
+Posts
+</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 400px">
+
+<ul class="links">
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://localhost/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+    <li><a class="menuLink" href="http://localhost/heroes-and-villains">Heroes and Villains</a></li>
+    <li><a class="menuLink" href="http://localhost/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+    <li><a class="menuLink" href="http://localhost/confusing-train-adventure">Confusing Train Adventure</a></li>
+    <li><a class="menuLink" href="http://localhost/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+    <li><a class="menuLink" href="http://localhost/agda-environment">Agda Programming Environment</a></li>
+    <li><a class="menuLink" href="http://localhost/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+    <li><a class="menuLink" href="http://localhost/all-grown-up">All Grown Up</a></li>
+    <li><a class="menuLink" href="http://localhost/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+    <li><a class="menuLink" href="http://localhost/rpg_engine_intro">RPG Engine: Introduction</a></li>
+    <li><a class="menuLink" href="http://localhost/existentialcrisis">Existential Crisis</a></li>
+    <li><a class="menuLink" href="http://localhost/nyak">New York, Alaska</a></li>
+    <li><a class="menuLink" href="http://localhost/tmo">Toronto, Montreal, Ottawa</a></li>
+</div>
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://localhost/photos1">Exchange: Photos 1</a></li>
+    <li><a class="menuLink" href="http://localhost/exchange_canada">Exchange: Canada</a></li>
+    <li><a class="menuLink" href="http://localhost/blog-written-in-perl">This Blog is Written in Perl</a></li>
+</div>
+</ul>
+
+
+
+</div>
+</div>
+
+
+</div>
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+
+<div id="leftmain">
+<div id="leftlinks" class="sidepane">
+<ul class="links">
+<li><a class="leftlink" href="http://localhost/3dhero">3D Hero</a></li>
+<li><a class="leftlink" href="http://localhost/3dtesla">3D Tesla</a></li>
+<li><a class="leftlink" href="http://localhost/4dhero">4D Hero</a></li>
+<li><a class="leftlink" href="http://localhost/bsp">BSP Demo</a></li>
+<li><a class="leftlink" href="http://localhost/bsp-wireframe">BSP Wireframe</a></li>
+<li><a class="leftlink" href="http://localhost/button">Button</a></li>
+<li><a class="leftlink" href="http://localhost/fractalcubes">Fractal Cubes</a></li>
+<li><a class="leftlink" href="http://localhost/fractbox">Fractbox</a></li>
+<li><a class="leftlink" href="http://localhost/heart">Heart</a></li>
+<li><a class="leftlink" href="http://localhost/hero">Hero</a></li>
+<li><a class="leftlink" href="http://localhost/herojs1k">Hero JS1K2014</a></li>
+<li><a class="leftlink" href="http://localhost/hyperspace">Hyperspace</a></li>
+<li><a class="leftlink" href="http://localhost/iou">IOU</a></li>
+<li><a class="leftlink" href="http://localhost/isometric_demo">Isometric Demo</a></li>
+<li><a class="leftlink" href="http://localhost/lex">Lex</a></li>
+<li><a class="leftlink" href="http://localhost/lowres">Lowres</a></li>
+<li><a class="leftlink" href="http://localhost/mandelbrot">Mandelbrot</a></li>
+<li><a class="leftlink" href="http://localhost/metashape">Metashape</a></li>
+<li><a class="leftlink" href="http://localhost/pixtree">Pixtree</a></li>
+<li><a class="leftlink" href="http://localhost/rpg">RPG</a></li>
+<li><a class="leftlink" href="http://localhost/rave_legacy">Rave Legacy</a></li>
+<li><a class="leftlink" href="http://localhost/rooms">Rooms</a></li>
+<li><a class="leftlink" href="http://localhost/shadows">Shadows</a></li>
+<li><a class="leftlink" href="http://localhost/snow">Snow</a></li>
+<li><a class="leftlink" href="http://localhost/tesla">Tesla</a></li>
+<li><a class="leftlink" href="http://localhost/tesseract">Tesseract</a></li>
+<li><a class="leftlink" href="http://localhost/three">Three</a></li>
+<li><a class="leftlink" href="http://localhost/tree">Tree</a></li>
+</ul>
+</div>
+</div>
+
+<div id="rightmain">
+
+<div id="contact-box">
+
+<a href="https://github.com/stevebob"><img src="http://localhost/github.png" alt="Github"></a>
+<a href="http://stevebob.net/rss.xml"><img src="http://localhost/rss.png" alt="RSS Feed"></a>
+<a href="mailto:stephen@sherra.tt"><img src="http://localhost/email.png" alt="Email"></a>
+<a href="https://www.facebook.com/stephen.sherratt1"><img src="http://localhost/facebook.png" alt="Facebook"></a>
+
+</div>
+
+<div id="rightlinks" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://localhost/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+<li><a class="right_link" href="http://localhost/heroes-and-villains">Heroes and Villains</a></li>
+<li><a class="right_link" href="http://localhost/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+<li><a class="right_link" href="http://localhost/confusing-train-adventure">Confusing Train Adventure</a></li>
+<li><a class="right_link" href="http://localhost/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+<li><a class="right_link" href="http://localhost/agda-environment">Agda Programming Environment</a></li>
+<li><a class="right_link" href="http://localhost/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+<li><a class="right_link" href="http://localhost/all-grown-up">All Grown Up</a></li>
+<li><a class="right_link" href="http://localhost/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+<li><a class="right_link" href="http://localhost/rpg_engine_intro">RPG Engine: Introduction</a></li>
+</ul>
+</div>
+
+
+<div id="career" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://stephen.sherra.tt">Resume (html)</a></li>
+<li><a class="right_link" href="/resume/StephenSherrattResume.pdf">Resume (pdf)</a></li>
+</ul>
+</div>
+
+</div>
+
+
+
+<div id="centremain">
+<div id="centrecontent">
+
+
+<div class="post-container">
+<div class="heading-container">
+<h1>Framebuffers and Coffee</h1>
+<div class="under-heading">
+2012-11-11 15:03
+</div>
+</div>
+<div class="post-body">
+<table class="image-left">
+  <caption class="image-caption" style="text-align:left;padding-right:10px;">This was drawn using a framebuffer. (Image from images.wikia.com)</caption>
+  <tr>
+    <td>
+      <iframe src="http://stevebob.net/framebuffers-and-coffee/rpg_engine/" style="width:250px;height:300px"> </iframe>
+    </td>
+  </tr>
+</table>
+<p>Two discoveries I recently made that will help with my game engine project as well as make my life easier in general, are CoffeeScript and using HTML Canvas elements as framebuffers. The former is a programming language that adds some “niceness” to javascript. The latter is a technique in computer graphics that allows the rendering of an image to what is effectively an invisible screen for some further processing (or just storage) before sending it to the actual screen.</p>
+
+<h2 id="coffeescript">CoffeeScript</h2>
+
+<p><a href="http://coffeescript.org">Here is the website.</a> If you ever intend on writing more than 10 lines of javascript you should click on that link and learn some CoffeeScript.</p>
+
+<p>It’s very transparent, in that most lines of javascript can be converted 1 to 1 into the corresponding CoffeeScript, so don’t worry about sacrificing functionality. It has (in my opinion) a far cleaner syntax than javascript. Pythonesque indenting is used to indicate scope, brackets aren’t required around control flow statements or function calls, there’s no need for semicolons to terminate or delimit lines.</p>
+
+<p>Besides the syntactic pleasantries, there is an intuitive way of defining classes (which I guess is still just a syntactic thing if you want to get technical). The reason I highlight this point is it encourages you to write classes the “correct” way for most use cases. The way I write classes in javascript is:</p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">Animal</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span> <span class="c1">// field</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">sayName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// method</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">bob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="s2">&quot;bob&quot;</span><span class="p">);</span>
+<span class="nx">bob</span><span class="p">.</span><span class="nx">sayName</span><span class="p">();</span> <span class="c1">// opens an alert box with &quot;My name is bob&quot;</span>
+</pre></div>
+
+
+<p>That seem fairly intuitive (by javascript standards at least). I have a function that creates an object which I can access using object oriented semantics (fields and methods). The “class definition” and the constructor are kinda the same thing here.</p>
+
+<p>Now here’s why it’s bad. Let’s say I go and create a large number of “Animal” objects. The code for the sayName method will be duplicated for every “Animal” instance I create. This means that there is memory wasted to store the duplicated code, and time wasted to copy the code each time I create a new “Animal”.</p>
+
+<p>What I should have done is:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="kd">function</span> <span class="nx">Animal</span><span class="p">()</span> <span class="p">{}</span>
+
+  <span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">construtor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="nx">Animal</span><span class="p">;</span>
+
+<span class="p">})();</span>
+
+<span class="kd">var</span> <span class="nx">bob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Animal</span><span class="p">;</span>
+
+<span class="nx">bob</span><span class="p">.</span><span class="nx">sayName</span><span class="p">();</span>
+</pre></div>
+
+
+<p>This works the way one would expect an “Animal” class to work. It can be accessed in the same ways as the previously defined one, but code is not duplicated. To be honest, I cheated a bit here and wrote it in CoffeeScript, compiled it to javascript and changed the output to look like code a person would write.</p>
+
+<p>Here’s the CoffeeScript that generated the above code:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nx">Animal</span>
+  <span class="nv">construtor: </span><span class="p">(</span><span class="nx">@name</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+  <span class="nv">sayName: </span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">alert</span> <span class="s">&quot;My name is &quot;</span> <span class="o">+</span> <span class="nx">@name</span>
+
+<span class="nv">bob = </span><span class="k">new</span> <span class="nx">Animal</span>
+<span class="nx">bob</span><span class="p">.</span><span class="nx">sayName</span><span class="p">()</span>
+</pre></div>
+
+
+<p>The “-&gt;” denotes a function with an optional list of arguments to the left and the definition to the right. The constructor takes a name, and does nothing with it. The “@” denotes a field, so the passed in name is stored in a field, and accessed in the “sayName” method.</p>
+
+<h2 id="canvas_as_a_framebuffer">Canvas as a Framebuffer</h2>
+
+<p>A framebuffer is an array of pixels that you can’t necessarily see. It can be thought of as a regular screen (or canvas element), and all the same operations can be performed.</p>
+
+<p>The reason this made me so happy when I found out about it is that I want to do something like this in my game engine. If the player is obscured from view, the thing obscuring them can be made transparent in a localised area. I got this idea from the original Fallout:</p>
+
+</div>
+<div class="post-image-centre-container">
+
+<table class="image-centre">
+<caption class="image-caption">A screenshot from Fallout demonstrating cutaway walls (Image from steamaddicts.com)
+</caption>
+<tr><td>
+<img class="post-image-centre" src="http://steamaddicts.com/wp-content/gallery/20120418_fallout_rgw9/fallout1_09.jpg" title="fallout screenshot"  alt="fallout screenshot" />
+</td></tr>
+</table>
+
+</div>
+
+<div class="post-body">
+
+<p>Framebuffers make it really easy to do this. You just have one framebuffer on which you draw everything behind the player (and the player as well if you want). On a second framebuffer, draw everything in front of the player. Then you figure out the 2d screen coordinates where the player will be drawn. Then you create a transparent circle with that point as its centre on the second framebuffer (by reducing the alpha value of pixels). Then you just copy the framebuffers to the visible canvas, with the first one being drawn before the second one.</p>
+
+<p>Another benefit of doing this is it can be used to optimize vector graphics. Most of the apps I wrote in the past use vector graphics in some way. It’s easy to just tell the canvas to draw a line between two points or fill in some polygon. Before the image can be drawn though, it must be rasterized (turned into an array of pixels). When vector graphics are used for animations, each frame must be rasterized before it’s drawn, which comes at a performance cost. This is justified usually, because the content is being dynamically generated, but for this game engine, if (say) a wall was stored using vector graphics, it’s going to look pretty much the same all the time. Rather than rasterizing the wall at each frame, I can rasterize it once when the program starts, and store the result on a framebuffer. Then, whenever I need to render the wall, I can just look at the framebuffer and copy pixels to the visible screen.</p>
+
+<p>To test out this technique, and also to get the feel for accessing canvas elements from CoffeeScript, I made the mudkip demo at the top of the page. The ImageLoader helper class is for dynamically loading image files. The FrameBuffer helper class just wraps invisible canvas elements and takes care of giving it a unique name and actually creating the element at runtime. I’ve dumped all the code into the box below (it’s actually divided into files). Note that this uses jquery (which is all the dollar signs).</p>
+<div class="highlight"><pre><span class="c1"># effectively the main function</span>
+<span class="nx">$</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+  <span class="nx">ImageLoader</span><span class="p">.</span><span class="nx">loadAsync</span> <span class="p">[</span>
+    <span class="s">&quot;http://images.wikia.com/animalcrossing/images/a/ae/Mudkip.png&quot;</span>
+  <span class="p">],</span> <span class="p">(</span><span class="nx">images</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+    <span class="c1"># images is an array of Image objects passed to this callback   </span>
+    
+    <span class="c1"># connect to the main canvas</span>
+    <span class="nv">canvas = </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span> <span class="s">&#39;screen&#39;</span>
+    <span class="nv">ctx = </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span> <span class="s">&#39;2d&#39;</span>
+
+    <span class="c1"># create a framebuffer</span>
+    <span class="nv">fb = </span><span class="k">new</span> <span class="nx">FrameBuffer</span>
+    
+    <span class="c1"># draw a box</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span><span class="o">=</span><span class="s">&quot;rgb(120, 170, 200)&quot;</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">274</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fill</span>
+    <span class="nv">fb.ctx.lineWidth = </span><span class="mi">4</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeStyle</span><span class="o">=</span><span class="s">&quot;rgb(50, 80, 200)&quot;</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeRect</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">274</span>
+    <span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span>
+   
+    <span class="c1"># draw some images on the framebuffer</span>
+    <span class="nx">fb</span><span class="p">.</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span> <span class="nx">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">272</span>
+    
+    <span class="c1"># copy the framebuffer onto the main canvas</span>
+    <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span> <span class="nx">fb</span><span class="p">.</span><span class="nx">canvas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+
+<span class="k">class</span> <span class="nx">ImageLoader</span>
+  <span class="c1"># srcArray: an array of strings representing the image sources</span>
+  <span class="c1"># callback: a function to call on the array of Image objects once</span>
+  <span class="c1"># they are loaded</span>
+  <span class="vi">@loadAsync: </span><span class="p">(</span><span class="nx">srcArray</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+    
+    <span class="c1"># create a blank image for each source</span>
+    <span class="nv">images = </span><span class="nx">srcArray</span><span class="p">.</span><span class="nx">map</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">new</span> <span class="nx">Image</span>
+    
+    <span class="c1"># maintain a count of how many images have loaded</span>
+    <span class="nv">numLoaded = </span><span class="mi">0</span>
+    
+    <span class="c1"># load the images</span>
+    <span class="nx">zipWith</span> <span class="nx">images</span><span class="p">,</span> <span class="nx">srcArray</span><span class="p">,</span> <span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="nx">src</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+      
+      <span class="c1"># when the image loads, increment the counter</span>
+      <span class="nv">img.onload = </span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">numLoaded</span><span class="o">++</span>
+
+      <span class="c1"># this actually loads the image</span>
+      <span class="nv">img.src = </span><span class="nx">src</span>
+    
+    <span class="c1"># this function sets itself to be called periodically to check</span>
+    <span class="c1"># if all the images are loaded, and makes the callback with</span>
+    <span class="c1"># the loaded images as its argument once they are loaded</span>
+    <span class="nv">wait = </span><span class="p">(</span><span class="nx">period</span><span class="p">,</span> <span class="nx">retries</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+      <span class="k">if</span> <span class="nx">numLoaded</span> <span class="o">==</span> <span class="nx">images</span><span class="p">.</span><span class="nx">length</span>
+        <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">images</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="nx">retries</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;timeout loading images&quot;</span>
+
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;.&quot;</span>
+      <span class="nx">setTimeout</span> <span class="nx">wait</span><span class="p">,</span> <span class="nx">period</span><span class="p">,</span> <span class="nx">retries</span><span class="o">-</span><span class="mi">1</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;Loading images&quot;</span>
+    <span class="nx">wait</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span>
+
+
+<span class="k">class</span> <span class="nx">FrameBuffer</span>
+  <span class="nv">constructor: </span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+    
+    <span class="c1"># create the unique html id</span>
+    <span class="nv">id = </span><span class="s">&quot;framebuffer&quot;</span> <span class="o">+</span> <span class="nx">FrameBuffer</span><span class="p">.</span><span class="nx">globalCount</span>
+
+    <span class="c1"># create a new canvas element</span>
+    <span class="vi">@canvasArr = </span><span class="p">(</span><span class="nx">$</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nv">id: </span><span class="nx">id</span><span class="p">})</span>
+    <span class="vi">@canvas = </span><span class="nx">@canvasArr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="vi">@canvas.width = </span><span class="mi">300</span>
+    <span class="vi">@canvas.height = </span><span class="mi">300</span>
+
+    <span class="c1"># get the 2d context for drawing</span>
+    <span class="vi">@ctx = </span><span class="nx">@canvas</span><span class="p">.</span><span class="nx">getContext</span> <span class="s">&#39;2d&#39;</span>
+
+    <span class="c1"># increment the count</span>
+    <span class="nx">FrameBuffer</span><span class="p">.</span><span class="nx">globalCount</span><span class="o">++</span>
+
+  <span class="c1"># used to create unique names for frame buffers</span>
+  <span class="vi">@globalCount: </span><span class="mi">0</span>
+
+<span class="nv">zip = </span><span class="p">(</span><span class="nx">xs</span><span class="p">,</span> <span class="nx">ys</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">[]</span> <span class="k">if</span> <span class="o">not</span> <span class="p">(</span><span class="nx">xs</span><span class="p">.</span><span class="nx">length</span> <span class="o">and</span> <span class="nx">ys</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+  <span class="nv">rest = </span><span class="nx">zip</span> <span class="nx">xs</span><span class="p">[</span><span class="mi">1</span><span class="p">..],</span> <span class="nx">ys</span><span class="p">[</span><span class="mi">1</span><span class="p">..]</span>
+  <span class="nx">rest</span><span class="p">.</span><span class="nx">unshift</span> <span class="p">{</span><span class="nv">_1: </span><span class="nx">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nv">_2: </span><span class="nx">ys</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
+  <span class="k">return</span> <span class="nx">rest</span>
+
+<span class="nv">zipWith = </span><span class="p">(</span><span class="nx">xs</span><span class="p">,</span> <span class="nx">ys</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+  <span class="p">(</span><span class="nx">zip</span> <span class="nx">xs</span><span class="p">,</span> <span class="nx">ys</span><span class="p">).</span><span class="nx">map</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span>
+    <span class="nx">fn</span> <span class="nx">x</span><span class="p">.</span><span class="nx">_1</span><span class="p">,</span> <span class="nx">x</span><span class="p">.</span><span class="nx">_2</span>
+</pre></div>
+
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+<div id="footer">
+Copyright &copy; 2014 stevebob.net
+</div>
+</div>
+
+
+</body>
+</html>

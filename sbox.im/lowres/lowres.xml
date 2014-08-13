@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Lowres" url="lowres" url-end="" favourite="true">
+    <description>
+        A manually pixelated version of Fractal Cubes
+    </description> 
+</app>

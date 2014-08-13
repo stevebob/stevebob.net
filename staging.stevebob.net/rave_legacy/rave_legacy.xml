@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Rave Legacy" url="rave_legacy" url-end="" favourite="true">
+    <description>
+        A port to javascript of a sine wave drawer I wrote in VB a long time ago
+    </description> 
+</app>

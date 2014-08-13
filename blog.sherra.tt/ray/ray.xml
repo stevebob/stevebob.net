@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Ray" url="ray" url-end="" favourite="false">
+    <description>
+        A demo of a game made using 2D ray casting to light 2D areas
+    </description> 
+</app>

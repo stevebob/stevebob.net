@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<post heading="Heroes and Villains" permalink="heroes-and-villains" date="2014-07-25 20:40">
+
+This is an explanation of a graphical demo I call "Heroes and Villains".
+I wrote the [first version](/hero) in my first year of university and it was one of the
+first demos on this site. I revisited the code several years later when I entered
+the demo in [JS1K](http://js1k.com/2014-dragons/demo/1905) competition, and re-implemented
+it in less than 1 kilobyte.
+
+<html>
+<script type="text/javascript" src="http://sbox.im/heroes-and-villains/h.js">1</script>
+<table class="image-centre">
+<caption class="image-caption" style="text-align:center;width:600px">
+Demo runs for 5 seconds then pauses (so as to not drain your laptop's battery).<br/>
+Click the demo to resume. Subsequent clicks restart the demo.
+</caption>
+<tr><td>
+<canvas id="hs" style="position:relative" width="600" height="200">Your browser does not support canvas.</canvas>
+</td></tr>
+</table>
+
+</html>
+
+## Etymology
+The demo is named after a "getting to know you" game.
+Take a room full of people and tell each of them to choose one person to be their "hero",
+and choose a second person to be their "villain", keeping the identity of both a secret.
+Then tell each person to move such that their hero is between themselves, and their villain.
+As each person moves into position, they force other people to keep moving, as the position of
+each person affects the position of people who have chosen them as heroes or villains.
+Played indoors in groups of around 15, people tend to stand in lines moving sideways or radially about the
+centre of the room, and tend to also move outwards getting as close to walls as possible.
+
+Naturally, the question arises: "Will the system ever reach a stable state, where everyone's hero is between
+themselves and their villain?" This demo started out as an attempt to simulate the game with
+a large number of players in a large space over a long period.
+
+## How it works
+
+### Initialization
+<img src="assignments.png" title="assignments" alt="assignments" gallery="false" align="right" >
+<caption>
+Each player's hero's villain is that player. Likewise for each player's villain.
+</caption>
+</img>
+
+Initially, each player is randomly assigned a position, and a pair of other players - one its hero,
+and the other its villain.
+When a player A is assigned as the hero of some other player B, B gets assigned as the villain of A.
+The likewise is true when a player is assigned as a villain.
+See the diagram to the right for a graphical explanation.
+
+This reflexive property is not part of the original game, and several hero/villain assignment policies
+were experimented with, and this one seemed the most interesting to watch.
+
+
+### Simulation
+The simulation is broken into discrete ticks. That is, there is an operation that is repeated infinitely
+at some frequency. This operation consists of calculating the next position of each player based on
+their current positions, updating the position of each player, and drawing each player to the display.
+
+The rules of the simulation used in the calculation of each player's position are as follows.
+
+- If a player's hero is between themselves and their villain, the player stays where it is.
+- Otherwise, a player moves towards the nearest point that would put its hero between itself and its villain.
+
+In order to calculate the point a player will move to, there are two scenarios depending on the relative positions
+of the player, their hero and their villain.
+Scenario 1 is assumed, and the point that would be used is checked to see if it places the hero between
+the player and its villain. If this property is not met, scenario 2 is used instead. Once the target is found,
+the player moves some small distance towards it.
+
+#### Scenario 1
+<img src="scenario1.png" title="scenario1" alt="scenario1" gallery="false" align="centre" width="300">
+<caption>
+Move perpendicular to the line between the hero and villain.
+</caption>
+</img>
+
+#### Scenario 2
+<img src="scenario2.png" title="scenario2" alt="scenario2" gallery="false" align="centre" width="500">
+<caption>
+Get "just behind" the hero. The distance between the hero and the target is some small constant.
+</caption>
+</img>
+
+## Variants
+Since implementing the original version, I have created some variants:
+
+- [Original](/hero)
+- [3D](/3dhero)
+- [4D](/4dhero)(with colour representing the position on the new axis)
+- [JS1K](/herojs1k)
+
+</post>

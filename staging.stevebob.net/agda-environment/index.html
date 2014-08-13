@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="http://staging.stevebob.net/sb.css">
+<link rel="stylesheet" type="text/css" href="http://staging.stevebob.net/syntax.min.css">
+<script src="http://staging.stevebob.net/tree.min.js" type="text/javascript"></script>
+<script src="http://staging.stevebob.net/mountain.min.js" type="text/javascript"></script>
+<script src="http://staging.stevebob.net/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://staging.stevebob.net/console/Console.min.js"></script>
+<script type="text/javascript" src="http://staging.stevebob.net/console/SBConsole.min.js"></script>
+<script type="text/javascript" src="http://staging.stevebob.net/console/consoleClient.min.js"></script>
+<script type="text/javascript" src="http://staging.stevebob.net/console/Sbox.min.js"></script>
+<script type="text/javascript" src="http://staging.stevebob.net/console/Interpreter.min.js"></script>
+
+<title>stevebob.net...Agda Programming Environment</title>
+<link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
+</head>
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole()">
+
+
+<div id="tree">
+<div id="treeclick" onclick="new TreeDemo().start_tree()">
+</div>
+<canvas id="screen" width=300 height=200 style="position:absolute;left:-30px;z-index:2"></canvas>
+</div>
+
+<div id="mountain_container">
+
+<div id="mountain_click" onclick="mountain_reset()"></div>
+<canvas id="mountain" height=130 width=500>
+</canvas>
+
+</div>
+
+
+<div id="sky">
+</div>
+<div id="skymain">
+<div id="skycontent">
+
+                <input id="consoleinput"
+                />
+            <div id="consoleoutput">
+                <p style="font-size:30px;margin:0px;">
+                <br />
+                </p>
+                <p style="font-size:40px">stevebob.net...</p>
+            </div>
+
+            
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="linkbar">
+
+<div id="linkbarmain">
+
+<div id="linkbarcontents">
+<ul class="links">
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://staging.stevebob.net/">
+<div class="bannerlink">
+Home</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://staging.stevebob.net/about">
+<div class="bannerlink">
+About</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://staging.stevebob.net/apps">
+<div class="bannerlink">
+Apps</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 700px">
+
+<ul class="links">
+
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://staging.stevebob.net/3dhero">3D Hero</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/3dtesla">3D Tesla</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/4dhero">4D Hero</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/bsp">BSP Demo</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/bsp-wireframe">BSP Wireframe</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/backface-culling">Backface Culling</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/backface-culling-2-cubes">Backface Culling 2 Cubes</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/boxillusion">Box Illusion</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/button">Button</a></li>
+    <li><a class="menuLink" href="http://comp1917.ripenetwork.com">COMP1917 in a Day</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/cell">Cell</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/clipping-plane">Clipping Plane</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/convexhull-demo">Convex Hull Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://staging.stevebob.net/dots">Dots</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/fractal">Fractal</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/fractalcubes">Fractal Cubes</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/fractbox">Fractbox</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/grav">Grav</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/heart">Heart</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/hero">Hero</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/herojs1k">Hero JS1K2014</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/hyperspace">Hyperspace</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/iou">IOU</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/isometric_demo">Isometric Demo</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/jewels">Jewels</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/lex">Lex</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://staging.stevebob.net/lowres">Lowres</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/mandelbrot">Mandelbrot</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/matrix">Matrix</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/merry">Merry</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/message">Message</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/metashape">Metashape</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/pixbox">Pixbox</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/pixtree">Pixtree</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rpg">RPG</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rave">Rave</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rave_legacy">Rave Legacy</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/ray">Ray</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/raycastdemo">Ray Cast Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://rsc.stevebob.net">Really Simple Chat</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rooms">Rooms</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/shadows">Shadows</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/snow">Snow</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/storm">Storm</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/tesla">Tesla</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/tesseract">Tesseract</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/three">Three</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/tree">Tree</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/vines">Vines</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/wireframe">Wireframe</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/worms">Worms</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/xor">XOR</a></li>
+</div>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://staging.stevebob.net/posts">
+<div class="bannerlink">
+Posts
+</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 400px">
+
+<ul class="links">
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://staging.stevebob.net/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/heroes-and-villains">Heroes and Villains</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/confusing-train-adventure">Confusing Train Adventure</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/agda-environment">Agda Programming Environment</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/all-grown-up">All Grown Up</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/rpg_engine_intro">RPG Engine: Introduction</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/existentialcrisis">Existential Crisis</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/nyak">New York, Alaska</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/tmo">Toronto, Montreal, Ottawa</a></li>
+</div>
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://staging.stevebob.net/photos1">Exchange: Photos 1</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/exchange_canada">Exchange: Canada</a></li>
+    <li><a class="menuLink" href="http://staging.stevebob.net/blog-written-in-perl">This Blog is Written in Perl</a></li>
+</div>
+</ul>
+
+
+
+</div>
+</div>
+
+
+</div>
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+
+<div id="leftmain">
+<div id="leftlinks" class="sidepane">
+<ul class="links">
+<li><a class="leftlink" href="http://staging.stevebob.net/3dhero">3D Hero</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/3dtesla">3D Tesla</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/4dhero">4D Hero</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/bsp">BSP Demo</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/bsp-wireframe">BSP Wireframe</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/button">Button</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/fractalcubes">Fractal Cubes</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/fractbox">Fractbox</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/heart">Heart</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/hero">Hero</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/herojs1k">Hero JS1K2014</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/hyperspace">Hyperspace</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/iou">IOU</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/isometric_demo">Isometric Demo</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/lex">Lex</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/lowres">Lowres</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/mandelbrot">Mandelbrot</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/metashape">Metashape</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/pixtree">Pixtree</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/rpg">RPG</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/rave_legacy">Rave Legacy</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/rooms">Rooms</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/shadows">Shadows</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/snow">Snow</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/tesla">Tesla</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/tesseract">Tesseract</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/three">Three</a></li>
+<li><a class="leftlink" href="http://staging.stevebob.net/tree">Tree</a></li>
+</ul>
+</div>
+</div>
+
+<div id="rightmain">
+
+<div id="contact-box">
+
+<a href="https://github.com/stevebob"><img src="http://staging.stevebob.net/github.png" alt="Github"></a>
+<a href="http://stevebob.net/rss.xml"><img src="http://staging.stevebob.net/rss.png" alt="RSS Feed"></a>
+<a href="mailto:stephen@sherra.tt"><img src="http://staging.stevebob.net/email.png" alt="Email"></a>
+<a href="https://www.facebook.com/stephen.sherratt1"><img src="http://staging.stevebob.net/facebook.png" alt="Facebook"></a>
+
+</div>
+
+<div id="rightlinks" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://staging.stevebob.net/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/heroes-and-villains">Heroes and Villains</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/confusing-train-adventure">Confusing Train Adventure</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/agda-environment">Agda Programming Environment</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/all-grown-up">All Grown Up</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+<li><a class="right_link" href="http://staging.stevebob.net/rpg_engine_intro">RPG Engine: Introduction</a></li>
+</ul>
+</div>
+
+
+<div id="career" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://stephen.sherra.tt">Resume (html)</a></li>
+<li><a class="right_link" href="/resume/StephenSherrattResume.pdf">Resume (pdf)</a></li>
+</ul>
+</div>
+
+</div>
+
+
+
+<div id="centremain">
+<div id="centrecontent">
+
+
+<div class="post-container">
+<div class="heading-container">
+<h1>Agda Programming Environment</h1>
+<div class="under-heading">
+2013-01-11 15:39
+</div>
+</div>
+<div class="post-body">
+
+<h2 id="edit">Edit:</h2>
+
+<p>A few things to note:</p>
+
+<ul>
+<li>my agda-helper program is obsolete, given that “agda -I” works (though it might say that it’s not supported). :typeOf is equivalent to the :t in agda-helper.</li>
+
+<li>the problems getting emacs’s agda-mode to work properly was due to a version mis-match between the Haskell Agda library and the Agda I installed with apt-get.</li>
+
+<li>to fix everything, build Agda from source or find an up to date binary rather than using apt-get</li>
+</ul>
+
+<h2 id="original_post">Original Post</h2>
+
+<p>Agda is a dependently typed, functional programming language. It bears some syntactic resemblance to Haskell, though I am told that once I actually start using it, I’ll find this resemblance to only be skin deep. This post is not about the Agda programming language, but about the development environment one uses when programming in Agda. That is, it’s about the tools used to write, compile, check and test Agda code. More specifically, it’s about my experience setting up these tools on my computer. I’m posting this because the experience was somewhat tedious, and so knowledge of it may help others make their experiences less tedious. It also resulted in the development of a simple tool that might make some people’s lives easier when testing Agda programs, but more on that later.</p>
+
+<h2 id="installing_agda">Installing Agda</h2>
+
+<p>For the record, my box runs 64 bit Ubuntu 12.04. The first thing I did was:</p>
+<div class="highlight"><pre>% apt-get install agda
+</pre></div>
+
+
+<p>So far so good. Next, I installed the Agda libraries for Haskell. “Agda libraries for haskell?” you ask. Operations on Agda programs are done through a Haskell interface. For people new to Haskell, it has its own package manager called “cabal”.</p>
+<div class="highlight"><pre>% cabal install agda agda-executables
+</pre></div>
+
+
+<p>And cross your fingers. Cabal has always been very touch and go in my experience, but after re-installing ghc (the Haskell compiler) and deleting my “~/.cabal” directory several times the, gods of Haskell decided to grant me with a working install of the Agda-2.3.0.1 library (the version compatible with ghc7.4.1 which I happen to run). I know there was probably a more elegant way to install that, but meh - it worked. For people treating this as instructions for setting up Agda, I recommend you at least try to install the Haskell library without doing what I did.</p>
+
+<h2 id="hello_world">Hello, World?</h2>
+
+<p>Not exactly. Once Agda was installed, I had a nice little “agda” binary that was, among other things, an Agda compiler. I wrote a little Agda program to make sure everything worked. It wasn’t the traditional first-program-in-language, that just prints out “Hello, World!”, because in Agda, like in most functional languages, the emphasis is on defining equations rather than doing things, and printing out a string is doing something so is actually non-trivial. Instead, I defined a simple type:</p>
+<div class='highlight'><pre>
+-- file: hello.agda
+
+module hello where
+
+data Blah : Set where
+    a : Blah
+</pre></div>
+<p>Without getting into too much detail, this code defines a type “Blah”, and a data constructor “a” that is a member of that type. It’s worth noting that this will not compile, since it lacks a “main” function (which is what the compiled program does when it’s run). But it took me a while for me to figure out how to get that information.</p>
+
+<p>I’ll highlight my thought process. First I looked at the documentation that came with Agda:</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>agda --help                                                                                                                                                                                                    <span class="o">[</span>19:20:24<span class="o">]</span>
+Agda
+
+Usage: agda <span class="o">[</span>OPTIONS...<span class="o">]</span> FILE
+
+  -V      --version                                   show version number
+  -?      --help                                      show this <span class="nb">help</span>
+  -I      --interactive                               start in interactive mode
+  -c      --compile                                   compile program using the MAlonzo backend <span class="o">(</span>experimental<span class="o">)</span>
+          --epic                                      compile program using the Epic backend
+          --js                                        compile program using the JS backend
+          --compile-dir<span class="o">=</span>DIR                           directory <span class="k">for </span>compiler output <span class="o">(</span>default: the project root<span class="o">)</span>
+          --ghc-flag<span class="o">=</span>GHC-FLAG                         give the flag GHC-FLAG to GHC when compiling using MAlonzo
+          --epic-flag<span class="o">=</span>EPIC-FLAG                       give the flag EPIC-FLAG to Epic when compiling using Epic
+          --test                                      run internal <span class="nb">test </span>suite
+          --vim                                       generate Vim highlighting files
+          --html                                      generate HTML files with highlighted <span class="nb">source </span>code
+          --dependency-graph<span class="o">=</span>FILE                     generate a Dot file with a module dependency graph
+          --html-dir<span class="o">=</span>DIR                              directory in which HTML files are placed <span class="o">(</span>default: html<span class="o">)</span>
+          --css<span class="o">=</span>URL                                   the CSS file used by the HTML files <span class="o">(</span>can be relative<span class="o">)</span>
+          --ignore-interfaces                         ignore interface files <span class="o">(</span>re-type check everything<span class="o">)</span>
+  -i DIR  --include-path<span class="o">=</span>DIR                          look <span class="k">for </span>imports in DIR
+          --no-forcing                                disable the forcing optimisation
+          --safe                                      disable postulates, unsafe OPTION pragmas and primTrustMe
+          --show-implicit                             show implicit arguments when printing
+  -v N    --verbose<span class="o">=</span>N                                 <span class="nb">set </span>verbosity level to N
+          --allow-unsolved-metas                      allow unsolved meta variables <span class="o">(</span>only needed in batch mode<span class="o">)</span>
+          --no-positivity-check                       <span class="k">do </span>not warn about not strictly positive data types
+          --no-termination-check                      <span class="k">do </span>not warn about possibly nonterminating code
+          --termination-depth<span class="o">=</span>N                       allow termination checker to count decrease/increase upto N <span class="o">(</span>default <span class="nv">N</span><span class="o">=</span>1<span class="o">)</span>
+          --no-coverage-check                         <span class="k">do </span>not warn about possibly incomplete pattern matches
+          --type-in-type                              ignore universe levels <span class="o">(</span>this makes Agda inconsistent<span class="o">)</span>
+          --sized-types                               use sized types <span class="o">(</span>inconsistent with coinduction<span class="o">)</span>
+          --injective-type-constructors               <span class="nb">enable </span>injective <span class="nb">type </span>constructors <span class="o">(</span>makes Agda anti-classical and possibly inconsistent<span class="o">)</span>
+          --guardedness-preserving-type-constructors  treat <span class="nb">type </span>constructors as inductive constructors when checking productivity
+          --no-universe-polymorphism                  disable universe polymorphism
+          --universe-polymorphism                     <span class="nb">enable </span>universe polymorphism <span class="o">(</span>default<span class="o">)</span>
+          --no-irrelevant-projections                 disable projection of irrelevant record fields
+          --experimental-irrelevance                  <span class="nb">enable </span>potentially unsound irrelevance features <span class="o">(</span>irrelevant levels, irrelevant data matching<span class="o">)</span>
+          --without-K                                 disable the K rule <span class="o">(</span>maybe<span class="o">)</span>
+
+Plugins:
+</pre></div>
+
+
+<p>That’s actually it. There is no man page for this program. The first bit of that that looked relevant is the “-c” option which compiles an Agda program. This was before I realized the necessity for a main function. So I ran:</p>
+<div class="highlight"><pre><span class="nv">$ </span>agda -c hello.agda
+</pre></div>
+
+
+<p>The resulting error message explains that I need a main function. Good we’re getting somewhere.</p>
+
+<p>Then I tried importing a standard library function into my agda program. I added this line to the start of the module:</p>
+<div class='highlight'><pre>
+open import Data.Char
+</pre></div>
+<p>and compiled:</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve/src/agda<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>agda -c test.agda                                                                                                                        <span class="o">[</span>19:39:35<span class="o">]</span>
+Checking <span class="nb">test</span> <span class="o">(</span>/home/steve/src/agda/test.agda<span class="o">)</span>.
+/home/steve/src/agda/test.agda:3,1-22
+Failed to find <span class="nb">source </span>of module Data.Char in any of the following
+locations:
+  /home/steve/src/agda/Data/Char.agda
+  /home/steve/src/agda/Data/Char.lagda
+when scope checking the declaration
+  open import Data.Char
+</pre></div>
+
+
+<p>Pretty easy to figure out what’s going on here. The compiler doesn’t know where to look for the standard library. I had a wild stab in the dark:</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve/src/agda<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>ls /usr/share/agda-stdlib                                                                                                                <span class="o">[</span>19:41:35<span class="o">]</span>
+Algebra/   Foreign/    IO/        Algebra.agda      Coinduction.agdai  Induction.agda   IO.agdai     Record.agda      Reflection.agdai  Universe.agda
+Category/  Function/   Level/     Algebra.agdai     Function.agda      Induction.agdai  Level.agda   Record.agdai     Size.agda         Universe.agdai
+Data/      Induction/  Relation/  Coinduction.agda  Function.agdai     IO.agda          Level.agdai  Reflection.agda  Size.agdai
+</pre></div>
+
+
+<p>(I tab-completed from “ag”.) Yay I found it! Looking back at the usage of “agda”, I use “-i” to add import paths. So:</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve/src/agda<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>agda -c -i /usr/share/agda-stdlib test.agda                                                                                              <span class="o">[</span>19:41:40<span class="o">]</span>
+
+The name of the top level module does not match the file name. The
+module <span class="nb">test </span>should be defined in one of the following files:
+  /usr/share/agda-stdlib/test.agda
+  /usr/share/agda-stdlib/test.lagda
+</pre></div>
+
+
+<p>Huh? It’s looking for my source file “test.agda” in the import path. This story will be resolved later, but first, a tangent:</p>
+
+<h2 id="enter_emacs">Enter Emacs</h2>
+
+<p>It was around this time that someone on the IRC channel on which I was asking for help asked if I was using emacs (I wasn’t) and I asked if I should be (and the reply was “yes”).</p>
+
+<p>Emacs is a very extensible text editor with many powerful tools to help programmers. Some extensions exist for various languages that add tools for testing and compiling code from in the editor. One such extension exists for Agda, and it was installed when I apt-got Agda (but all the documentation I read said I should have gotten a “agda-mode” binary with Agda (I didn’t) and when I run that it will install agda-mode in emacs (the name of the agda extension)).</p>
+
+<p>At this point I’ll make readers aware that I use VIM as my editor of choice. I have nothing against emacs, I just happened to be around lots of VIM users when I outgrew gedit (another editor).</p>
+
+<p>So I quickly learnt the basics of emacs. This was a bit frustrating because I’ve spent the better part of the last three years building up muscle memory for VIM shortcuts (dvorak VIM shortcuts mind you), and having to learn an entire new set of commands with lots of Control and Meta key presses was…unpleasant. Nevertheless, emacs’s agda-mode gave me a nice drop-down menu of things to do with Agda code (including compile, evaluate an expression and find the type of an expression).</p>
+
+<p>So I tried compiling my code with the standard library import. I got an error message:</p>
+<div class='highlight'><pre>
+Problem encountered. The *ghci* buffer can perhaps explain why.
+</pre></div>
+<p>(ghci is the name of an interactive Haskell interpretter.)</p>
+
+<p>Nice. This was before I realized that Agda operations are performed through a Haskell interface, and before I learnt all about buffers in emacs, so I was pretty confused by this. I found out that buffers are effectively containers for text. When you open a file in emacs, its contents is copied to a buffer. When you save a file, the buffer is written to the file on disk. Buffers can also exist for non-files, and the ghci buffer is one such example. Since Haskell is used to compile Agda, a ghci session is run which can be accessed in a ghci buffer. It allows you to interact with the ghci shell just as you normally would in a terminal. After the failed compile attempt, I had a look at the buffer:</p>
+<div class='highlight'><pre>
+HCi, version 7.4.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer-gmp ... linking ... done.
+Loading package base ... linking ... done.
+Prelude&gt; :set -package Agda-2.3.0
+cannot satisfy -package Agda-2.3.0
+    (use -v for more information)
+Prelude&gt; :mod + Agda.Interaction.GhciTop
+
+
+
+location info&gt;:
+    Could not find module `Agda.Interaction.GhciTop'
+    It is a member of the hidden package `Agda-2.3.0.1'.
+Prelude&gt; ioTCM "/home/steve/src/agda/test.agda" Nothing ( cmd_write_highlighting_info "/home/steve/src/agda/test.agda" "/tmp/agda2-mode8592JyE" )
+
+&lt;interactive&gt;:4:1: Not in scope: `ioTCM'
+
+&lt;interactive&gt;:4:50: Not in scope: `cmd_write_highlighting_info'
+Prelude&gt; ioTCM "/home/steve/src/agda/test.agda" (Just "/tmp/agda2-mode8592jGR") ( cmd_compile MAlonzo "/home/steve/src/agda/test.agda" [".", "/usr/share/agda-stdlib"] )
+
+&lt;interactive&gt;:5:1: Not in scope: `ioTCM'
+
+&lt;interactive&gt;:5:74: Not in scope: `cmd_compile'
+
+&lt;interactive&gt;:5:86: Not in scope: data constructor `MAlonzo'
+
+</pre></div>
+<p>Alright. So something is going horribly wrong. This first thing that fails (well, the first thing it’s trying to do) is setting the package to “Agda-2.3.0” (the Agda library package for Haskell I installed at the start). But hang on. The version of that package was 2.3.0.1, not 2.3.0. At some point, wires are getting crossed about which version of Agda to load, and the wrong one is being attempted and failing because it doesn’t exist. Ok, so this is an interactive shell, so I can fix this. At the ghci prompt, I ran:</p>
+<div class='highlight'><pre>
+Prelude&gt; :set -package Agda-2.3.0.1
+package flags have changed, resetting and loading new packages...
+...
+</pre></div>
+<p>Lookin’ good! Let’s try compiling. The ghci buffer says:</p>
+<div class='highlight'><pre>
+Prelude&gt; ioTCM "/home/steve/src/agda/test.agda" (Just "/tmp/agda2-mode8592Xvp") ( cmd_compile MAlonzo "/home/steve/src/agda/test.agda" [".", "/usr/share/agda-stdlib"] )
+
+&lt;interactive&gt;:5:1: Not in scope: `ioTCM'
+
+&lt;interactive&gt;:5:74: Not in scope: `cmd_compile'
+
+&lt;interactive&gt;:5:86: Not in scope: data constructor `MAlonzo'
+
+</pre></div>
+<p>Aww man! Ok so ioTCM is a function for doing Agda magic, but it’s not currently in scope. Loading the package made ghci aware of the existence of some Haskell modules, and ioTCM resides within one of them. In ghci, there is a “:browse” command that lists the functions in a module, and this coupled with some nice tab-completion inside ghci means I can navigate around the modules inside the Agda package. But this doesn’t really help me find the function quickly.</p>
+
+<p>Here’s my solution. Forget about Haskell for a second. Even if these Haskell modules are compiled code, in order for them to be of any use, people have to be able to call functions from inside them using a function call in source code. For this to work, the name of each function <em>probably</em> exists in plain text somewhere in the module file which contians it. And how do we find a string inside a file inside a directory structure? GREP!</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>grep -rn <span class="s1">&#39;ioTCM&#39;</span> ~/.cabal/lib                                                                                                            <span class="o">[</span>20:29:16<span class="o">]</span>
+Binary file /home/steve/.cabal/lib/Agda-2.3.0.1/ghc-7.4.1/libHSAgda-2.3.0.1.a matches
+Binary file /home/steve/.cabal/lib/Agda-2.3.0.1/ghc-7.4.1/Agda/Interaction/GhciTop.hi matches
+Binary file /home/steve/.cabal/lib/Agda-2.3.0.1/ghc-7.4.1/HSAgda-2.3.0.1.o matches
+</pre></div>
+
+
+<p>Once again, possibly not the most elegant way to solve the problem but it works and it works fast. This reveals that the module is “Agda.Interaction.GhciTop”. So let’s import it!</p>
+<div class='highlight'><pre>
+Prelude&gt; import Agda.Interaction.GhciTop
+Prelude Agda.Interaction.GhciTop&gt;
+</pre></div>
+<p>And compile again. The long pause means that it works. It will have compilation errors, but at least the compiler is being invoked. Success.</p>
+
+<h2 id="now_lets_do_something_useful">Now let’s do something useful</h2>
+
+<p>…where useful is context sensitive and this is the context of learning Agda. When I was learning Haskell, the most valuable tool by far was ghci (yes, the prompt that I just fought to get my Agda to compile). It lets you enter Haskell expressions and it will print out what the expression returns. You can define functions, and then call them. It lets you load a Haskell source file and use functions and types defined in that file in the interactive shell. Here’s an example:</p>
+<div class='highlight'><pre>
+Prelude&gt; concat ["hello", "world"]
+"helloworld"
+Prelude&gt; 1 + 2
+3
+Prelude&gt; let incr = (1+)
+Prelude&gt; incr 5
+6
+</pre></div>
+<p>Haskell is strongly typed, and as a result, it’s much easier to encounter type errors than in say, perl. Sometimes, it’s useful to confirm the types of expressions with Hasell’s type checker before using them. ghci can do this:</p>
+<div class='highlight'><pre>
+Prelude&gt; :t concat
+concat :: [[a]] -&gt; [a]
+Prelude&gt; :t (+)
+(+) :: (Num a) =&gt; a -&gt; a -&gt; a
+</pre></div>
+<p>As more information gets encoded in the type system, this tool becomes more and more useful. In Agda, the type system is more powerful than in Haskell, and more information can be encoded in it. As such it would be very useful to have a similar tool. I asked if such a tool was available on the IRC channel and was told that in emacs, C-c C-d can be used to check the type of an expression. Similarly, C-c C-n can be used to evaluate or “normalize” an expression.</p>
+
+<p>But I missed the way it worked in ghci. In emacs, I can’t see my history as I enter new expressions to infer types or normalize. Doing it all through emacs just felt too constrictive.</p>
+
+<p>Remember how when I did anything Agda the Haskell function being called would be sent to the ghci buffer. When I use emacs to infer types or normalize, I can see the Haskell function call being made. I jumped into my own ghci shell in a terminal and tried to reproduce the results:</p>
+<div class='highlight'><pre>
+Prelude Agda.Interaction.GhciTop&gt; ioTCM "/home/steve/src/agda/test.agda" (Just "/tmp/agda.tmp") ( cmd_load "/home/steve/src/agda/test.agda" [".", "/usr/share/agda-stdlib"] )
+...
+Prelude Agda.Interaction.GhciTop&gt; ioTCM "/home/steve/src/agda/test.agda" Nothing ( cmd_compute_toplevel False "a" )
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Normal Form*" "a")
+agda2_mode_code (agda2-goals-action '())
+Prelude Agda.Interaction.GhciTop&gt; ioTCM "/home/steve/src/agda/test.agda" Nothing ( cmd_infer_toplevel Agda.Interaction.BasicOps.Normalised "a" )
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Inferred Type*" "Blah")
+agda2_mode_code (agda2-goals-action '())
+</pre></div>
+<p>There is a lot of superfluous information there, but the value and type of the expression “a” is displayed. Knowing the Haskell functions that get this information, I knocked together a command line program that behaves similarly to ghci for type inferring and expression evaluation.</p>
+
+<p>Get it here: <a href="https://github.com/stevebob/agda-helper">agda-helper</a></p>
+
+<p>Here’s an example of its use using the hello.agda from earlier:</p>
+<div class='highlight'><pre>
+$ ./agda-helper hello.agda
+...
+hello.agda:
+a
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Normal Form*" "a")
+agda2_mode_code (agda2-goals-action '())
+
+hello.agda:
+:t a
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Inferred Type*" "Blah")
+agda2_mode_code (agda2-goals-action '())
+
+hello.agda:
+:t 'c'
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Inferred Type*" "Char")
+agda2_mode_code (agda2-goals-action '())
+
+hello.agda:
+'c'
+agda2_mode_code (agda2-status-action "Checked")
+agda2_mode_code (agda2-info-action "*Normal Form*" "'c'")
+agda2_mode_code (agda2-goals-action '())
+
+</pre></div>
+<p>So it still prints the same stuff as before but now there is a nice wrapper. I might make a little perl script to wrap this to scrape out the meaningful information in the future.</p>
+
+<h2 id="compiling_from_a_terminal">Compiling from a terminal</h2>
+
+<p>I almost forgot. I was having this problem:</p>
+<div class="highlight"><pre><span class="o">[</span>/home/steve/src/agda<span class="o">]</span>
+<span class="o">[</span>steve@stevebox<span class="o">]</span> <span class="nv">$ </span>agda -c -i /usr/share/agda-stdlib test.agda                                                                                              <span class="o">[</span>19:41:40<span class="o">]</span>
+
+The name of the top level module does not match the file name. The
+module <span class="nb">test </span>should be defined in one of the following files:
+  /usr/share/agda-stdlib/test.agda
+  /usr/share/agda-stdlib/test.lagda
+</pre></div>
+
+
+<p>While I was reading an online tutorial, I came upon the solution:</p>
+<div class='highlight'><pre>
+[/home/steve/src/agda]
+[steve@stevebox] $ agda -c -i /usr/share/agda-stdlib -i . test.agda                                                                                              [19:41:40]
+</pre></div>
+<p>The “-i .” tells the compiler to also look in the current directory. Don’t ask why it’s necessary.</p>
+
+<h2 id="exit_emacs">Exit Emacs?</h2>
+
+<p>Not exactly. This tool is more of a compliment to emacs’s agda-mode, which provides additional useful tools for writing Agda. If you want your VIM key bindings inside emacs, have a look at <a href="http://emacswiki.org/emacs/Evil">evil</a>.</p>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+<div id="footer">
+Copyright &copy; 2014 stevebob.net
+</div>
+</div>
+
+
+</body>
+</html>

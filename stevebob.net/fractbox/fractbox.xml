@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Fractbox" url="fractbox" url-end="" favourite="true">
+    <description>
+        A fractal demo with squares
+    </description> 
+</app>

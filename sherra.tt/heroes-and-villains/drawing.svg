@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3813"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3816"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-0"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816-61"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3813-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-4-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816-2-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="626.94649"
+     inkscape:cy="1044.8837"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="885"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="arc"
+       style="stroke:#000000;fill:none;stroke-opacity:1;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985"
+       sodipodi:cx="166.67517"
+       sodipodi:cy="307.87976"
+       sodipodi:rx="23.233509"
+       sodipodi:ry="23.233509"
+       d="m 189.90868,307.87976 a 23.233509,23.233509 0 1 1 -46.46702,0 23.233509,23.233509 0 1 1 46.46702,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="154.40552"
+       y="319.04327"
+       id="text3755"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3757"
+         x="154.40552"
+         y="319.04327">a</tspan></text>
+    <path
+       transform="translate(107.45942,-86.548242)"
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-4"
+       sodipodi:cx="166.67517"
+       sodipodi:cy="307.87976"
+       sodipodi:rx="23.233509"
+       sodipodi:ry="23.233509"
+       d="m 189.90868,307.87976 a 23.233509,23.233509 0 1 1 -46.46702,0 23.233509,23.233509 0 1 1 46.46702,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="261.86493"
+       y="234.49503"
+       id="text3755-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3757-2"
+         x="261.86493"
+         y="234.49503">b</tspan></text>
+    <path
+       transform="translate(107.27922,84.931479)"
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-4-8"
+       sodipodi:cx="166.67517"
+       sodipodi:cy="307.87976"
+       sodipodi:rx="23.233509"
+       sodipodi:ry="23.233509"
+       d="m 189.90868,307.87976 a 23.233509,23.233509 0 1 1 -46.46702,0 23.233509,23.233509 0 1 1 46.46702,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="261.68475"
+       y="403.97476"
+       id="text3755-2-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3757-2-1"
+         x="261.68475"
+         y="403.97476">c</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 185.25544,285.32397 36.27346,-33.69608 24.98803,-23.21252"
+       id="path3807"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:none"
+       d="m 195.06448,302.60555 36.27346,-33.69608 24.98803,-23.21252"
+       id="path3807-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.28877258px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-55.824234"
+       y="328.88135"
+       id="text6777-1"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.71500425,-0.69912011,0.69912011,0.71500425,0,0)"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6779-6"
+         x="-55.824234"
+         y="328.88135">hero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.28877258px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-41.766579"
+       y="375.71191"
+       id="text6777-2-1"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.74493894,-0.66713266,0.66713266,0.74493894,0,0)"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6779-5-9"
+         x="-41.766579"
+         y="375.71191">villain</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 248.94514,379.60288 207.2882,352.84678 178.59161,334.41507"
+       id="path3807-36"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:none"
+       d="m 263.24508,365.80498 -41.65695,-26.7561 -28.6966,-18.43171"
+       id="path3807-3-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.28877258px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="346.08484"
+       y="213.51401"
+       id="text6777-1-2"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.85494409,0.51872016,-0.51872016,0.85494409,0,0)"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6779-6-2"
+         x="346.08484"
+         y="213.51401">hero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.28877258px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="341.73239"
+       y="154.42531"
+       id="text6777-2-1-6"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.83140416,0.55566817,-0.55566817,0.83140416,0,0)"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/assignments.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6779-5-9-4"
+         x="341.73239"
+         y="154.42531">villain</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="path6928"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(111.1168,-139.18279)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(429.31485,-13.13198)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:10.8,10.8;stroke-dashoffset:0"
+       d="M 1265.9314,89.476656 1037.2164,388.90212"
+       id="path6966"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1261.7008"
+       y="138.45331"
+       id="text6968"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6970"
+         x="1261.7008"
+         y="138.45331">villain</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1016.7379"
+       y="281.27408"
+       id="text6968-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6970-7"
+         x="1016.7379"
+         y="281.27408">hero</tspan></text>
+    <path
+       transform="translate(-29.192881,41.213206)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7-9"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1581.8989"
+       y="270.50412"
+       id="text7011"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013"
+         x="1581.8989"
+         y="270.50412">player</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1084.8661"
+       y="360.33115"
+       id="text7011-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013-0"
+         x="1084.8661"
+         y="360.33115">target</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-4);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 1533.4116,258.38228 c -416.1829,52.52793 -416.1829,52.52793 -416.1829,52.52793"
+       id="path7036"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(350.26409,-5.213201)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7-95"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1272.7773"
+       y="249.0722"
+       id="text7011-0-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013-0-2"
+         x="1272.7773"
+         y="249.0722">destination</tspan></text>
+    <path
+       transform="translate(-35.434463,-836.54149)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-7"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(71.682307,-975.72428)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-5"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(65.308931,-626.81633)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7-8"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.2936542;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:13.17461631, 13.17461631;stroke-dashoffset:0"
+       d="M 1230.2001,-746.768 950.65016,-382.22191"
+       id="path6966-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1226.2664"
+       y="-698.0882"
+       id="text6968-31"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6970-9"
+         x="1226.2664"
+         y="-698.0882">villain</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="981.30347"
+       y="-555.26746"
+       id="text6968-3-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6970-7-8"
+         x="981.30347"
+         y="-555.26746">hero</tspan></text>
+    <path
+       transform="translate(-110.34165,-738.18542)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7-9-6"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1203.6072"
+       y="-348.8945"
+       id="text7011-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013-2"
+         x="1203.6072"
+         y="-348.8945">player</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1048.0031"
+       y="-464.78174"
+       id="text7011-0-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013-0-7"
+         x="1048.0031"
+         y="-464.78174">target</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend-4)"
+       d="M 1189.864,-358.24153 C 1095.0847,-417.47557 1032.2276,-456.047 1032.2276,-456.047"
+       id="path7036-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       transform="translate(9.1153141,-663.18326)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6928-6-7-95-8"
+       sodipodi:cx="1126.3201"
+       sodipodi:cy="269.49396"
+       sodipodi:rx="9.0913725"
+       sodipodi:ry="9.0913725"
+       d="m 1135.4114,269.49396 a 9.0913725,9.0913725 0 1 1 -18.1827,0 9.0913725,9.0913725 0 1 1 18.1827,0 z"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1153.0571"
+       y="-388.89786"
+       id="text7011-0-8-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan7013-0-2-1"
+         x="1153.0571"
+         y="-388.89786">destination</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 979.84797,-410.3387 60.60913,41.41625 37.3757,-51.51778"
+       id="path7537"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/steve/src/stevebob.net/posts/heroes-and-villains/scenario1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

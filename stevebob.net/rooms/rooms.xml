@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Rooms" url="rooms" url-end="" favourite="true">
+    <description>
+        Rooms 3D demo
+    </description> 
+</app>

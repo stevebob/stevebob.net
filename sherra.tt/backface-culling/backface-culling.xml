@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Backface Culling" url="backface-culling" url-end="" favourite="false">
+    <description>
+        Backface Culling 3D demo
+    </description> 
+</app>

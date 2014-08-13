@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- Thanbs to Dan Padilha for the server space -->
+<html>
+<head>
+<title>lowres</title>
+       <script type="application/x-javascript" src="global.js"></script>
+       <script type="application/x-javascript" src="fracttypes.js"></script>
+       <script type="application/x-javascript" src="fractal.js"></script>
+       <script type="application/x-javascript" src="algebra.js"></script>
+       <script type="application/x-javascript" src="three.js"></script>
+       <script type="application/x-javascript" src="client.js"></script>
+       <script type="application/x-javascript" src="pixelate.js"></script>
+
+       <link href="fractal3d.css" rel="stylesheet"  type="text/css"/> 
+</head>
+<body style="margin:0px;padding:0px;" onload="client();" onresize="adjustSize();">
+
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header">
+<a href="http://stevebob.net">back</a> | stevebob.net...Press r to restart demo. Pixel size: <input id='pixels' type='text' value='4'/><input type='button' onclick='setpixelsize()' value='Pixelate' /></div>
+        
+        <canvas id="screen"> 
+        </canvas>
+
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Snow" url="snow" url-end="" favourite="true">
+    <description>
+        Snowflakes generated using fractals
+    </description> 
+</app>

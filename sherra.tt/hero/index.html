@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+    <head> 
+        <title>heroes and villains</title> 
+        <script type="application/x-javascript" src="hero.js"></script>
+        
+    </head>
+    
+    <body
+    onload="setUpCanvas();updateMousePos();"
+    onresize="updateDimensions();"
+    style="margin:0px;border:0px;">
+    
+        
+    
+        <canvas id="screen" height=400 width=1200> 
+        
+        </canvas>
+
+
+<div id="ctrl" style="left:0px;top:0px;bottom:0px;width:320px;position:absolute;background-color:rgba(255, 255, 255, 0.6);padding:5px;">
+
+<link href="../header.css" rel="stylesheet"  type="text/css"/>
+
+<div id="header"style="font-size:16px;position:relative;left:0px;margin:0px;padding:0px;background-color:rgba(0, 0, 0, 0);">
+<a href="http://stevebob.net">back</a> | stevebob.net...</div>
+
+<div style="padding:5px;position:absolute;top:25px;left:0px;">
+<a id="what" href="javascript:shInfo()">what is this?</a>
+<p id="desc" style="padding:0px;margin:0px;padding-left:15px;padding-right:10px;text-align:justify;display:none;">
+Heroes and Villains is a game played by a group of people in a room.
+At the beginning of the game, each person chooses someone to be their 'hero' and someone else to be their 'villain'.
+The aim of the game is for each person to position themselves in the room such that their hero is between them and their villain.
+This is a computer simulation of heroes and villains with dots representing people.
+<a href="javascript:shInfo();">(hide info)</a>
+</p>
+</div>
+
+
+<div id="ctrlin" style="padding:0px;left:0px;top:50px;bottom:60px;width:320px;position:absolute;padding-left:5px;overflow:auto;">
+
+
+<p id="title" style="position:absolute;margin:0px;left:0px;right:0px;top:10px;text-align:center;font-size:32px;font-family:monospace;">
+Settings
+</p>
+
+<p id="sub" style="position:absolute;left:0px;right:0px;top:40px;text-align:center;font-size:12pt;font-family:monospace;">
+'s' toggles on/off<br/>
+'r' restarts the simulation
+</p>
+
+<p id="dotcount-label" style="margin:0px;border:0px;position:absolute;left:20px;top:110px;text-align:left;font-size:12pt;font-family:monospace;">
+Dot Count: 
+</p>
+
+<input id="dotcount" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:110px;">
+
+
+<p id="dotsize-label" style="margin:0px;border:0px;position:absolute;left:20px;top:150px;text-align:left;font-size:12pt;font-family:monospace;">
+Dot Size:
+</p>
+
+<input id="dotsize" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:150px;">
+
+
+<p id="accuracy-label" style="margin:0px;border:0px;position:absolute;left:20px;top:190px;text-align:left;font-size:12pt;font-family:monospace;">
+Tolerance (pixels):
+</p>
+
+<input id="accuracy" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:190px;">
+
+<p id="dotopacity-label" style="margin:0px;border:0px;position:absolute;left:20px;top:230px;text-align:left;font-size:12pt;font-family:monospace;">
+Dot Opacity (%):
+</p>
+<input id="dotopacity" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:230px;">
+
+
+<p id="dotwspread-label" style="margin:0px;border:0px;position:absolute;left:20px;top:270px;text-align:left;font-size:12pt;font-family:monospace;">
+Spread Width (%):
+</p>
+
+<input id="dotwpercent" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:270px;">
+
+<p id="dothspread-label" style="margin:0px;border:0px;position:absolute;left:20px;top:310px;text-align:left;font-size:12pt;font-family:monospace;">
+Spread Height (%):
+</p>
+
+<input id="dothpercent" style="margin:0px;border:0px;position:absolute;width:80px;right:20px;top:310px;">
+
+
+<p id="xborders-label" style="margin:0px;border:0px;position:absolute;left:20px;top:350px;text-align:left;font-size:12pt;font-family:monospace;height:auto;">
+<input id="xborders" type=checkbox style="margin:0px;border:0px;">
+Dots stay on screen
+</p>    
+
+<p id="follow-label" style="margin:0px;border:0px;position:absolute;left:20px;top:380px;text-align:left;font-size:12pt;font-family:monospace;height:auto;">
+<input id="follow" type=checkbox style="margin:0px;border:0px;">
+Dot follows cursor
+</p>    
+
+
+<div style="position:absolute;top:430px; left:0px;right:0px">
+<p id="hero-label" style="margin:0px;border:0px;position:absolute;left:20px;top:0px;text-align:left;font-size:12pt;font-family:monospace;height:auto;">
+<strong>Hero and Villain Assignment</strong>
+<br/>
+<br/>
+Basic:<br/>
+<input id="onehero" type=checkbox style="margin:0px;border:0px;">
+One Common Hero
+<br/>
+<input id="onevillain" type=checkbox style="margin:0px;border:0px;">
+One Common Villain
+<br/>
+<br/>
+Advanced:
+<br/>
+d is a dot
+<br/>
+h(d) denotes the hero of d
+<br/>
+v(d) denotes the villain of d
+<br/>
+By default these functions are not injective.
+<br/>
+<input id="hvd" type=checkbox style="margin:0px;border:0px;">
+h(v(d)) = d for most d
+<br/>
+<input id="vhd" type=checkbox style="margin:0px;border:0px;">
+v(h(d)) = d for most d
+<br/>
+<input id="hhd" type=checkbox style="margin:0px;border:0px;">
+h(h(d)) = d for most d
+<br/>
+<input id="vvd" type=checkbox style="margin:0px;border:0px;">
+v(v(d)) = d for most d
+<br/>
+<input id="hinj" type=checkbox style="margin:0px;border:0px;">
+make h injective
+<br/>
+<input id="vinj" type=checkbox style="margin:0px;border:0px;">
+make v injective
+<br/>
+<br/>
+
+
+</p>
+</div>
+
+
+
+
+
+</div>
+
+<input type=button value="Restart" onclick="start();" style="bottom:20px;height:30px;left:100px;right:100px;position:absolute;">
+
+</div>
+
+    
+    </body>
+</html>
+    
+
+    

@@ -1,0 +1,58 @@
+div,body {
+    padding:0px;
+    margin:0px;
+}
+
+div#top {
+    position:absolute;
+    top:5px;
+    left:20px;
+    right:20px;
+    height:16pt;
+    font-family:monospace;
+}
+
+div#bottom {
+    position:absolute;
+    top:40px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+}
+
+textarea#text {
+    
+    
+    top:0px;
+    left:0px;
+
+    width:100%;
+    height:100%;
+
+    position:absolute;
+
+    padding:0px;
+    margin:0px;
+}
+
+input#update {
+    bottom:20px;
+    position:absolute;
+    width:100px;
+    height:2em;
+    left:-50px;
+}
+
+div#footer {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    width:50%;
+}
+
+div#sync {
+    position:absolute;
+    right:0px;
+    top:0px;
+    color:rgba(0 ,0, 0 ,1);
+}

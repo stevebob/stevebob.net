@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Jewels" url="jewels" url-end="" favourite="false">
+    <description>
+        A randomized jewel case demo
+    </description> 
+</app>

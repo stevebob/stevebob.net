@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="http://blog.sherra.tt/sb.css">
+<link rel="stylesheet" type="text/css" href="http://blog.sherra.tt/syntax.min.css">
+<script src="http://blog.sherra.tt/tree.min.js" type="text/javascript"></script>
+<script src="http://blog.sherra.tt/mountain.min.js" type="text/javascript"></script>
+<script src="http://blog.sherra.tt/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://blog.sherra.tt/console/Console.min.js"></script>
+<script type="text/javascript" src="http://blog.sherra.tt/console/SBConsole.min.js"></script>
+<script type="text/javascript" src="http://blog.sherra.tt/console/consoleClient.min.js"></script>
+<script type="text/javascript" src="http://blog.sherra.tt/console/Sbox.min.js"></script>
+<script type="text/javascript" src="http://blog.sherra.tt/console/Interpreter.min.js"></script>
+
+<title>stevebob.net...This Blog is Written in Perl</title>
+<link rel="icon" type="image/png" href="http://stevebob.net/favicon.png">
+</head>
+<body onload="new TreeDemo().start_tree();mountain_main();initConsole()">
+
+
+<div id="tree">
+<div id="treeclick" onclick="new TreeDemo().start_tree()">
+</div>
+<canvas id="screen" width=300 height=200 style="position:absolute;left:-30px;z-index:2"></canvas>
+</div>
+
+<div id="mountain_container">
+
+<div id="mountain_click" onclick="mountain_reset()"></div>
+<canvas id="mountain" height=130 width=500>
+</canvas>
+
+</div>
+
+
+<div id="sky">
+</div>
+<div id="skymain">
+<div id="skycontent">
+
+                <input id="consoleinput"
+                />
+            <div id="consoleoutput">
+                <p style="font-size:30px;margin:0px;">
+                <br />
+                </p>
+                <p style="font-size:40px">stevebob.net...</p>
+            </div>
+
+            
+</div>
+</div>
+
+ 
+
+
+
+
+<div id="linkbar">
+
+<div id="linkbarmain">
+
+<div id="linkbarcontents">
+<ul class="links">
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://blog.sherra.tt/">
+<div class="bannerlink">
+Home</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://blog.sherra.tt/about">
+<div class="bannerlink">
+About</div>
+</a>
+</li>
+</div>
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://blog.sherra.tt/apps">
+<div class="bannerlink">
+Apps</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 700px">
+
+<ul class="links">
+
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://blog.sherra.tt/3dhero">3D Hero</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/3dtesla">3D Tesla</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/4dhero">4D Hero</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/bsp">BSP Demo</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/bsp-wireframe">BSP Wireframe</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/backface-culling">Backface Culling</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/backface-culling-2-cubes">Backface Culling 2 Cubes</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/boxillusion">Box Illusion</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/button">Button</a></li>
+    <li><a class="menuLink" href="http://comp1917.ripenetwork.com">COMP1917 in a Day</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/cell">Cell</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/clipping-plane">Clipping Plane</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/convexhull-demo">Convex Hull Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://blog.sherra.tt/dots">Dots</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/fractal">Fractal</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/fractalcubes">Fractal Cubes</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/fractbox">Fractbox</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/grav">Grav</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/heart">Heart</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/hero">Hero</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/herojs1k">Hero JS1K2014</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/hyperspace">Hyperspace</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/iou">IOU</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/isometric_demo">Isometric Demo</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/jewels">Jewels</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/lex">Lex</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://blog.sherra.tt/lowres">Lowres</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/mandelbrot">Mandelbrot</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/matrix">Matrix</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/merry">Merry</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/message">Message</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/metashape">Metashape</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/pixbox">Pixbox</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/pixtree">Pixtree</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rpg">RPG</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rave">Rave</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rave_legacy">Rave Legacy</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/ray">Ray</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/raycastdemo">Ray Cast Demo</a></li>
+</div>
+
+<div class="app-column">
+    <li><a class="menuLink" href="http://rsc.stevebob.net">Really Simple Chat</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rooms">Rooms</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/shadows">Shadows</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/snow">Snow</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/storm">Storm</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/tesla">Tesla</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/tesseract">Tesseract</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/three">Three</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/tree">Tree</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/vines">Vines</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/wireframe">Wireframe</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/worms">Worms</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/xor">XOR</a></li>
+</div>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<div class="bannerlinkcontainer">
+
+<li>
+<a href="http://blog.sherra.tt/posts">
+<div class="bannerlink">
+Posts
+</div>
+</a>
+</li>
+
+<div class="dropMenu">
+<div class="dropMenuContainee" style="width: 400px">
+
+<ul class="links">
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://blog.sherra.tt/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/heroes-and-villains">Heroes and Villains</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/confusing-train-adventure">Confusing Train Adventure</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/agda-environment">Agda Programming Environment</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/all-grown-up">All Grown Up</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/rpg_engine_intro">RPG Engine: Introduction</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/existentialcrisis">Existential Crisis</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/nyak">New York, Alaska</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/tmo">Toronto, Montreal, Ottawa</a></li>
+</div>
+
+<div class="post-column">
+    <li><a class="menuLink" href="http://blog.sherra.tt/photos1">Exchange: Photos 1</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/exchange_canada">Exchange: Canada</a></li>
+    <li><a class="menuLink" href="http://blog.sherra.tt/blog-written-in-perl">This Blog is Written in Perl</a></li>
+</div>
+</ul>
+
+
+
+</div>
+</div>
+
+
+</div>
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+
+<div id="leftmain">
+<div id="leftlinks" class="sidepane">
+<ul class="links">
+<li><a class="leftlink" href="http://blog.sherra.tt/3dhero">3D Hero</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/3dtesla">3D Tesla</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/4dhero">4D Hero</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/bsp">BSP Demo</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/bsp-wireframe">BSP Wireframe</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/button">Button</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/fractalcubes">Fractal Cubes</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/fractbox">Fractbox</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/heart">Heart</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/hero">Hero</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/herojs1k">Hero JS1K2014</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/hyperspace">Hyperspace</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/iou">IOU</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/isometric_demo">Isometric Demo</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/lex">Lex</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/lowres">Lowres</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/mandelbrot">Mandelbrot</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/metashape">Metashape</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/pixtree">Pixtree</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/rpg">RPG</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/rave_legacy">Rave Legacy</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/rooms">Rooms</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/shadows">Shadows</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/snow">Snow</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/tesla">Tesla</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/tesseract">Tesseract</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/three">Three</a></li>
+<li><a class="leftlink" href="http://blog.sherra.tt/tree">Tree</a></li>
+</ul>
+</div>
+</div>
+
+<div id="rightmain">
+
+<div id="contact-box">
+
+<a href="https://github.com/stevebob"><img src="http://blog.sherra.tt/github.png" alt="Github"></a>
+<a href="http://stevebob.net/rss.xml"><img src="http://blog.sherra.tt/rss.png" alt="RSS Feed"></a>
+<a href="mailto:stephen@sherra.tt"><img src="http://blog.sherra.tt/email.png" alt="Email"></a>
+<a href="https://www.facebook.com/stephen.sherratt1"><img src="http://blog.sherra.tt/facebook.png" alt="Facebook"></a>
+
+</div>
+
+<div id="rightlinks" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://blog.sherra.tt/reinventing-the-3d-wheel">Reinventing the 3D Wheel</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/heroes-and-villains">Heroes and Villains</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/dont-plan-your-trip">Don't Plan Your Trip</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/confusing-train-adventure">Confusing Train Adventure</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/thinking-fourth-dimensionally">Thinking Fourth Dimensionally</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/agda-environment">Agda Programming Environment</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/framebuffers-and-coffee">Framebuffers and Coffee</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/all-grown-up">All Grown Up</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/rpg_engine_bsp_tree_insertion">RPG Engine: BSP Tree Insertion</a></li>
+<li><a class="right_link" href="http://blog.sherra.tt/rpg_engine_intro">RPG Engine: Introduction</a></li>
+</ul>
+</div>
+
+
+<div id="career" class="sidepane">
+<ul class="links">
+<li><a class="right_link" href="http://stephen.sherra.tt">Resume (html)</a></li>
+<li><a class="right_link" href="/resume/StephenSherrattResume.pdf">Resume (pdf)</a></li>
+</ul>
+</div>
+
+</div>
+
+
+
+<div id="centremain">
+<div id="centrecontent">
+
+
+<div class="post-container">
+<div class="heading-container">
+<h1>This Blog is Written in Perl</h1>
+<div class="under-heading">
+2011-12-25 23:50
+</div>
+</div>
+<div class="post-body">
+
+<p>Let me take a minute to explain myself. Perl was not my first choice of language when I decided to write a blog website. I initially started writing the site in Ruby using <a href="http://www.sinatrarb.com/&gt;Sinatra">Sinatra</a> and I really liked it. Coding websites in Ruby with Sinatra is intuitive and the code is readable.</p>
+
+<p>As with most web apps written in Ruby, Sinatra apps run as their own process and include a web server (such as <a href="http://code.macournoyer.com/thin/">Thin</a>). That is, the web app includes a script that launches the app and starts a web server. This is in contrast to CGI - the more traditional approach to dynamic web content, where an app is a script that prints the HTML to be sent to the browser and the web server is a separate process (such as <a href="http://www.apache.org/">Apache</a>). The benefit of the former approach over the latter approach is performance. Each time a request is made to a CGI web app, the entire program must be loaded into memory and executed. When a web app is its own process (as is the case with Sinatra apps), it is loaded when the server is started and remains in memory as long as the server runs. This streamlines the process of servicing requests made to the app, making it a faster approach to CGI.</p>
+
+<p>So with this performance benefit, why did I write this site in Perl CGI?</p>
+
+<p>My web server does not allow me to run my own processes meaning I could not use it for Sinatra apps. Not to be perturbed, I looked for alternative hosting options and came across <a href="http://www.heroku.com/">Heroku</a>. Heroku is a platform for deploying web apps written in Ruby. Apps are deployed to Heroku using a git repository. Once configured, the latest version of the app can be deployed to Heroku using git push. Apps deployed to Heroku are compiled into optimized packages known as “slugs”, boosting their performance.</p>
+
+<p>In addition to the web component, my blog needed access to a database in which to store posts, and some means of uploading and storing images so I can post photos.</p>
+
+<p>Apps deployed on Heroku do not have complete access to a filesystem. Apps may observe their filesystem (using commands like <code>ls</code> and <code>cat file</code>) but may not create or modify files directly. This meant I could not simply upload photos, as this requires creating files. Users of Heroku are encouraged to use third party sites for file hosting, and there are modules available that may be used to connect to these services.</p>
+
+<p>Furthermore, Heroku apps must use Postgres as a database, and the only way to freely (without paying) use a database is to be part of a shared database. I modified my blog to use Postgres (it previously used Mysql) but was unable to connect to the database. Heroku provides documentation for connecting to a shared database but it is aimed at apps built on <a href="http://rubyonrails.org/">Rails</a>. To get a database working for my blog, I made a web wrapper for a mysql database running on my web server. SQL statements were sent to the wrapper as post parameters, the statement was executed on the server, which responded with HTML containing the result of the query which could be passed by the Ruby app on Heroku. This worked, but it was abandoned as it seemed insecure and very hacky.</p>
+
+<p>At this point I was frustrated by all the restrictions being placed upon me by Heroku. I could write a blog in Ruby using Sinatra but I would have no way to deploy it. I didn’t want to find other sources and just wanted to get something online, so I opted for rewriting the blog as a CGI app. Writing CGI apps in Ruby is discouraged <a href="http://www.dreamincode.net/forums/topic/259314-development-server-fpr-ruby/">[0]</a>, possibly due to the language’s poor performance when compared with other scripting languages <a href="http://xodian.net/serendipity/index.php?/archives/27-Benchmark-PHP-vs.-Python-vs.-Perl-vs.-Ruby.html">[1]</a>. I chose Perl because I know it better than the other candidate scripting languages (such as Python or PHP).</p>
+
+<p>This was either the biggest or second biggest Perl project I have undertaken, and it was my first time writing object oriented Perl. In Perl, most object oriented concepts (such as defining classes, creating instances of classes, extending classes, calling methods on objects) are possible, however do not feel as elegant as they do in other object oriented languages I have used (Java, Ruby, Python). Needless to say, I didn’t get into Perl for the syntax. Once you get past the syntax however, Perl’s object oriented features are quite usable. The main use of OO in this blog is elegant handling of database records (by treating them as objects with getters and setters for fields) and grouping together related functions (by making them all methods of a class). For these purposes, I found Perl’s object oriented features to be adequate.</p>
+
+</div>
+<div class="post-image-centre-container">
+
+<table class="image-centre">
+<caption class="image-caption">Camelia - the spokesbug for Perl 6
+</caption>
+<tr><td>
+<img class="post-image-centre" src="http://www.perl6.org/camelia-logo.png" title="camelia"  alt="camelia" />
+</td></tr>
+</table>
+
+</div>
+
+<div class="post-body">
+
+<p>The current version of Perl is Perl 5. <a href="http://en.wikipedia.org/wiki/Perl_6">Perl 6</a> is currently in development, and will be a complete re-write of Perl in which the entire Perl community is invited to take part. A glance at its Wikipedia article shows examples of static types, improved object oriented syntax and infinite lists (resembling those found in Haskell). There is currently no official release date on Perl 6, however there are several implementations of the language.</p>
+
+<p>[0]<a href="http://www.dreamincode.net/forums/topic/259314-development-server-fpr-ruby/">http://www.dreamincode.net/forums/topic/259314-development-server-fpr-ruby/</a></p>
+
+<p>[1]<a href="http://xodian.net/serendipity/index.php?/archives/27-Benchmark-PHP-vs.-Python-vs.-Perl-vs.-Ruby.html">http://xodian.net/serendipity/index.php?/archives/27-Benchmark-PHP-vs.-Python-vs.-Perl-vs.-Ruby.html</a></p>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+<div id="footer">
+Copyright &copy; 2014 stevebob.net
+</div>
+</div>
+
+
+</body>
+</html>
