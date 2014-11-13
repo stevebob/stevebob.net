@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D100</title>
+<script type="application/x-javascript" src="jquery.min.js"></script>
+<script type="application/x-javascript">
+var hist = [];
+function get_number() {
+    var rand = Math.ceil(Math.random()*100);
+    var d20 = Math.ceil(rand/5);
+    var d10 = Math.ceil(rand/10);
+    var d5 = Math.ceil(rand/20);
+    $("#others").html(
+    "<div><div style='float:left'>D20: </div>" + d20 + 
+    "</div><div><div style='float:left'>D10: </div>" + d10 + 
+        "</div><div><div style='float:left'>D5: </div>" + d5 + "</div>");
+    var a = new Date();
+    var h = a.getHours();
+    var m = a.getMinutes();
+    var s = a.getSeconds();
+    var time = h + ":" + (m >= 10 ? m : "0"+m) + ":" + (s >= 10 ? s : "0"+s);
+    hist.push("<div style='float:left;width:2em'>"+rand + "</div><span style='color:grey'>" + time + "</span> ");
+    $("#result").html(rand);
+    $("#history").html(hist.slice().reverse().slice(0,20).join("<br/>"));
+}
+function resize() {
+    $("#result").css('font-size', $(window).height());
+}
+
+$(function() {
+    resize();
+    $(window).keydown(get_number);
+    $(window).click(get_number);
+    $(window).resize(resize);
+    get_number();
+});
+</script>
+
+<style>
+body {
+    font-family: helvetica;
+}
+#credit {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    padding:5px;
+}
+#result {
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    text-align: center;
+}
+#others {
+    font-size: 40px;
+    padding:10px;
+    position:fixed;
+    top:0px;
+    right:0px;
+}
+#others div div {
+    text-align:right;
+    margin-right:0.5em;
+    width:2.5em;
+}
+#history {
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+<div id="result">
+</div>
+<div id="history"></div>
+<div id="others"></div>
+</body>
+</html>

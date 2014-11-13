@@ -56,7 +56,7 @@ h1 {
   color: #464646;
 }
 body {
-  background-color: #c0f088;
+  background-color: #cee9af;
   font-family: sans-serif;
 }
 .sidepane > a {
@@ -117,21 +117,21 @@ div#sky {
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 140px;
+  height: 80px;
 }
 div#skymain {
   position: relative;
   max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  height: 20px;
+  height: 80px;
   top: 0px;
   width: 100%;
 }
 div#skycontent {
   position: absolute;
   left: 235px;
-  top: 0px;
+  bottom: 0px;
   right: 0px;
 }
 div#treeclick {
@@ -139,7 +139,7 @@ div#treeclick {
   top: 0px;
   left: 0px;
   width: 224px;
-  height: 160px;
+  height: 120px;
   z-index: 4;
 }
 div#tree {
@@ -153,14 +153,14 @@ div#linkbar {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 140px;
+  top: 80px;
   height: 40px;
   background-color: #60b040;
 }
 div#main {
   position: relative;
   max-width: 1400px;
-  top: 160px;
+  top: 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -222,6 +222,7 @@ div#contact-box > a {
   margin-right: 1px;
 }
 div#rightlinks {
+  top: 20px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-border-radius: 5px;
@@ -235,7 +236,6 @@ div#rightlinks {
   padding-bottom: 10px;
 }
 div#career {
-  top: 20px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-border-radius: 5px;
@@ -281,7 +281,7 @@ div#mountain_container {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 140px;
+  height: 80px;
   width: 100px;
   z-index: 5;
 }
@@ -292,7 +292,7 @@ div#consoleoutput {
   font-size: 20px;
   top: 0px;
   left: 20px;
-  height: 120px;
+  height: 60px;
   right: 0px;
   overflow: auto;
   font: normal normal normal 115% / normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
@@ -301,7 +301,7 @@ input#consoleinput {
   position: absolute;
   right: 0px;
   left: 20px;
-  top: 120px;
+  top: 60px;
   height: 20px;
   background-color: rgba(0, 0, 0, 0);
   color: black;
@@ -391,4 +391,25 @@ ul.links {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
+}
+@font-face {
+  font-family: 'inconsolata';
+  src: url('/Inconsolata.otf');
+}
+#skymain h1 {
+  margin-left: 20px;
+  font-family: inconsolata;
+  font-size: 36pt;
+}
+#social {
+  opacity: 0.8;
+  padding-top: 4px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 24px;
+}
+#social a {
+  margin-left: 1px;
 }

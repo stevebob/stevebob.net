@@ -1,9 +1,9 @@
 /* sky */
 @sky_colour: #90c0f0;
-@sky_height: 140px;
+@sky_height: 80px;
 
 /* grass */
-@grass_colour: #c0f088;
+@grass_colour: #CEE9AF;
 @linkbar_colour: #60b040;
 @linkbar_height: 40px;
 @small_gap: 5px;
@@ -178,7 +178,7 @@ div#skymain {
     max-width: @main_width;
     margin-right:auto;
     margin-left:auto;
-    height: 20px;
+    height: @sky_height;
     top:0px;
     width:100%;
 }
@@ -186,7 +186,7 @@ div#skymain {
 div#skycontent {
     position:absolute;
     left: @left_width;
-    top:0px;
+    bottom:0px;
     right:0px;
 }
 
@@ -197,7 +197,7 @@ div#treeclick {
     top:0px;
     left:0px;
     width:224px;
-    height:160px;
+    height:120px;
 
     z-index:4;
 }
@@ -223,7 +223,7 @@ div#linkbar {
 div#main {
     position:relative;
     max-width: @main_width;
-    top: (@sky_height + @linkbar_height - @gap);
+    top: (@linkbar_height);
     margin-right:auto;
     margin-left:auto;
 
@@ -294,6 +294,7 @@ div#contact-box > a {
 
 
 div#rightlinks {
+    top:20px;
     position:relative;
     background-color: @section-background;
     .rounded-corners;
@@ -304,7 +305,6 @@ div#rightlinks {
 }
 
 div#career {
-    top:20px;
     position:relative;
     background-color: @section-background;
     .rounded-corners;
@@ -524,4 +524,26 @@ ul.links {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+}
+
+@font-face {
+    font-family: 'inconsolata';
+    src: url('/Inconsolata.otf');
+}
+#skymain h1 {
+  margin-left: @gap;
+  font-family: inconsolata;
+  font-size: 36pt;
+}
+#social {
+  opacity: 0.8;
+  padding-top:4px;
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  margin-right: @gap + 4px;
+}
+#social a {
+  margin-left: 1px;
 }

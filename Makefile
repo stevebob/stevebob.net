@@ -4,8 +4,7 @@ SERVER=sherra.tt:
 all: 
 	./resume.sh
 	./compile.sh 'http://sherra.tt/'
-	./compile.sh 'http://blog.sherra.tt/'
-	./compile.sh 'http://sbox.im/'
+	./compile.sh 'https://sherra.tt/'
 	./compile.sh 'http://stevebob.net/'
 
 resume:
@@ -23,7 +22,7 @@ staging:
 	./compile.sh 'http://localhost/'
 
 sync:
-	rsync -Pavz stevebob.net sbox.im blog.sherra.tt sherra.tt $(SERVER) 
+	rsync -Pavz stevebob.net sherra.tt secure.sherra.tt $(SERVER) 
 
 clean:
-	rm -rf output sbox.im blog.sherra.tt stevebob.net sherra.tt
+	rm -rf output stevebob.net sherra.tt secure.sherra.tt

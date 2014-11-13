@@ -1,7 +1,7 @@
 # Profile
 
-I recently graduated from the University of New South Wales with 1st Class
-Honours. I currently work on mobile application and server infrastructure
+I recently graduated from the University of New South Wales with a degree in
+Computer Science. I currently work on mobile application and server infrastructure
 at Shodogg ANZ. I write HTML5 demos as a hobby, and am also interested
 in low-level systems programming.
 

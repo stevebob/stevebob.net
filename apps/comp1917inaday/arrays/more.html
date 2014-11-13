@@ -1,4 +1,0 @@
-<h1>More array notes</h1>
-You will hear the term "bounds" used in the context of arrays. The bounds of an array is the range of indices that can be used with the array. If you use an index that is too high (or negative), it is said to be outside the bounds of the array. If you do this in your code, it will still compile without warnings or errors. C doesn't care, as as far as it's concerned this is perfectly valid code. However when the program is running, attempting to change array elements outside the bounds may result in a <strong>segmentation fault</strong>. You should therefore be very careful with how you access data in arrays.
-
-Also, when you declare an array, the values do not get changed at all. They remain as they were before the memory was assingned to the array. Yhis is a consequence of c being such a low level language. At no point should you access a value in an array that you didn't first assign.

@@ -8,7 +8,7 @@ the demo in [JS1K](http://js1k.com/2014-dragons/demo/1905) competition, and re-i
 it in less than 1 kilobyte.
 
 <html>
-<script type="text/javascript" src="http://sbox.im/heroes-and-villains/h.js">1</script>
+<script type="text/javascript" src="https://sherra.tt/heroes-and-villains/h.js">1</script>
 <table class="image-centre">
 <caption class="image-caption" style="text-align:center;width:600px">
 Demo runs for 5 seconds then pauses (so as to not drain your laptop's battery).<br/>

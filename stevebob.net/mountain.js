@@ -3,8 +3,8 @@ var mountain_ctx;
 var peaks = [];
 var mountains = [];
 
-const WIDTH = 600;
-const HEIGHT = 130;
+const WIDTH = 400;
+const HEIGHT = 100;
 
 const ATTEMPTS = 20;
 const PEAK_MAX_SPREAD = 100;

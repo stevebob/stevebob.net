@@ -1,7 +1,7 @@
 function TreeDemo() {
 
     const width = 300;
-    const height = 200;
+    const height = 110;
 
     const centrePoint = new Point2D(width/2, height/2);
 
@@ -176,7 +176,7 @@ function TreeDemo() {
         
         var greenness = parseInt(50 * (segment / line.length));
 
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 1;
         ctx.strokeStyle = "rgba(120, " + (80 + greenness) + ", 50, 0.4)";
 
         ctx.beginPath();
@@ -200,8 +200,8 @@ function TreeDemo() {
 
     this.start_tree = function() {
 
-        var baseCluster = Cluster.createRandomizedHorizontal(new Point2D(centrePoint.x, 140), splitFactor, 50);
-        var f = new Fractal(new Point2D(centrePoint.x, 130), -Math.PI/2, 30, 6);
+        var baseCluster = Cluster.createRandomizedHorizontal(new Point2D(centrePoint.x, height - 10), splitFactor, 20);
+        var f = new Fractal(new Point2D(centrePoint.x, height - 30), -Math.PI/2, 20, 6);
 
         var paths = [];
         for (var i = 0;i!=splitFactor;++i) {
@@ -224,7 +224,7 @@ function TreeDemo() {
     function Fractal(point, angle, length, depth) {
 
         this.point = point;
-        this.cluster = Cluster.createRandomized(this.point, splitFactor, (depth + 1) * 4);
+        this.cluster = Cluster.createRandomized(this.point, splitFactor, (depth + 1) * 1);
         
         this.next = [];
         if (depth > 0) {
