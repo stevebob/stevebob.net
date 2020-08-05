@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Convex Hull Demo" url="convexhull-demo" url-end="" favourite="false">
+    <description>
+        Demo of convex hull computation
+    </description> 
+</app>
