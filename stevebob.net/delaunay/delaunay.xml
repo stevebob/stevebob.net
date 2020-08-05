@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<app name="Delaunay" url="delaunay" url-end="" favourite="true">
+    <description>
+        Delaunay Triangulation
+    </description> 
+</app>
