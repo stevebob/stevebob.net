@@ -6,12 +6,12 @@ The frontend and backend have been completely re-written to be consistent with m
 There's also an RSS feed, and rounded corners!
 
 The style of the old site was designed to look 8-bit, using bright colours, square corners
-and the pixelated fractal tree (which lives on [here](http://stevebob.net/pixtree/)).
+and the pixelated fractal tree (which lives on [here](https://stevebob.net/pixtree/)).
 The new style is designed to look more modern. The colour scheme is basically the same, but 
 the colours are washed out. Also there is a new tree. Click on it to redraw.
 
 Now, some history.
-When I started this site, it was just a static page displaying [this](http://stevebob.net/tesla)
+When I started this site, it was just a static page displaying [this](https://stevebob.net/tesla)
 with a header bar containing links to the several other apps I had.
 Once I had some more apps made, the user interface became too cluttered, and so I
 made a home page that had a list of apps and a description.
@@ -26,7 +26,7 @@ the directory that contains all the apps, and makes a list of apps that it displ
 Each app had a ".app" file that contained a description of the app, along with what to
 call it, using a markup language that I defined myself in php.
 
-Then I decided I wanted a blog. The technical details of that can be found [here](http://stevebob.net/blog-written-in-perl/),
+Then I decided I wanted a blog. The technical details of that can be found [here](https://stevebob.net/blog-written-in-perl/),
 but the tl;dr of it is that I ended up writing what was effectively a separate website, entirely in perl, to serve as my blog.
 And it worked. I had a web interface for writing content and uploading photos, that was password protected, and even had
 a concept of user accounts. Everything was stored in a mysql database. The exact text I entered into the interface for writing content,

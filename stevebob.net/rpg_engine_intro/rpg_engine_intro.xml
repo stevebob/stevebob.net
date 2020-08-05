@@ -28,7 +28,7 @@ I've been hacking on this project for a few days now, and it currently stands at
 </ul>
 <br/>
 
-Use WASD keys to move the avatar in the demo below. The colour of the walls indicates whether the avatar is in front (red) of or behind (blue) the wall. Check out the XML that generates this world [here](http://stevebob.net/blog/canvas/bridge0.1/testc.xml).
+Use WASD keys to move the avatar in the demo below. The colour of the walls indicates whether the avatar is in front (red) of or behind (blue) the wall. Check out the XML that generates this world [here](https://stevebob.net/blog/canvas/bridge0.1/testc.xml).
 
 <p>
 In the demo, it appears that some visible surface detection is already taking place. This is a cheap trick I pulled for the purpose of this demo. In this case (and I think this is true for all cases where all the polygons are vertical), there is an ordering on the walls that if they are drawn in that order (drawing over what was previously on that position on the canvas) it looks correct. (That is, no wall ever needs to be split into two as is sometimes the case when determining draw order for regular polygons.) I've figured out this order in this case, listed the walls in that order in the XML file, and the engine draws them in the correct order.

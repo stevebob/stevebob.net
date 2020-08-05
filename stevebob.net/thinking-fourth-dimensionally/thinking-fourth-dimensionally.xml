@@ -98,7 +98,7 @@ look like a small cube inside a big cube?".
 Here's a quick story about how I learnt the answer to that question.
 The tesseract demo was initially intended to be a 4D shape exploring demo.
 It would display a 3D cross section of a 4D shape, and let users move around
-in four dimensions. [Here is said demo.](http://stevebob.net/hyperspace)
+in four dimensions. [Here is said demo.](https://stevebob.net/hyperspace)
 It has the same controls as the tesseract demo, and i/k moves in the fourth dimension. The 4D shape in the demo is a "cube based hyper-hourglass".
 That is, a cube projected to an inverse cube, so the centre is a single point.
 
