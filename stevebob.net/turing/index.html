@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Turing Machine</title>
+<link href="turing.css" rel="stylesheet" type="text/css"/>
+
+<script src="utils.js" type="text/javascript"></script>
+<script src="TuringMachine.js" type="text/javascript"></script>
+<script src="GUI.js" type="text/javascript"></script>
+
+<script>
+var gui = new GUI();
+</script>
+
+</head>
+
+<body onload="gui.update()">
+<div id="content">
+<center>
+<h1>Turing Machine</h1>
+</center>
+
+<a id = "help_link" href="help.html">Help</a>
+<div id="tm">
+
+<div id="sep0">
+</div>
+<div id="sep1">
+</div>
+<div id="sep2">
+</div>
+
+<div id="output_alphabet_window">
+<h2>Alphabet</h2>
+<div id="output_alphabet">
+<input type="text" id="alphabet_field" onchange="gui.characters_changed()"/>
+<input type="button" id="alphabet_apply_btn" value="Apply" onclick="gui.characters_changed()"/>
+</div>
+</div>
+
+
+
+<div id="state_adder_window">
+<h2>States</h2>
+<div id="state_adder">
+<div class="divider"></div>
+
+<div id="state_list">
+
+<div class="state_entry">
+<input type="button" class="delete_button" value="Delete"/>
+</div>
+<div class="divider"></div>
+
+
+<div class="state_entry">
+<input type="text" class="name_field" value="q1"/>
+<input type="button" class="delete_button" value="Delete"/>
+</div>
+<div class="divider"></div>
+
+
+
+</div>
+
+<div class="add">
+
+<input id="state_name_field" type="text" class="name_field" value="q1"/>
+<input type="button" class="add_button" value="Add State" onclick="gui.add_state()"/>
+</div>
+</div>
+</div>
+
+
+<div id="function_window">
+<h2>Transition Function</h2>
+
+<table id="function_list">
+</table>
+</div>
+
+<div id="demo_window">
+<div id="demo">
+<label>Initial tape contents: </label><input type="text" id="tape_input" style="margin-bottom:10px;">
+<br />
+<input type="button" onclick="gui.start_emulation()" value="Start">
+<input type="button" onclick="gui.pause_emulation()" value="Pause">
+<input type="button" onclick="gui.resume_emulation()" value="Resume">
+|
+<input type="button" onclick="gui.prepare()"  value="Prepare">
+
+<input type="button" onclick="gui.rewind()"  value="Prev">
+<input type="button" onclick="gui.progress()"  value="Next">
+|
+<input type="button" onclick="gui.change_tape()"  value="Live Tape Update">
+
+
+<table border="1" id="stats_table">
+<tr><td>State:</td><td id="current_state_name"></td></tr>
+<tr><td>Head Position:</td><td id="current_head_position"></td></tr>
+<tr><td>Step Count:</td><td id="current_step_count"></td></tr>
+</table>
+
+<table border="1" id="tape_table">
+<tr id="index_row"></tr>
+<tr id="head_row"></tr>
+<tr id="tape_row"></tr>
+</table>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

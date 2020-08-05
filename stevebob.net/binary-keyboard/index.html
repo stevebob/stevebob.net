@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<title>Binary Keyboard</title>
+<script type="application/x-javascript" src="jquery.min.js"></script>
+<script type="application/x-javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+var bin_buffer = [];
+var dec_buffer = [];
+
+$(function() {
+
+    const cols = 6;
+
+    var header = '<th>Decimal</th><th>Binary</th><th>Ascii</th>'
+    var tab = ['<table border=1><tr>'];
+    for (var i = 0;i<cols;++i) {
+        tab.push(header);
+    }
+    tab.push('</tr>');
+
+    var first = 32, last = 126;
+    var count = last - first;
+    var rows = Math.ceil(count/cols);
+    for (var _i = 0;_i<=Math.floor(count/cols);++_i) {
+        tab.push('<tr>');
+        for (var j = 0;j<cols;++j) {
+            var i = _i + first + j * rows;
+            if (i <= last) {
+                tab.push('<td id="dec'+i+'">', i, '</td><td id="bin'+i+'">', num_to_bin_arr(i).slice().reverse().map(function(x, y){return '<span id="bin'+i+'-'+y+'">'+x+'</span>'}).join(''), 
+                    '</td><td id="ascii'+i+'">', ascii_to_char(i), '</td>');
+            }
+        }
+        tab.push('<tr>');
+    }
+
+    tab.push('</table>');
+    $('#asciitable').html(tab.join(''));   
+});
+
+function download_file() {
+    var contents = dec_buffer.map(function(x){return String.fromCharCode(x)}).join('');
+    console.debug(contents);
+    var file = new Blob([dec_buffer.map(String.fromCharCode).join('')], {type: 'application/octet-stream'});
+    var url = URL.createObjectURL(file);
+    $("#realdownload").attr('href', url);
+    $("#realdownload").attr('download', 'bk'+(new Date().getTime()%6911));
+    $("#realdownload")[0].click();
+}
+
+function highlight(bin_arr) {
+    bin_arr = bin_arr.slice();
+    var to_shift = 8 - bin_arr.length;
+    var num = bin_arr_to_num(bin_arr);
+    for (var i = 32;i<=126;++i) {
+        for (var j = 0;j<8;++j) {
+            $("#bin"+i+"-"+j).removeClass('highlit');
+        }
+        if ((i >> to_shift) == num && bin_arr.length > 0) {
+            $("#dec"+i).addClass('highlit');
+            $("#ascii"+i).addClass('highlit');
+            for (var j = 0;j<bin_arr.length;++j) {
+                $("#bin"+i+"-"+j).addClass('highlit');
+            }
+        } else {
+            $("#dec"+i).removeClass('highlit');
+            $("#ascii"+i).removeClass('highlit');
+        }
+    }
+
+
+}
+
+$(document).unbind('keydown').bind('keydown', function (event) {
+    event.preventDefault();
+ 
+    switch (event.keyCode) {
+        case 48: 
+            zero();
+            break;
+        case 49: 
+            one();
+            break;
+        case 8: 
+            backspace();
+            break;
+    }
+    process_buffer();
+    $("#bin-buffer").html(bin_arr_to_str(bin_buffer));
+    if (bin_buffer.length > 0) {
+        $("#dec-buffer").html(bin_arr_to_num(bin_buffer));
+    } else {
+        $("#dec-buffer").html('');
+    }
+    highlight(bin_buffer);
+});
+
+function num_to_bin_str(num) {
+    return bin_arr_to_str(num_to_bin_arr(num).slice().reverse(), '');
+}
+
+function bin_arr_to_str(bin_arr, del) {
+    del = del == undefined ? '' : del;
+    return bin_arr.join(del);
+}
+
+function bin_arr_to_num(bin_arr) {
+    bin_arr = bin_arr.slice().reverse();
+    var m = 1;
+    var ret = 0;
+    for (var i = 0;i<bin_arr.length;++i) {
+        ret += bin_arr[i]*m;
+        m*=2;
+    }
+    return ret;
+}
+function num_to_bin_arr(num) {
+    var b = 1;
+    var ret = [];
+    for (var i = 0;i<8;++i) {
+        ret.push(num&b?1:0);
+        b<<=1;
+    }
+    return ret;
+}
+
+function ascii_to_char(x) {
+    if (x >= 32 && x <= 126) {
+        return String.fromCharCode(x);
+    } else {
+        return String.fromCharCode(0xfffd);
+    }
+}
+
+function process_buffer() {
+    if (bin_buffer.length == 8) {
+        var num = bin_arr_to_num(bin_buffer);
+        dec_buffer.push(num);
+        var sec = $("#ascii"+num+", #dec"+num+", #bin"+num);
+        sec.css('backgroundColor', 'yellow');
+        sec.animate({backgroundColor: 'rgba(0,0,0,0)'}, 'slow', function() {sec.removeAttr('style')});
+
+        bin_buffer = [];
+    }
+    $("#text").val(dec_buffer.map(ascii_to_char).join(''));
+}
+
+function backspace() {
+    if (bin_buffer.length > 0) {
+        bin_buffer.pop();
+    } else if (dec_buffer.length > 0) {
+        var last = dec_buffer.pop();
+        bin_buffer = num_to_bin_arr(last).slice().reverse();
+        bin_buffer.pop();
+    }
+}
+
+function one() {
+    bin_buffer.push(1);
+}
+
+function zero() {
+    bin_buffer.push(0);
+}
+
+</script>
+
+<style>
+body {
+    font-family: helvetica;
+}
+div {
+    font-family: monospace;
+}
+#bin-buffer {
+height: 1em;
+width: 300px;
+}
+#dec-buffer {
+height: 1em;
+width: 300px;
+}
+#text {
+    margin-top:10px;
+    width:600px;
+    height: 100px;
+}
+.label {
+    height: 1em;
+    width: 300px;
+    float:left;
+    width: 70px;
+}
+.highlit {
+    font-weight:bold;
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Binary Keyboard</h1>
+<h2>Use 0 and 1 keys to type</h2>
+<div class="label">Binary:</div>
+<div id="bin-buffer">
+</div>
+<div class="label">Decimal:</div>
+<div id="dec-buffer">
+</div>
+<textarea id="text">
+</textarea>
+<br/>
+<a id="download" href="javascript:download_file()">Download File</a>
+<a id="realdownload" style="display:none">Really Download File</a>
+<h2>Ascii Table</h2>
+<div id="asciitable">
+</div>
+</body>
+</html>

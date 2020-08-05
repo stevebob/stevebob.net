@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Turing Machine | Help</title>
+<link href="turing.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+<div id="help_content">
+<center>
+<h1>Help</h1>
+</center>
+<a id = "help_link" href="index.html">Turnig Machine</a>
+
+<h2>General</h2>
+<p>
+A turing machine is a simple hypothetical computational engine.
+It is comprised of a finite set of states, a finite alphabet of characters which
+may initially appear on the tape (input alphabet), a finite alphabet of characters which may be
+written to the tape (output alphabet), and a transition function mapping (State, Character) tuples to
+(State, Character, Direction) tuples, where Direction is either LEFT or RIGHT.
+<br/>
+A turing machine has a single tape comprised of cells, extending infinitely far to the right, 
+with a single read/write head that can, at any time,
+be in exactly one position on the tape. A turing machine has exactly one current state,
+which at any time is one of the states in its set of states.
+<br/>
+Initially, the head is at the left most cell of the tape and the state is the INIT state.
+Some input string made up of characters from the input alphabet.
+At any point in the computation, the transition function is used to find the mapping from
+the current state and the character currently under the head to a new state, a new character and a direction.
+The turing machine's state is updated to this new state, the new character is written to the tape
+overwriting the old one, and the head moves one position in that direction (unless the head is at the left most
+position and the direction is LEFT).
+</p>
+<h2>Controls</h2>
+<h3>Start</h3>
+Starts an animated simulation of the turing machine using the given input string.
+<h3>Pause</h3>
+Pauses the animated simulation of the turing machine.
+<h3>Resume</h3>
+Resumes a paused or stepped through simulation of the turing machine.
+<h3>Prepare</h3>
+Displays the input string on the turing machine and positions the head at the left most position.
+<h3>Prev</h3>
+Rewinds the turing machine's computation by one step.
+<h3>Next</h3>
+Progresses the turing machine's computation by one step.
+<h3>Live Tape Update</h3>
+Changes the tape contents to be that of the input string text box.
+<h2>Alphabet</h2>
+<p>
+This is both the input and output alphabets for this turing machine. No distinction is made between
+input and output alphabets. That is, any character that can be read can also be written. It is up
+to the user to enforce an output alphabet as some strict subset of the input alphabet if they choose to.
+</p>
+<h2>States</h2>
+<p>
+This is a list of all the possible states the turing machine can be in.
+The three default states are ACCEPT, REJECT and INIT.
+The ACCEPT and REJECT states are both halt states.
+That is, once the turing machine enters either state, it will stop computing.
+The INIT state is the state in which the turing machine will begin.
+</p>
+<h2>Transition Function</h2>
+This is where the transition function's mappings can be set. Each combination of state and character appear
+in this list as an input to the function (besides the HALT states).
+</div>
+
+</body>
+</html>
+
