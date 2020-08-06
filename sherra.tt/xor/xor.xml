@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<app name="XOR" url="xor" url-end="" favourite="false">
-    <description>
-        A graph of bitwise XOR
-    </description> 
-</app>

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<app name="Lex" url="lex" url-end="" favourite="true">
-    <description>
-        A terminal emulator and interpreter for simple mathematical expressions
-    </description> 
-</app>
