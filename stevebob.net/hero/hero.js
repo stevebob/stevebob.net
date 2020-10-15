@@ -8,7 +8,7 @@ var settingsVis = 1;
 var infoView = 0;
 
 //Environment Variables
-var count = 2000;
+var count = 20000;
 var size = 1;
 var stepSize = 32;
 
